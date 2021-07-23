@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Links -->
+  <!-- Bootstrap Links -->
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+  <!-- Font Awesome links -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/6c2bd266c9.js" crossorigin="anonymous"></script>
+
+  <!-- Font Links -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap" rel="stylesheet">
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tinos&display=swap" rel="stylesheet">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- CSS Stylesheet Links -->
+
+  <link href="header.css" rel="stylesheet">
+
+
+  <style>
+    body {
+      overflow-x: hidden;
+      background-color: #ffffed;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    /* Header */
+
+    .header {
+      background: linear-gradient(95deg, rgba(36, 16, 60, 0.9981034650188201) 36%, rgba(52, 17, 95, 1) 100%);
+      color: white;
+      text-align: center;
+      font-size: 10px;
+      height: 50vh;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      place-items: center;
+    }
+
+    .header img {
+      height: 9rem;
+      width: 20rem;
+      left: 0rem;
+      top: 0rem;
+      position: absolute;
+    }
+
+    .heading-holder {
+      position: relative;
+      text-align: center;
+    }
+
+    .heading {
+      font-size: 3rem;
+    }
+
+
+    /* Circular Menu */
+
+
+    .circular-menu {
+      width: 18rem;
+      height: 18rem;
+      position: absolute;
+      top: 0.5rem;
+      left: 75%;
+    }
+
+    .circle {
+      width: 18rem;
+      height: 18rem;
+      -webkit-transition: all 1s ease-out;
+      -moz-transition: all 1s ease-out;
+      transition: all 1s ease-out;
+    }
+
+
+    .change-icon-color {
+      color: transparent !important;
+      background-blend-mode: exclusion;
+      -webkit-text-stroke: 0.04rem white;
+    }
+
+    .name-color {
+      color: white;
+      -webkit-text-stroke: 0.28px black;
+      text-shadow: none;
+      font-size: 0.9rem;
+    }
+
+
+    /* Formation of ASPIRE */
+
+    .about {
+      position: relative;
+      margin-top: 0rem;
+      margin-bottom: 2rem;
+      padding: 0;
+    }
+
+    .about img {
+      height: 120vh;
+      width: 100%;
+    }
+
+
+    .formation {
+      position: absolute;
+      left: 110vh;
+      top: 9vh;
+      margin: 1rem;
+      font-size: 1.2rem;
+      text-align: left;
+      color:#5a3448;
+      border-left: 0.1rem solid #5a3448;
+      padding:1rem;
+    }
+
+    .formation h2 {
+      font-size: 2.2rem;
+      margin-bottom: 2rem;
+      color:#5a3448;
+    }
+
+    .btn {
+      position: absolute;
+      left:50%;
+      margin-top: 2rem;
+      font-size: 1.3rem;
+      background-color: rgba(255,255,255,0.3);
+      color:#5a3448;
+    }
+
+    /* What ASPIRE Offers */
+
+    .offers-container {
+      display: grid;
+      place-items: center;
+      padding: 5%;
+    }
+
+    .offers-container h2{
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      color:#881244;
+    }
+
+    .offers-container ul{
+      font-size: 1.2rem;
+      line-height: 2.2rem;
+      color:#5a3448;
+    }
+
+    /* Vision */
+
+    .vision-container {
+      background-image: url('Path.jpg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%;
+      height: 100vh;
+      position: relative;
+    }
+
+    .vision-text {
+      text-align: center;
+      position: relative;
+      top: 40vh;
+      left:0;
+      background-color: rgba(255,255,255,0.1);
+    }
+
+    .vision-text h2 {
+      margin-bottom: 2rem;
+      font-size: 2.5rem;
+      color:white;
+      background-color: rgba(0,0,0,0.3);
+    }
+
+    .vision-text p{
+      color:white;
+      font-size: 1.5rem;
+      font-style: italic;
+    }
+
+    /* Mission */
+
+    .mission-container {
+      display: grid;
+      place-items: center;
+      margin-top:7%;
+    }
+
+    .mission-container h2{
+        font-size: 2.5rem;
+        color:#881244;
+    }
+
+    .mission-deck {
+      margin-top: 5%;
+    }
+
+    .mission-point {
+      display: grid;
+      place-items: center;
+      background: linear-gradient(180deg, rgba(228,240,0,0.9981034650188201) 29%, rgba(190,190,24,1) 97%);
+      height:20rem;
+      width:13rem;
+      padding:1%;
+      box-shadow:0.5rem 0.6rem 0.5rem 0.5rem lightgrey;
+    }
+
+
+    .mission-text {
+      display: grid;
+      place-items: center;
+      text-align: center;
+      font-size:1.3rem;
+      color:#5a3448;
+      /* border-top: 0.07rem solid #5a3448;
+      border-bottom: 0.07rem solid #5a3448; */
+      padding:4%;
+    }
+
+
+    /* IITB Section */
+
+    .IIT-container {
+      display: grid;
+      place-items: center;
+      text-align: center;
+      margin-top: 10%;
+      margin-bottom: 5rem;
+    }
+
+    .IIT-img {
+      height: 18%;
+      width: 18%;
+      float: left;
+      margin-right: 3rem;
+      border-radius: 50%;
+      shape-outside: circle();
+    }
+
+    .IIT-text {
+      padding: 2%;
+      text-align: justify;
+      font-size: 1.1rem;
+    }
+
+    .IIT-text h2 {
+      text-align: center;
+      color:#881244;
+    }
+
+    .IIT-text p {
+      color:#5a3448;
+      padding:4%;
+    }
+
+    @media (max-width:998px){
+
+      .header {
+        background: linear-gradient(95deg, rgba(36, 16, 60, 0.9981034650188201) 36%, rgba(52, 17, 95, 1) 100%);
+        color: white;
+        text-align: center;
+        font-size: 10px;
+        height: 50vh;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        place-items: center;
+      }
+
+      .header img {
+        height: 7rem;
+        width: 17rem;
+      }
+
+      .heading {
+        font-size: 2.6rem;
+      }
+
+
+      /* Circular Menu */
+
+
+      .circular-menu {
+        width: 18rem;
+        height: 18rem;
+        top: 1rem;
+        left: 68%;
+      }
+
+      .circle {
+        width: 18rem;
+        height: 18rem;
+      }
+
+      .circle a {
+        font-size: 1.5rem;
+      }
+
+      .name-color {
+        color: white;
+        -webkit-text-stroke: 0.28px black;
+        text-shadow: none;
+        font-size: 0.87rem;
+      }
+
+      /* Formation of ASPIRE */
+
+      .about {
+        position: relative;
+        margin-top: 0rem;
+        margin-bottom: 2rem;
+        padding: 0;
+      }
+
+      .about img {
+        height: 150vh;
+        width: 100%;
+      }
+
+
+      .formation {
+        position: absolute;
+        left: 75vh;
+        top: 1vh;
+        margin: 1rem;
+        font-size: 1.2rem;
+        text-align: left;
+        color:#5a3448;
+        border-left: 0.1rem solid #5a3448;
+        padding:1rem;
+      }
+
+      .formation h2 {
+        font-size: 2.2rem;
+        margin-bottom: 2rem;
+        color:#5a3448;
+      }
+
+      .btn {
+        position: absolute;
+        left:50%;
+        margin-top: 2rem;
+        font-size: 1.3rem;
+        background-color: rgba(255,255,255,0.3);
+        color:#5a3448;
+      }
+
+
+    }
+
+
+    @media (max-width:768px){
+
+      .header {
+        background: linear-gradient(95deg, rgba(36, 16, 60, 0.9981034650188201) 36%, rgba(52, 17, 95, 1) 100%);
+        text-align: center;
+        font-size: 10px;
+        height: 65vh;
+        padding: 0;
+        margin: 0;
+        display:block;
+      }
+
+      .header img {
+        height: 7rem;
+        width: 17rem;
+      }
+
+      .heading {
+        font-size: 2rem;
+        position: absolute;
+        top:22rem;
+        left:3%;
+      }
+
+
+      /* Circular Menu */
+
+
+      .circular-menu {
+        width: 18rem;
+        height: 18rem;
+        top: 6rem;
+        left: 5rem;
+      }
+
+      .circle {
+        width: 18rem;
+        height: 18rem;
+      }
+
+      .circle a {
+        font-size: 1.5rem;
+      }
+
+      .name-color {
+        color: white;
+        -webkit-text-stroke: 0.28px black;
+        text-shadow: none;
+        font-size: 0.87rem;
+      }
+
+      /* Formation of ASPIRE */
+
+      .about {
+        position: relative;
+        margin-top: 0rem;
+        margin-bottom: 2rem;
+        padding: 0;
+      }
+
+      .about img {
+        height: 120vh;
+        width: 100%;
+      }
+
+
+      .formation {
+        position: absolute;
+        left: 2vh;
+        top: 3vh;
+        font-size: 1.2rem;
+        text-align: left;
+          color:#5a3448;
+        border-left: none;
+        padding:0rem;
+      }
+
+      .formation h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color:#5a3448;
+      }
+
+      .formation p{
+        background: rgba(255,255,255,0.5);
+      }
+
+      .btn {
+        position: absolute;
+        left:50%;
+        margin-top: 2rem;
+        font-size: 1.3rem;
+        background-color: rgba(255,255,255,0.8);
+        color:#5a3448;
+      }
+
+      .mission-point {
+        height:20rem;
+        width:20rem;
+      }
+
+
+    }
+
+    /* Back to top button */
+
+    .back-to-top {
+      position: fixed;
+      bottom: 25px;
+      right: 3rem;
+      left:93%;
+      display: none;
+      width:5%;
+      color: #881244;
+      background: #ffffd4;
+    }
+
+    /* Footer */
+
+    #footer {
+      padding: 1%;
+      background-color: #24103c;
+      padding-top: 2rem;
+      font-family: 'Cormorant Garamond', serif;
+    }
+
+    .footer-left {
+      padding: 1rem;
+      border-right: 0.1rem solid #881244;
+    }
+
+    .left-left {
+      display: grid;
+      place-items: center;
+    }
+
+    .left-left img {
+      height: 8rem;
+      width: 16rem;
+    }
+
+    .left-right {
+      display: grid;
+      place-items: center;
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      font-weight: lighter;
+      padding-right: 3.5rem;
+      line-height: 1.8rem;
+      text-align: justify;
+      color: #ffffed;
+    }
+
+    .address-icon {
+      font-size: 2.6rem;
+      color: transparent;
+      -webkit-text-stroke: 0.04rem #ffffed;
+      position: absolute;
+      left: 52%;
+      top: 50%;
+    }
+
+
+    .footer-right {
+      padding: 1rem;
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .footer-right a {
+      text-decoration: none;
+      color: #ffffed;
+      font-size: 1rem;
+    }
+
+    .footer-right p {
+      margin-top: 2rem;
+      color: #ffffed;
+      font-size: 0.85rem;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .footer-text {
+      display: grid;
+      place-items: center;
+      text-align: center;
+      margin-top: 4rem;
+      color: #881244;
+      margin-bottom: 2rem;
+    }
+
+    .sicon {
+      padding: 1rem;
+      font-size: 1.4rem;
+      color: #ffffed;
+    }
+
+      @media (max-width:768px){
+         .footer-left {
+      padding: 1rem;
+      border-right:none;
+    }
+
+    .left-left img {
+      height: 5rem;
+      width: 10rem;
+    }
+    }
+  </style>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <img src="WhiteTextLogo.png">
+    <div class="heading-holder">
+      <h1 class="heading">About Us</h1>
+    </div>
+  </div>
+
+  <!-- Circular Menu -->
+
+  <nav class="circular-menu">
+
+    <div class="circle">
+      <a style="text-decoration:none" href="#" class="fas fa-home change-icon-color" onclick="href='index.html'">
+        <div class="name name-color">Home</div>
+      </a>
+      <a style="text-decoration:none" href="#" class="fas fa-address-card change-icon-color" onclick="href='about.html'">
+        <div class="name name-color">About</div>
+      </a>
+      <a style="text-decoration:none" href="#" class="fas fa-user-tie change-icon-color" onclick="href='team-intro.html'">
+        <div class="name name-color">People</div>
+      </a>
+      <a style="text-decoration:none" href="#" class="fas fa-building change-icon-color" onclick="href='infrastructure.html'">
+        <div class="name name-color">Spaces</div>
+      </a>
+      <a style="text-decoration:none" href="#" class="fas fa-users change-icon-color" onclick="href='clients.html'">
+        <div class="name name-color">Clients</div>
+      </a>
+      <a style="text-decoration:none" href="#" class="fas fa-images change-icon-color" onclick="href='gallery.html'">
+        <div class="name name-color">Gallery</div>
+      </a>
+      <a style="text-decoration:none" href="#" class="fas fa-calendar-day change-icon-color" onclick="href='events.html'">
+        <div class="name name-color">Events</div>
+      </a>
+      <a style="text-decoration:none" href="#" class="fas fa-newspaper change-icon-color" onclick="href='mediacoverage.html'">
+        <div class="name name-color">Media</div>
+      </a>
+      <a style="text-decoration:none" href="#" class="fas fa-paper-plane change-icon-color" onclick="href='contact.html'">
+        <div class="name name-color">Contact</div>
+      </a>
+    </div>
+
+    <a style="text-decoration:none" href="" class="menu-button fa fa-bars fa-2x change-icon-color"></a>
+
+  </nav>
+
+
+  <!-- Formation of ASPIRE -->
+
+  <div class="container-fluid about">
+    <img src="BuildingModelCropped.jpg" alt="...">
+    <div class="formation">
+      <h2>Formation of ASPIRE</h2>
+      <p>
+        The Ministry of Education (formerly, the Ministry of Human Resource Development), Government of India commissioned IIT Bombay to build a Research Park at the IIT Bombay campus in Powai, Mumbai. Set up in 2016, ASPIRE - IIT Bombay’s Research Park Foundation (IITBRPF) is a non-profit entity to accelerate innovation and research to achieve impactful outcomes. Modelled on learnings from successful national and global research parks, ASPIRE is set to become the nerve centre linking knowledge, expertise, and resources to boost industry-academia culture in India.
+        <a href="timeline.html"><button type="button" class="btn">The Journey so far..</button></a>
+      </p>
+    </div>
+
+
+  </div>
+  </div>
+
+
+
+  <div class="container offers-container">
+    <h2>What we do at ASPIRE</h2>
+    <ul>
+      <li>Establish and nurture R&D collaboration between industries and IIT Bombay for mutual value creation</li>
+      <li>Transform into an innovation hub thriving on maturing science & technology towards industry and societal impact</li>
+      <li>Offer industry-centric working spaces to collaborate and jointly develop innovative solutions to advance emerging technologies towards commercialization</li>
+      <li>Present students with valuable corporate research exposure to strengthen the pool of talented and competent manpower in the country</li>
+    </ul>
+  </div>
+
+
+  <!-- Vision -->
+  <div class="container-fluid vision-container">
+    <div class="vision-text">
+      <h2>Vision</h2>
+      <p>
+        To achieve recognition for innovation, entrepreneurship and research excellence through industry-academia collaboration.
+      </p>
+    </div>
+  </div>
+
+  <!-- Mission -->
+  <div class="container mission-container">
+    <h2>Mission</h2>
+    <div class="card-deck mission-deck">
+      <div class="card mission-point">
+        <div class="mission-text">
+          <p>
+            To establish an innovation hub through industry-academia collaboration
+          </p>
+        </div>
+      </div>
+      <div class="card mission-point">
+        <div class="mission-text">
+          <p>
+            Enable two-way flow of knowledge and resources
+          </p>
+        </div>
+      </div>
+      <div class="card mission-point">
+        <div class="mission-text">
+          <p>
+            Creation of joint IITB-industry R&D groups for stronger impact
+          </p>
+        </div>
+      </div>
+      <div class="card mission-point">
+        <div class="mission-text">
+          <p>
+            Strengthen engagement with industry to translate IIT Bombay research
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- IIT -->
+
+  <div class="container IIT-container">
+    <div class="IIT-text">
+      <h2>Indian Institute of Technology Bombay</h2>
+
+
+      <img class="IIT-img" src="IITBLogo.png">
+      <p>
+        The Indian Institute of Technology Bombay is recognised as a leader in the field of engineering education and research. The campus continues to witness the merging of exceptional faculty and bright students, making it a hub of innovation.
+        ASPIRE invites industries to take root on this campus to build on the intellectual capital of IIT Bombay.
+      </p>
+    </div>
+  </div>
+
+  <a id="back-to-top" href="#" class="btn btn-light btn-lg back-to-top" role="button"><i class="fas fa-chevron-up"></i></a>
+
+  <section id="footer">
+
+    <div class="row">
+      <div class="col-md-6 footer-left">
+        <div class="row">
+          <div class="col-6 left-left">
+            <img src="WhiteTextLogo.png">
+          </div>
+          <div class="col-6 left-right">
+            <p>
+              IITB Research Park Foundation, <br>
+              Indian Institute of Technology Bombay, <br>
+              Main Building, 6B, Powai,
+              <br>Mumbai, Maharashtra 400076 
+
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 footer-right">
+        <h6><a style="margin-right:3rem" href="about.html">About Us</a> <a style="margin-right:3rem" href="infrastructure.html"> Spaces </a> <a href="contact.html"> Contact</a></h6>
+        <p>
+          Follow us:
+        </p>
+        <div class="social-icons">
+          <a style="text-decoration:none;" href="https://www.facebook.com/IITBRP/" target="_blank"><i class="fab fa-facebook-f sicon"></i></a>
+          <a style="text-decoration:none;" href="https://www.instagram.com/iitbrp/" target="_blank"><i class="fab fa-instagram sicon"></i></a>
+          <a style="text-decoration:none;" href="https://twitter.com/IITBRP" target="_blank"><i class="fab fa-twitter sicon"></i></a>
+          <a style="text-decoration:none;" href="https://www.linkedin.com/company/iit-bombay-research-park-aspire-/" target="_blank"><i class="fab fa-linkedin-in sicon"></i></a>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+
+    <div class="footer-text">
+      Copyright line
+    </div>
+  </section>
+
+
+
+  <script>
+
+  // Circular Menu
+    var items = document.querySelectorAll('.circle a');
+
+    for (var i = 0, l = items.length; i < l; i++) {
+      items[i].style.left = (50 - 35 * Math.cos(-0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)).toFixed(4) + "%";
+
+      items[i].style.top = (50 + 35 * Math.sin(-0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)).toFixed(4) + "%";
+    }
+
+    document.querySelector('.menu-button').onclick = function(e) {
+      e.preventDefault();
+      document.querySelector('.circle').classList.toggle('open');
+    }
+
+    window.onload = function(e) {
+      e.preventDefault();
+      document.querySelector('.circle').classList.toggle('open');
+    }
+
+    $('.carousel').carousel({
+      interval: 5000
+    })
+
+
+  </script>
+<script>
+// Back to top
+
+    $(function() {
+      var text = $(".text");
+      $(window).scroll(function() {
+        var scroll = $(window).scrollTop();
+
+        if (scroll >= 400) {
+          text.removeClass("hidden");
+        }
+      });
+    });
+
+
+
+    // Detect request animation frame
+    var scroll = window.requestAnimationFrame ||
+      // IE Fallback
+      function(callback) {
+        window.setTimeout(callback, 1000 / 60)
+      };
+    var elementsToShow = document.querySelectorAll('.show-on-scroll');
+
+    function loop() {
+
+      Array.prototype.forEach.call(elementsToShow, function(element) {
+        if (isElementInViewport(element)) {
+          element.classList.add('is-visible');
+        } else {
+          element.classList.remove('is-visible');
+        }
+      });
+
+      scroll(loop);
+    }
+
+    // Call the loop for the first time
+    loop();
+
+    // Helper function from: http://stackoverflow.com/a/7557433/274826
+    function isElementInViewport(el) {
+      // special bonus for those using jQuery
+      if (typeof jQuery === "function" && el instanceof jQuery) {
+        el = el[0];
+      }
+      var rect = el.getBoundingClientRect();
+      return (
+        (rect.top <= 0 &&
+          rect.bottom >= 0) ||
+        (rect.bottom >= (window.innerHeight || document.documentElement.clientHeight) &&
+          rect.top <= (window.innerHeight || document.documentElement.clientHeight)) ||
+        (rect.top >= 0 &&
+          rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
+      );
+    }
+
+
+
+
+    $(document).ready(function() {
+      $(window).scroll(function() {
+        if ($(this).scrollTop() > 50) {
+          $('#back-to-top').fadeIn();
+        } else {
+          $('#back-to-top').fadeOut();
+        }
+      });
+      // scroll body to 0px on click
+      $('#back-to-top').click(function() {
+        $('body,html').animate({
+          scrollTop: 0
+        }, 400);
+        return false;
+      });
+    });
+</script>
+</body>
+
+</html>

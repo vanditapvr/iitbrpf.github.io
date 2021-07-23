@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+
+  <!-- Links -->
+  <!-- Bootstrap Links -->
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+  <!-- Font Awesome links -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/6c2bd266c9.js" crossorigin="anonymous"></script>
+
+  <!-- Font Links -->
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- CSS Stylesheet Links -->
+
+  <link href="C:\Users\vandi\.atom\IITBRPF Website\CSS\header.css" rel="stylesheet">
+
+
+  <style>
+    body {
+      overflow-x: hidden;
+      background-color: #ffffed;
+    }
+
+    /* Header */
+
+    .header {
+      background: linear-gradient(95deg, rgba(36, 16, 60, 0.9981034650188201) 36%, rgba(52, 17, 95, 1) 100%);
+      color: white;
+      text-align: center;
+      font-size: 10px;
+      height: 46vh;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      place-items: center;
+    }
+
+    .header img {
+      height: 9rem;
+      width: 20rem;
+      left: 0rem;
+      top: 0rem;
+      position: absolute;
+    }
+
+    .heading-holder {
+      position: relative;
+      text-align: center;
+    }
+
+    .heading {
+      font-size: 3rem;
+    }
+
+
+    /* Circular Menu */
+
+
+    .circular-menu {
+      width: 18rem;
+      height: 18rem;
+      position: absolute;
+      top: 0.5rem;
+      left: 75%;
+    }
+
+    .circle {
+      width: 18rem;
+      height: 18rem;
+      -webkit-transition: all 1s ease-out;
+      -moz-transition: all 1s ease-out;
+      transition: all 1s ease-out;
+    }
+
+
+    .change-icon-color {
+      color: transparent !important;
+      background-blend-mode: exclusion;
+      -webkit-text-stroke: 0.04rem white;
+    }
+
+    .name-color {
+      color: white;
+      -webkit-text-stroke: 0.28px black;
+      text-shadow: none;
+      font-size: 0.9rem;
+    }
+
+    .bod-container {
+      margin-top: 5%;
+    }
+
+    .bod-image{
+      height:16rem;
+      width:14rem;
+      box-shadow: 0.5rem 0.5rem 0.5rem 0.5rem grey;
+    }
+
+    .bod {
+      margin-top: 5rem;
+      text-align: center;
+    }
+
+    .bod-container h2 {
+      color:#5a3448;
+      font-size: 2.5rem;
+      text-align: left;
+      border-left: 0.1rem solid #5a3448;
+      padding:1rem;
+    }
+
+    .bod a{
+      text-decoration: none;
+    }
+
+    .bod h3 {
+      color:#881244;
+      margin-top: 2.2rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border-bottom: 0.08rem solid #881244;
+      padding:1rem;
+    }
+
+    .bod h5 {
+      color:#a53463;
+      font-size: 1rem;
+    }
+
+    .modal {
+      background-color: #ffffed;
+    }
+
+    .modal-content {
+      padding: 3%;
+      background-color: #fdf5e6;
+      text-align:justify;
+      color:#881244;
+    }
+
+    .modal-header {
+      border: none;
+      text-align: center;
+    }
+
+    .modal-title {
+      text-align: center;
+      font-weight: bold;
+      color: #9f8170;
+    }
+
+    .team-container{
+      margin-top:8rem;
+    }
+
+    .team-container h2 {
+      color:#5a3448;
+      font-size: 2.5rem;
+      text-align: left;
+      border-left: 0.1rem solid #5a3448;
+      padding:1rem;
+    }
+
+    .team {
+        margin-top: 5rem;
+        text-align: center;
+    }
+
+    .team h3 {
+      color:#881244;
+      margin-top: 2.2rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border-bottom: 0.08rem solid #881244;
+      padding:1rem;
+      text-align: center;
+    }
+
+    .title {
+      color:#a53463;
+      font-size: 1rem;
+      font-style: italic;
+    }
+
+    .email {
+      color:grey;
+      font-size: 0.9rem;
+    }
+
+    .team-image{
+      height:14rem;
+      width:14rem;
+      box-shadow: 0.5rem 0.5rem 0.5rem 0.5rem grey;
+    }
+
+
+    </style>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <!-- Header -->
+    <div class="header">
+      <img src="C:\Users\vandi\.atom\Research Park Official Website\Images\Research_Park_Logos\WhiteTextLogo.png">
+      <div class="heading-holder">
+        <h1 class="heading">People</h1>
+      </div>
+    </div>
+
+    <!-- Circular Menu -->
+
+    <nav class="circular-menu">
+
+      <div class="circle">
+        <a style="text-decoration:none" href="#" class="fas fa-home change-icon-color" onclick="href='index.html'">
+          <div class="name name-color">Home</div>
+        </a>
+        <a style="text-decoration:none" href="#" class="fas fa-address-card change-icon-color" onclick="href='about.html'">
+          <div class="name name-color">About</div>
+        </a>
+        <a style="text-decoration:none" href="#" class="fas fa-user-tie change-icon-color" onclick="href='team-intro.html'">
+          <div class="name name-color">Team</div>
+        </a>
+        <a style="text-decoration:none" href="#" class="fas fa-building change-icon-color" onclick="href='infrastructure.html'">
+          <div class="name name-color">Infrastructure</div>
+        </a>
+        <a style="text-decoration:none" href="#" class="fas fa-users change-icon-color" onclick="href='clients.html'">
+          <div class="name name-color">Clients</div>
+        </a>
+        <a style="text-decoration:none" href="#" class="fas fa-images change-icon-color" onclick="href='gallery.html'">
+          <div class="name name-color">Gallery</div>
+        </a>
+        <a style="text-decoration:none" href="#" class="fas fa-calendar-day change-icon-color" onclick="href='events.html'">
+          <div class="name name-color">Events</div>
+        </a>
+        <a style="text-decoration:none" href="#" class="fas fa-newspaper change-icon-color" onclick="href='mediacoverage.html'">
+          <div class="name name-color">Media</div>
+        </a>
+        <a style="text-decoration:none" href="#" class="fas fa-paper-plane change-icon-color" onclick="href='contact.html'">
+          <div class="name name-color">Contact</div>
+        </a>
+      </div>
+
+      <a style="text-decoration:none" href="" class="menu-button fa fa-bars fa-2x change-icon-color"></a>
+
+    </nav>
+
+    <div class="container bod-container">
+      <h2>Board Of Directors</h2>
+      <div class="row">
+        <div class="col-md-4 bod">
+          <a href="#" data-toggle="modal" data-target="#bod1">
+          <img class="bod-image"src="C:\Users\vandi\.atom\IITBRPF Website\Images\BOD_Pictures\Prof.Subhashis Chaudhuri- Director (2).jpg">
+          <h3>
+            Prof. Subhasis Chaudhuri
+          </h3>
+          <h5>
+            <em>Director, IIT Bombay</em>
+          </h5>
+        </a>
+        <!-- Modal -->
+<div class="modal fade" id="bod1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Prof. Subhasis Chaudhuri<br>Director, IIT Bombay</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Prof. Subhasis Chaudhuri has held various administrative positions at IIT Bombay including Deputy Director (Academic and Infrastructural Affairs), Dean (International Relations), Head of the Electrical Engineering Department. He is also a Distinguished Alumnus of IIT Kharagpur and is known for his pioneering studies in the areas of image processing, computer vision, machine learning and computational haptics. Some of the areas where he has contributed significantly include - depth recovery from defocused images, image super-resolution, blind deconvolution, hyper-spectral image visualization and pattern recognition in remote sensing images. Prof. Chaudhuri has received numerous awards for his research, which include the G.D. Birla Award for Scientific Research, Shanti Swarup Bhatnagar Prize, Swarnajayanti Fellowship, NASI-Reliance Industries Platinum Jubilee Award for Application Oriented Innovation, J. C. Bose National Fellowship, Hari Om Prerit Dr. Vikram Sarabhai Research Award to name a few.
+      </div>
+    </div>
+  </div>
+</div>
+        </div>
+
+        <div class="col-md-4 bod">
+          <a href="#" data-toggle="modal" data-target="#bod2">
+          <img class="bod-image" src="C:\Users\vandi\.atom\IITBRPF Website\Images\BOD_Pictures\Prof.Prasanna Mujumdar- Deputy Director.jpg" alt="Personal Trainer 1" >
+          <h3>
+            Prof. Prasanna M. Mujumdar
+          </h3>
+          <h5>
+            <em>Deputy Director, Finance & External Affairs, IIT Bombay</em>
+          </h5>
+          </a>
+          <!-- Modal -->
+<div class="modal fade" id="bod2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Prof. Prasanna M. Mujumdar<br>Deputy Director, Finance & External Affairs, IIT Bombay</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+    </div>
+  </div>
+</div>
+        </div>
+
+        <div class="col-md-4 bod">
+          <a href="#" data-toggle="modal" data-target="#bod3">
+          <img class="bod-image" src="C:\Users\vandi\.atom\IITBRPF Website\Images\BOD_Pictures\Prof.Milind Atrey- Dean R&D.jpg" alt="Personal Trainer 1" >
+          <h3>
+            Prof. Milind Atrey
+          </h3>
+          <h5>
+            <em>Dean (Research & Development), IIT Bombay</em>
+          </h5>
+          </a>
+          <!-- Modal -->
+<div class="modal fade" id="bod3" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Prof. Milind Atrey <br>Dean (Research & Development), IIT Bombay</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Prof Milind Atrey is currently the Dean (Research and Development) at IIT
+Bombay, holds the Bank of Baroda chair for Entrepreneurship, in addition to be
+Professor in the Department of Mechanical Engineering. Before taking charge as
+Dean (R&D), he was the Professor-in-charge of the Business Incubator at IIT
+Bombay for 6.5 years. He is also the President of the Indian Cryogenics Council
+and a founding chair of IMechE’s Process Division in India. He is the Fellow of
+Indian Cryogenics Council and IMechE (Institution of Mechanical Engineers, UK).
+He has been entrusted with various projects related to Defence, Space, and Atomic
+Energy applications. Prof. Atrey is the recipient of various awards namely, the Prof
+Sukhatme Award for Excellence in Teaching, the Dr Patwardhan Technology
+development award, the Industrial Impact award and the Excellence in Teaching
+award. He has more than 150 research publications, 9 patents and a book to his
+credit.
+As Dean (R&D), his office is responsible to take care of academia - industry
+collaboration, Technology transfers and IP monitoring in addition to managing the
+sponsored research and consultancy projects at IIT Bombay.
+
+      </div>
+    </div>
+  </div>
+</div>
+        </div>
+
+        <div class="col-md-4 bod">
+          <a href="#" data-toggle="modal" data-target="#bod4">
+          <img class="bod-image" src="C:\Users\vandi\.atom\IITBRPF Website\Images\Team_Pictures\Prof.Ravindra Gudi- PIC R&D.jpeg" alt="Personal Trainer 1" >
+          <h3>
+            Prof. Ravindra Gudi
+          </h3>
+          <h5>
+            <em>Principal-in-charge, IITB Research Park Foundation</em>
+          </h5>
+          </a>
+          <!-- Modal -->
+<div class="modal fade" id="bod4" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Prof. Ravindra Gudi<br>Principal-in-charge, IITB Research Park Foundation</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Dr. Ravindra D. Gudi is a Professor at the Department of Chemical Engineering, Indian Institute of Technology, Bombay. He also holds the Institute Chair Position in Artificial Intelligence and Machine Learning. His research interests lie broadly in process systems engineering & green engineering, i.e. modeling, optimization, control and fault diagnosis of process systems, sustainability in industrial practices. He also serves on the Executive Council of the International Federation of Automatic Control. Prof. Gudi is a recipient of several awards including the Canadian Commonwealth Fellowship by the Government of Canada (1991-1995), Lovraj Kumar Memorial Award for promotion of Industry-Academia Interaction (July 1998 - January 1999), Manudhane Applied Research Award (2006), Herdillia Award for Excellence in Basic Chemical Engineering (2009), and the Distinguished Instrumentation Professional Award (2015). He has also been a visiting professor at the University of Wisconsin-Madison and University of Washington In St. Louis. He serves as a consultant to several industries in India and abroad.
+      </div>
+    </div>
+  </div>
+</div>
+        </div>
+
+        <div class="col-md-4 bod">
+          <a href="#" data-toggle="modal" data-target="#bod5">
+          <img class="bod-image" src="C:\Users\vandi\.atom\IITBRPF Website\Images\BOD_Pictures\Prof.Devag Khakhar.jpg" alt="Personal Trainer 1" >
+          <h3>
+            Prof. Devang Khakhar
+          </h3>
+          <h5>
+            <em>Professor, Department of Chemical Engineering</em>
+          </h5>
+          </a>
+          <!-- Modal -->
+<div class="modal fade" id="bod5" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Prof. Devang Khakhar<br>Professor, Department of Chemical Engineering</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Professor Devang Khakhar is currently Professor of Chemical Engineering at IIT Bombay. Professor Khakhar did his B.Tech. from IIT Delhi in 1981 and his Ph.D. from the University of Massachusetts, Amherst in 1986. He joined the Department of Chemical Engineering at IIT Bombay in January 1987, and has been with the Institute since then. Prof. Khakhar's research interests include mechanics of granular materials and polymer processing. He has been recognised for his research by the Bhatnagar Prize and is a Fellow of the Indian National Academy of Engineering, the Indian Academy of Sciences, the Indian National Science Academy and the National Academy of Science, India. Professor Khakhar serves as a member of the Atomic Energy Regulatory Board. He has served as Head, Chemical Engineering, Dean (Faculty Affairs) and Director at IIT Bombay.
+
+      </div>
+    </div>
+  </div>
+</div>
+        </div>
+
+        <div class="col-md-4 bod">
+          <a href="#" data-toggle="modal" data-target="#bod6">
+          <img class="bod-image" src="C:\Users\vandi\.atom\IITBRPF Website\Images\BOD_Pictures\Prof.MS Ananth- Former Director IITM.jpg" alt="Personal Trainer 1" >
+          <h3>
+            Prof. M. S. Ananth
+          </h3>
+          <h5>
+            <em>Former Director IIT Madras</em>
+          </h5>
+          </a>
+          <!-- Modal -->
+<div class="modal fade" id="bod6" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Prof. M. S. Ananth<br>Former Director IIT Madras</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Prof. M.S. Ananth was Director, IIT Madras from Dec 2001 to July 2011. He is the architect of the world’s largest open-courseware in technical education, NPTEL. He established
+the first university based research park in India, the IIT Madras Research Park to promote innovation and entrepreneurship. He has been consistently rated a good teacher. He is a Fellow of IIChE and INAE. He was a Member of both the Scientific Advisory Committee to the Cabinet and the National Manufacturing Competitiveness Council from 2007-2011. He has been a Visiting Professor in IIT Kanpur, IIT Bombay, IISc Bangalore, Princeton University and the University of Colorado (USA) and RWTH, Aachen (Germany). He participated in the World Economic Forum as a member of the Global University Leaders Forum from 2007 to 2011. In December 2011, I&EC Research published a special Festschrift Issue in honour of Professor M.S. Ananth, “leading researcher, gifted teacher and visionary leader of higher education in India”.
+      </div>
+    </div>
+  </div>
+</div>
+        </div>
+
+        <div class="col-md-4 bod">
+          <a href="#" data-toggle="modal" data-target="#bod7">
+          <img class="bod-image" src="C:\Users\vandi\.atom\IITBRPF Website\Images\BOD_Pictures\Mr.Pradeep Goyal- Founder Pradeep Metals.jpg" alt="Personal Trainer 1" >
+          <h3>
+            Mr. Pradeep Goyal
+          </h3>
+          <h5>
+            <em>Founder, Chairman & Managing Director, Pradeep Metals Limited</em>
+          </h5>
+          </a>
+          <!-- Modal -->
+<div class="modal fade" id="bod7" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Mr. Pradeep Goyal<br>Founder, Chairman & Managing Director, Pradeep Metals Limited</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+    </div>
+  </div>
+</div>
+        </div>
+
+        <div class="col-md-4 bod">
+          <a href="#" data-toggle="modal" data-target="#bod8">
+          <img class="bod-image" src="C:\Users\vandi\.atom\IITBRPF Website\Images\BOD_Pictures\Dr.Hemant Kanakia- President Kanakia Ventures.jpg" alt="Personal Trainer 1" >
+          <h3>
+            Dr Hemant Kanakia
+          </h3>
+          <h5>
+            <em>President, Kanakia Ventures</em>
+          </h5>
+          </a>
+          <!-- Modal -->
+<div class="modal fade" id="bod8" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Dr Hemant Kanakia<br>President, Kanakia Ventures</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        An IIT Bombay alumnus, Dr. Kanakia pioneered a new type of switching fabric, which was used to build very fast data switches.  He has patents on new ways of sending videos over packetized transport that has now become very core of video streaming services and a patent on 'means and methods for fast routing of packets', to his credit. Before joining Columbia Capital, he was founder and CEO of Torrent Networking Technology, co-founder of Photuris and Gemplex, inc. (now aquired by different companies). Previously, Dr. Kanakia served on the Board of Directors of many private companies as well as on the board of trustees for Virginia Tech and Case Western Reserve University. Dr. Hemant Kanakia is focused on mentoring young entrepreneurs in India through India Angel networks in the sectors ranging from education, technology and healthcare.
+      </div>
+    </div>
+  </div>
+</div>
+        </div>
+
+        <div class="col-md-4 bod">
+          <a href="#" data-toggle="modal" data-target="#bod9">
+          <img class="bod-image" src="C:\Users\vandi\.atom\IITBRPF Website\Images\BOD_Pictures\Dr.Nitin Kareer- Chief Secretary revenue GoM.jpg" alt="Personal Trainer 1" >
+          <h3>
+            Dr. Nitin Kareer
+          </h3>
+          <h5>
+            <em>Additional Chief Secretary (Revenue), Government of Maharashtra</em>
+          </h5>
+          </a>
+          <!-- Modal -->
+<div class="modal fade" id="bod9" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Dr. Nitin Kareer<br>Additional Chief Secretary (Revenue), Government of Maharashtra</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Dr. Nitin Kareer joined the Indian Administrative Service in 1988 with the objective of serving the public and positively impacting the lives of people. Working in several sectors across the State of Maharashtra, primarily in Revenue administration, Urban Development, Taxation, and Development administration have provided this opportunity in ample measure. He has been a recipient of the Satyen Mitra Award for the Best Adult Literacy Programme in the country in 1998 for the Sangli district. He has also been instrumental in full computerisation of the land transaction in the Registration Department in 2002 and has won the first prize at National e-Governance. He has been recognised internationally for his automated building plan approval system developed at Pune Municipal Corporation. He is also closely involved in the promotion of sports activities in the state of Maharashtra. Dr Nitin is continuously focused on ensuring the proper implementation of social sector schemes for empowerment of the public.
+      </div>
+    </div>
+  </div>
+</div>
+        </div>
+
+        <div class="col-md-4 bod">
+          <a href="#" data-toggle="modal" data-target="#bod10">
+          <img class="bod-image" src="C:\Users\vandi\.atom\IITBRPF Website\Images\BOD_Pictures\Ms.Rekha Koita- Co founder Koita Foundation.jpg" alt="Personal Trainer 1" >
+          <h3>
+            Ms Rekha Koita
+          </h3>
+          <h5>
+            <em>Co-Founder, Koita Foundation</em>
+          </h5>
+        </a>
+          <!-- Modal -->
+<div class="modal fade" id="bod10" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Ms Rekha Koita<br>Co-Founder, Koita Foundation</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Rekha is the co-founder of Koita Foundation, an organization which works with NGOs to build scale and enhance impact through process improvements and technology enhancements. She has also been a corporate trainer for the past 10 years and specializes in business process consulting. Rekha was a management consultant at Accenture for over 8 years where her key focus areas included operations (business process re-engineering, ERP design and implementation, performance/profitability enhancement), and human resources (corporate governance, recruitment and training).Based on her experience in management consulting, Rekha conducts corporate training for leading Indian and multinational organizations. She also conducts training workshops for start-ups and NGOs in niche areas like problem solving and presentation skills. Rekha has done her B.Tech from IIT Mumbai in 1992, after she completed her Master of Science degree in Materials Science and Engineering from Carnegie Mellon University (USA) in 1994.
+      </div>
+    </div>
+  </div>
+</div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container team-container">
+      <h2>Prime Movers</h2>
+      <div class="row">
+        <div class="col-md-4 team">
+          <img class="team-image"src="C:\Users\vandi\.atom\IITBRPF Website\Images\Team_Pictures\Prof.Ravindra Gudi- PIC R&D.jpeg">
+          <h3>Prof. Ravindra Gudi</h3>
+          <p class="title">Professor- In- Charge</p>
+          <p class="email">example@example.com</p>
+      </div>
+
+      <div class="col-md-4 team">
+        <img class="team-image"src="C:\Users\vandi\.atom\IITBRPF Website\Images\Team_Pictures\Ms.Kameshwari Mangalampalli- COO R&D.png">
+        <h3>Ms.Kameshwari Mangalampalli</h3>
+        <p class="title">Chief Operating Officer</p>
+        <p class="email">example@example.com</p>
+    </div>
+
+    <div class="col-md-4 team">
+      <img class="team-image"src="C:\Users\vandi\.atom\IITBRPF Website\Images\Team_Pictures\Ms.Prerana Yadav- APM Operations.png">
+        <h3>Ms. Prerana Yadav</h3>
+        <p class="title">Assistant Project Manager- Operations</p>
+        <p class="email">example@example.com</p>
+  </div>
+
+  <div class="col-md-4 team">
+    <img class="team-image"src="C:\Users\vandi\.atom\IITBRPF Website\Images\Team_Pictures\Mr.Vinay Gupta- APM Infrastructure.png">
+     <h3>Mr. Vinay Gupta</h3>
+     <p class="title">Assistant Project Manager- Infrastructure</p>
+     <p class="email">example@example.com</p>
+</div>
+
+<div class="col-md-4 team">
+  <img class="team-image"src="C:\Users\vandi\.atom\IITBRPF Website\Images\Team_Pictures\Ms.Shubhra Moondra- Senior Project Assistant Finance.png">
+      <h3>Mrs. Shubhra Moondra</h3>
+      <p class="title">Senior Project Assistant- Finance & Accounts</p>
+  <p class="email">example@example.com</p>
+</div>
+
+<div class="col-md-4 team">
+  <img class="team-image"src="C:\Users\vandi\.atom\IITBRPF Website\Images\Team_Pictures\Ms.Divyashree Rai- Senior Project Assistant Communications.png">
+    <h3>Ms. Divyashree Rai</h3>
+    <p class="title">Senior project Assistant- Communications</p>
+    <p class="email">example@example.com</p>
+</div>
+
+<div class="col-md-4 team">
+  <img class="team-image"src="C:\Users\vandi\.atom\IITBRPF Website\Images\Team_Pictures\Ms.Vandita Reddy- Project Assistant IT.png">
+  <h3>Ms. Vandita Reddy</h3>
+    <p class="title">Project Assistant- IT Operations & Maintenance</p>
+    <p class="email">example@example.com</p>
+</div>
+      </div>
+    </div>
+
+
+
+
+<script>
+
+// Circular Menu
+
+var items = document.querySelectorAll('.circle a');
+
+for (var i = 0, l = items.length; i < l; i++) {
+  items[i].style.left = (50 - 35 * Math.cos(-0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)).toFixed(4) + "%";
+
+  items[i].style.top = (50 + 35 * Math.sin(-0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)).toFixed(4) + "%";
+}
+
+document.querySelector('.menu-button').onclick = function(e) {
+  e.preventDefault();
+  document.querySelector('.circle').classList.toggle('open');
+}
+
+window.onload = function(e) {
+  e.preventDefault();
+  document.querySelector('.circle').classList.toggle('open');
+}
+</script>
+
+  </body>
+</html>

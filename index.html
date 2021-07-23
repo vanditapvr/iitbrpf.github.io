@@ -1,0 +1,1853 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Links -->
+  <!-- bootstrap links -->
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+  <!-- Font Awesome links -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/6c2bd266c9.js" crossorigin="anonymous"></script>
+
+  <!-- Font Links -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playball&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tinos&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+  <!-- CSS Stylesheet Links -->
+
+  <link href="header.css" rel="stylesheet">
+
+  <!-- Owl Carousel CSS Link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous"
+    referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    /* Global  */
+    body {
+      background-color: #ffffed;
+      font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+    }
+
+    /* Header */
+    .header-bg {
+      height: 100vh;
+      width:100%;
+      min-height: 350px;
+      background: no-repeat center center scroll;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      object-fit: cover;
+    }
+
+
+    .display-overlay {
+      z-index: 1;
+      width: 100%;
+    }
+
+
+    .overlay {
+      position: absolute;
+      width: 100%;
+      height: 15vh;
+      transition: .5s ease;
+      opacity: 1;
+      color: white;
+      font-size: 20px;
+      padding: 20px;
+      float: left;
+      z-index: 1;
+      background: rgba(36, 16, 60, 0.19);
+    }
+
+    .overlay img {
+      height: 8rem;
+      width: 18rem;
+      position: absolute;
+      top: -1.2rem;
+      left: 0rem;
+    }
+
+
+    .button-control-header {
+      position: absolute;
+      top: 75vh;
+    }
+
+    /* Circular Menu */
+
+
+    .circular-menu {
+      width: 25rem;
+      height: 25rem;
+      position: absolute;
+      top: 8rem;
+      left: 150vh;
+    }
+
+    .circle {
+      width: 25rem;
+      height: 25rem;
+      -webkit-transition: all 1s ease-out;
+      -moz-transition: all 1s ease-out;
+      transition: all 1s ease-out;
+    }
+
+
+    .change-icon-color {
+      color: transparent !important;
+      background-blend-mode: exclusion;
+      -webkit-text-stroke: 0.1rem white;
+    }
+
+    .name-color {
+      color: white;
+      -webkit-text-stroke: 0.28px black;
+      text-shadow: none;
+
+    }
+
+
+
+
+    /* Tagline */
+
+    .tagline-holder {
+      width: 40%;
+      position: absolute;
+      top: 35vh;
+      border-left: 3px solid whitesmoke;
+    }
+
+    .tagline-text {
+      color: whitesmoke;
+      font-size: 3rem;
+      margin-left: 1rem;
+      animation-name: focus-in-expand-top;
+      animation-duration: 1s;
+      animation-timing-function: ease-in;
+      animation-delay: 0s;
+      animation-iteration-count: 1;
+      animation-direction: normal;
+      animation-fill-mode: none;
+      font-family: 'Alice', serif;
+    }
+
+
+    @keyframes focus-in-expand-top {
+      0% {
+        letter-spacing: 3em;
+        -webkit-transform: translateY(1px);
+        transform: translateY(1px);
+        filter: blur(7px);
+        opacity: 0;
+      }
+
+      100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        filter: blur(0);
+        opacity: 1;
+      }
+    }
+
+    /* Tab screen size */
+
+
+    @media only screen and (max-width:992px) {
+
+      .overlay img {
+        height: 12rem;
+        width: 18rem;
+      }
+
+      .circular-menu {
+        width: 22rem;
+        height: 22rem;
+        position: absolute;
+        top: 8rem;
+        left: 65%;
+      }
+
+      .circle {
+        width: 22rem;
+        height: 22rem;
+      }
+
+
+      .tagline-holder {
+        width: 50%;
+        position: absolute;
+        top: 40vh;
+        border-left: 3px solid whitesmoke;
+        left:5%;
+      }
+
+      .tagline-text {
+        color: whitesmoke;
+        font-size: 2.5rem;
+      }
+
+    }
+
+    /* Mobile screen size */
+
+    @media (max-width:768px) {
+
+      .overlay img {
+        height: 8rem;
+        width: 18rem;
+      }
+
+      .circular-menu {
+        width: 20rem;
+        height: 20rem;
+        position: absolute;
+        top: 18vh;
+        left: 2rem;
+      }
+
+      .circle {
+        width: 20rem;
+        height: 20rem;
+      }
+
+
+
+      .tagline-holder {
+        width: 60%;
+        position: absolute;
+        top: 70vh;
+        text-align: center;
+        left:15%;
+        border:none;
+      }
+
+      .tagline-text {
+        color: whitesmoke;
+        font-size: 2rem;
+      }
+
+    }
+
+    /* Intro Section */
+
+    .intro-section {
+      padding: 2rem;
+      width: 100%;
+      max-width: none;
+      padding-right: 2rem;
+    }
+
+    .intro-section h1 {
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    .aspire-img {
+      text-align: center;
+      background: #24103c;
+    }
+
+    .aspire-img h4 {
+      color: #eedfdf;
+      /* animation-name: focus-in-expand-top;
+      animation-duration: 1s;
+      animation-timing-function: ease-in; */
+      opacity: 0;
+      transform: translateY(0.1em);
+      transition: transform 4s .25s cubic-bezier(0, 1, .3, 1),
+        opacity 2s .25s ease-out;
+      will-change: transform, opacity;
+
+    }
+
+    .aspire-img h4.is-visible {
+      opacity: 1;
+    }
+
+    .aspire-img img {
+      position: relative;
+      text-align: center;
+      height: 25%;
+      width: 25%;
+    }
+
+    .inline-photo {
+      opacity: 0;
+      transform: translateY(0.1em);
+      transition: transform 4s .25s cubic-bezier(0, 1, .3, 1),
+        opacity 2s .25s ease-out;
+      will-change: transform, opacity;
+    }
+
+    .inline-photo.is-visible {
+      opacity: 1;
+    }
+
+    .intro-text {
+      padding: 2%;
+    }
+
+    .intro-text p {
+      text-align: justify;
+      font-size: 1.3rem;
+      margin-right: 8rem;
+      margin-left: 8rem;
+      line-height: 2rem;
+      color: #5a3448;
+    }
+
+
+    .text-holder {
+      display: grid;
+      place-items: center;
+      text-align: center;
+      width: 70%;
+      position: relative;
+      padding: 2%;
+      margin: auto;
+    }
+
+    /* 5 year celebration video text */
+
+    .video-text {
+      text-align: center;
+      animation: blinker 3s linear infinite;
+      font-size: 1.5rem;
+      color: #8bcb9c;
+      margin-bottom: 3rem;
+    }
+
+    .video-text a {
+      color: #8bcb9c;
+    }
+
+    .modal-content {
+      background-color: transparent;
+      border: none;
+    }
+
+    .modal-header {
+      border: none;
+    }
+
+    @keyframes blinker {
+      50% {
+        opacity: 0;
+      }
+    }
+
+    /* Offers Features Section */
+
+    .offers-section {
+      padding: 2rem;
+    }
+
+    .offers-section h1 {
+      text-align: center;
+      margin-bottom: 3rem;
+      color: #881244;
+    }
+
+    .offers-features-section {
+      left: 30%;
+      display: flex;
+    }
+
+    .offers-feature {
+      height: 22rem;
+      width: 11.28rem;
+      box-shadow: 0.5rem 0.5rem 0.5rem 0.5rem gainsboro;
+    }
+
+
+    .feature-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.3);
+      overflow: hidden;
+      width: 100%;
+      height: 16%;
+      transition: .5s ease;
+      display: grid;
+      place-items: center;
+    }
+
+    .offers-feature:hover .feature-overlay {
+      height: 100%;
+      width: 100%;
+      cursor: pointer;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .feature-text {
+      color: white;
+      position: relative;
+    }
+
+    .feature-text h6 {
+      font-weight: bold;
+      margin-bottom: 2rem;
+      margin-top: 0.5rem;
+      text-align: center;
+      font-size: 1.2rem;
+    }
+
+    .feature-text p {
+      color: white;
+      display: grid;
+      place-items: center;
+      font-size: 1rem;
+      margin: 0.2rem;
+      text-align: center;
+    }
+
+    .feature-text a {
+      text-decoration: none;
+      color: white;
+      display: grid;
+      place-items: center;
+    }
+
+    @media (max-width:998px) {
+
+
+      .intro-text p {
+        margin-right: 3rem;
+        margin-left: 3rem;
+      }
+
+
+      .offers-feature {
+        height: 20rem;
+        width: 13.5rem;
+        margin-top: 1.5rem;
+        box-shadow: 0.5rem 0.5rem 0.5rem 0.5rem gainsboro;
+      }
+
+
+      .feature-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.3);
+        overflow: hidden;
+        width: 100%;
+        height: 16%;
+        transition: .5s ease;
+        display: grid;
+        place-items: center;
+      }
+
+      .offers-feature:hover .feature-overlay {
+        height: 100%;
+        width: 100%;
+        cursor: pointer;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+
+      .feature-text {
+        color: white;
+        position: relative;
+      }
+
+      .feature-text h6 {
+        font-weight: bold;
+        margin-bottom: 2rem;
+        margin-top: 0.5rem;
+        text-align: center;
+        font-size: 1.18rem;
+      }
+
+      .feature-text p {
+        color: white;
+        display: grid;
+        place-items: center;
+        font-size: 0.98rem;
+        margin: 0.2rem;
+        text-align: center;
+      }
+
+    }
+
+    @media (max-width:768px) {
+
+
+      .intro-section {
+        padding: 2rem;
+        width: 100%;
+        max-width: none;
+        padding-right: 2rem;
+      }
+
+      .intro-section h1 {
+        text-align: center;
+        margin-top: 1rem;
+      }
+
+      .aspire-img {
+        text-align: center;
+        background: #24103c;
+      }
+
+      .aspire-img h4 {
+        color: #eedfdf;
+        /* animation-name: focus-in-expand-top;
+        animation-duration: 1s;
+        animation-timing-function: ease-in; */
+        opacity: 0;
+        transform: translateY(0.1em);
+        transition: transform 4s .25s cubic-bezier(0, 1, .3, 1),
+          opacity 2s .25s ease-out;
+        will-change: transform, opacity;
+        font-size: 1.5rem;
+      }
+
+      .aspire-img h4.is-visible {
+        opacity: 1;
+      }
+
+      .aspire-img img {
+        position: relative;
+        text-align: center;
+        height: 60%;
+        width: 60%;
+      }
+
+
+      .intro-text {
+        padding: 0;
+      }
+
+      .intro-text p {
+        text-align: justify;
+        font-size: 1.3rem;
+        line-height: 2.5rem;
+        color: #5a3448;
+        margin:0;
+      }
+
+
+
+      .offers-feature {
+        height: 20rem;
+        left:15%;
+        width: 70%;
+        margin-top: 1.5rem;
+        box-shadow: 0.5rem 0.5rem 0.5rem 0.5rem gainsboro;
+      }
+
+
+      .feature-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.3);
+        overflow: hidden;
+        width: 100%;
+        height: 16%;
+        transition: .5s ease;
+        display: grid;
+        place-items: center;
+      }
+
+      .offers-feature:hover .feature-overlay {
+        height: 100%;
+        width: 100%;
+        cursor: pointer;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+
+      .feature-text {
+        color: white;
+        position: relative;
+      }
+
+      .feature-text h6 {
+        font-weight: bold;
+        margin-bottom: 2rem;
+        margin-top: 0.5rem;
+        text-align: center;
+        font-size: 1.18rem;
+      }
+
+      .feature-text p {
+        color: white;
+        display: grid;
+        place-items: center;
+        font-size: 0.98rem;
+        margin: 0.2rem;
+        text-align: center;
+      }
+
+      .announcements-section{
+        margin:0;
+        padding:0;
+      }
+
+      .announcements-divider {
+        padding: 0;
+        margin:0;
+      }
+
+      .latest-section{
+        margin:0;
+        padding:0;
+      }
+
+      .updates-section{
+        margin:0;
+        padding:0;
+      }
+
+
+
+    }
+
+
+    /* Announcements and Events Section */
+
+    .announcements-section {
+      padding: 1.5rem;
+      background-color: #ffffe0;
+      margin-top: 7rem;
+      margin-bottom: 5rem;
+    }
+
+    .announcements-section h1 {
+      text-align: center;
+      color: #881244;
+    }
+
+    .announcements-divider {
+      padding: 2.5rem;
+    }
+
+    .latest-section {
+      margin-top: 1rem;
+      overflow-y: hidden;
+    }
+
+    .latest-section:hover{
+      overflow-y: auto;
+      cursor:pointer;
+    }
+
+
+
+    /* width */
+.latest-section::-webkit-scrollbar {
+  width: 0.4rem;
+  cursor: pointer;
+}
+
+.latest-section::-webkit-scrollbar:hover {
+  cursor: pointer;
+}
+
+/* Track */
+.latest-section::-webkit-scrollbar-track {
+  background: transparent;
+  cursor: pointer;
+}
+
+/* Handle */
+.latest-section::-webkit-scrollbar-thumb {
+  background: #f8de7e;
+  border-radius: 15rem;
+  cursor: pointer;
+}
+
+/* Handle on hover */
+.latest-section::-webkit-scrollbar-thumb:hover {
+  background: gold;
+  cursor: pointer;
+}
+
+.modal-content img {
+  height: 100%;
+  width:100%;
+}
+
+
+    .latest-section h4 {
+      text-align: center;
+      color: #a53463;
+    }
+
+    .latest-news-list {
+      padding: 1rem;
+      height: 18rem;
+      color: #5a3448;
+    }
+
+    .news-item {
+      margin-top: 0.5rem;
+      font-size: 1.15rem;
+      text-align: justify;
+    }
+
+    .news-item a {
+      text-decoration: none;
+      color: #5a3448;
+    }
+
+    .news-item span{
+      font-size: 0.9rem;
+      margin-top: 1rem;
+    }
+
+    .updates-section {
+      margin-top: 1rem;
+      border-left: 0.1rem solid #881244;
+    }
+
+    .updates-section h4 {
+      text-align: center;
+      color: #a53463;
+    }
+
+    .updates-list {
+      padding: 1rem;
+      height: 18rem;
+      color: #5a3448;
+    }
+
+    .updates-item {
+      margin-top: 0.5rem;
+      font-size: 1.15rem;
+      color: #5a3448;
+      text-align: justify;
+    }
+
+    .upcomingevents-section {
+      margin-top: 1rem;
+
+    }
+
+    .upcomingevents-section h4 {
+      text-align: center;
+      color: #a53463;
+    }
+
+    .upcomingevents-list {
+      height: 18rem;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      font-size: 1.15rem;
+      color: #5a3448;
+    }
+
+
+
+
+    /* Technology Domains */
+
+    .potential-section {
+      width: 100%;
+      padding: 5%;
+      text-align: center;
+    }
+
+    .potential-section h1 {
+      text-align: center;
+      margin-bottom: 3rem;
+      color: #881244;
+    }
+
+    .sector {
+      background-color: olive;
+      border-radius: 50%;
+      width: 10rem;
+      height: 10rem;
+      position: relative;
+      display: inline-block;
+      shape-outside: circle();
+    }
+
+
+    .sector:before {
+      content: "";
+      position: absolute;
+      top: 1%;
+      left: 5%;
+      width: 90%;
+      height: 90%;
+      border-radius: 50%;
+      background: radial-gradient(circle at 1% 0px, #ffffff, rgba(255, 255, 255, 0) 60%);
+      filter: blur(5px);
+      z-index: 1;
+    }
+
+    .sector:nth-of-type(2n) {
+      margin: 1.5rem;
+      color: #5a3448;
+      box-shadow: 0.5rem 0.2rem 0.7rem 0.2rem lightgrey;
+      background: radial-gradient(circle at 50% 120%, #1cf2d5, #1cf2d5 10%, #00CED1 80%, #7cf8e7 100%);
+    }
+
+    .sector:nth-of-type(2n+1) {
+      margin-left: 0.5rem;
+      box-shadow: 0.5rem 0.2rem 0.7rem 0.2rem lightgrey;
+      background: radial-gradient(circle at 50% 120%, #ffc764, #ffc764 10%, #FFD700 80%, #F0E68C 100%);
+      color: #5a3448;
+    }
+
+    .sector-name {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 140%;
+      font-size: 1.3rem;
+    }
+
+    /* Emerging Sectors */
+
+    .emerging-section {
+      width: 100%;
+      padding: 5%;
+      text-align: center;
+    }
+
+    .emerging-section h1 {
+      text-align: center;
+      margin-bottom: 4rem;
+      color: #881244;
+    }
+
+    .emerging-sector {
+      background-color: olive;
+      border-radius: 50%;
+      width: 10rem;
+      height: 10rem;
+      position: relative;
+      display: inline-block;
+      shape-outside: circle();
+    }
+
+    .emerging-sector:before {
+      content: "";
+      position: absolute;
+      top: 1%;
+      left: 5%;
+      width: 90%;
+      height: 90%;
+      border-radius: 50%;
+      background: radial-gradient(circle at 1% 0px, #ffffff, rgba(255, 255, 255, 0) 50%);
+      filter: blur(5px);
+      z-index: 1;
+    }
+
+    .emerging-sector:nth-child(2n) {
+      background: radial-gradient(circle at 50% 120%, #ddffbc, #ddffbc 10%, #91c788 80%, #91c788 100%);
+      margin: 1.5rem;
+      box-shadow: 0.5rem 0.2rem 0.7rem 0.2rem lightgrey;
+      color: #5a3448;
+    }
+
+    .emerging-sector:nth-child(2n+1) {
+      background: radial-gradient(circle at 50% 120%, #FF69B4, #FF69B4 10%, #FFB6C1 80%, #FF1493 100%);
+      margin-left: 0.5rem;
+      box-shadow: 0.5rem 0.2rem 0.7rem 0.2rem lightgrey;
+      color: #5a3448;
+    }
+
+    .emerging-sector-name {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 140%;
+      font-size: 1.3rem;
+    }
+
+    /* Modes of Engagement */
+
+    .modes-of-engagement-section {
+      padding: 1rem;
+      padding-top: 5rem;
+      padding-bottom: 10rem;
+      margin-top: 5rem;
+      margin-bottom: 5rem;
+      background-color: #ffffe0;
+    }
+
+    .modes-of-engagement-section h1 {
+      text-align: center;
+      margin-bottom: 3rem;
+      color: #881244;
+    }
+
+    .modes-text {
+      height: 80vh;
+      padding: 1%;
+      padding-left:1rem;
+    }
+
+    .modes-text p {
+      font-size: 1.2rem;
+      text-align: left;
+      color: #a53463;
+    }
+
+    .modes-slider {
+      padding: 1rem;
+    }
+
+    .modes-slide {
+      height: 22rem;
+      width: 100%;
+      background-color: yellow;
+      transition: transform .5s ease;
+    }
+
+    .modes-slide:hover {
+      cursor: pointer;
+      transition: transform .5s ease-in-out;
+      -ms-transform: scale(1.2);
+      /* IE 9 */
+      -webkit-transform: scale(1.2);
+      /* Safari 3-8 */
+      transform: scale(1.2);
+
+    }
+
+    .modes-slide img {
+      height: 100%;
+      width: 100%;
+    }
+
+    .modes-textoverlay {
+      position: absolute;
+      display: grid;
+      place-items: end center;
+      text-align: center;
+      background-color: transparent;
+      transition: transform .5s ease;
+      height: 100%;
+      width: 100%;
+    }
+
+    .modes-textoverlay:hover {
+      display: grid;
+      place-items: center;
+      transition: transform .5s ease;
+      text-align: center;
+    }
+
+    .modes-textoverlay p {
+      display: grid;
+      place-items: center;
+      color: white;
+      font-size: 1.1rem;
+      font-weight: bold;
+      width: 100%;
+      height: 15%;
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    @media (max-width:768px){
+      .modes-slide {
+      height: 15rem;
+      }
+
+      .modes-slider {
+    margin-top:1rem;
+    }
+
+    .modes-textoverlay p {
+      display: grid;
+      place-items: center;
+      color: white;
+      font-size: 1.1rem;
+      font-weight: bold;
+      width: 100%;
+      height: 20%;
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+
+
+    }
+
+
+    /* Testimonial Section */
+
+    .testimonial-section {
+      padding: 2rem;
+      margin-top: 2rem;
+      padding-bottom: 6rem;
+      margin-bottom: 5rem;
+    }
+
+    .testimonial-section h1 {
+      text-align: center;
+      margin-bottom: 1rem;
+      color: #881244;
+    }
+
+    .testimonial {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .testimonial-img {
+      height: 16rem;
+      width: 16rem;
+      margin-top: 4 rem;
+      margin-bottom: 6rem;
+    }
+
+    .testimonial p {
+      display: grid;
+      place-items: center;
+      text-align: center;
+      color: #a53463;
+    }
+
+    .testimonial-control-prev {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+    }
+
+    .testimonial-control-next {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+    }
+
+    /* 5 year celebration video */
+
+    .video-container {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    /* Back to top button */
+
+    .back-to-top {
+      position: fixed;
+      bottom: 25px;
+      right:3rem;
+      display: none;
+      color: #881244;
+      background: #ffffd4;
+    }
+
+    /* Footer */
+
+    #footer {
+      padding: 1%;
+      background-color: #24103c;
+      padding-top: 2rem;
+      font-family: 'Cormorant Garamond', serif;
+    }
+
+    .footer-left {
+      padding: 1rem;
+      border-right: 0.1rem solid #881244;
+    }
+
+    .left-left {
+      display: grid;
+      place-items: center;
+    }
+
+    .left-left img {
+      height: 8rem;
+      width: 16rem;
+    }
+
+    .left-right {
+      display: grid;
+      place-items: center;
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      font-weight: lighter;
+      padding-right: 3.5rem;
+      line-height: 1.8rem;
+      text-align: justify;
+      color: #ffffed;
+    }
+
+    .address-icon {
+      font-size: 2.6rem;
+      color: transparent;
+      -webkit-text-stroke: 0.04rem #ffffed;
+      position: absolute;
+      left: 52%;
+      top: 50%;
+    }
+
+
+    .footer-right {
+      padding: 1rem;
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .footer-right a {
+      text-decoration: none;
+      color: #ffffed;
+      font-size: 1rem;
+    }
+
+    .footer-right p {
+      margin-top: 2rem;
+      color: #ffffed;
+      font-size: 0.85rem;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .footer-text {
+      display: grid;
+      place-items: center;
+      text-align: center;
+      margin-top: 4rem;
+      color: #881244;
+      margin-bottom: 2rem;
+    }
+
+    .sicon {
+      padding: 1rem;
+      font-size: 1.4rem;
+      color: #ffffed;
+    }
+
+    @media (max-width:768px){
+         .footer-left {
+      padding: 1rem;
+      border-right:none;
+    }
+
+    .left-left img {
+      height: 5rem;
+      width: 10rem;
+    }
+    }
+  </style>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+
+  <!-- Header -->
+
+  <header>
+    <div class="overlay">
+
+      <div class="container display-overlay">
+        <img src="WhiteTextLogo.png">
+
+        <!-- Tagline -->
+
+        <div class="tagline-holder">
+          <div class="tagline-text">
+            <p>
+              Connecting Industry and Academia
+            </p>
+          </div>
+        </div>
+
+
+        <!-- Circular Menu -->
+
+        <nav class="circular-menu">
+
+          <div class="circle">
+            <a style="text-decoration:none" href="#" class="fas fa-home change-icon-color" onclick="href='index.html'">
+              <div class="name name-color">Home</div>
+            </a>
+            <a style="text-decoration:none" href="#" class="fas fa-address-card change-icon-color" onclick="href='about.html'">
+              <div class="name name-color">About</div>
+            </a>
+            <a style="text-decoration:none" href="#" class="fas fa-user-tie change-icon-color" onclick="href='team-intro.html'">
+              <div class="name name-color">People</div>
+            </a>
+            <a style="text-decoration:none" href="#" class="fas fa-building change-icon-color" onclick="href='infrastructure.html'">
+              <div class="name name-color">Spaces</div>
+            </a>
+            <a style="text-decoration:none" href="#" class="fas fa-users change-icon-color" onclick="href='clients.html'">
+              <div class="name name-color">Clients</div>
+            </a>
+            <a style="text-decoration:none" href="#" class="fas fa-images change-icon-color" onclick="href='gallery.html'">
+              <div class="name name-color">Gallery</div>
+            </a>
+            <a style="text-decoration:none" href="#" class="fas fa-calendar-day change-icon-color" onclick="href='events.html'">
+              <div class="name name-color">Events</div>
+            </a>
+            <a style="text-decoration:none" href="#" class="fas fa-newspaper change-icon-color" onclick="href='mediacoverage.html'">
+              <div class="name name-color">Media</div>
+            </a>
+            <a style="text-decoration:none" href="#" class="fas fa-paper-plane fa-2x change-icon-color" onclick="href='contact.html'">
+              <div class="name name-color">Contact</div>
+            </a>
+          </div>
+
+          <a style="text-decoration:none" href="" class="menu-button fa fa-bars fa-2x change-icon-color"></a>
+
+        </nav>
+
+
+      </div>
+
+
+
+    </div>
+
+    <!-- Header Background Slideshow -->
+
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner" role="listbox">
+        <!-- Slide One - Set the background image for this slide in the line below -->
+        <div class="carousel-item header-bg active" style="background-image: linear-gradient(rgba(0, 0, 0, 0.15),rgba(0, 0, 0, 0.15)),url('BuildingModel.jpg')">
+        </div>
+        <!-- Slide Two - Set the background image for this slide in the line below -->
+        <div class="carousel-item header-bg" style="background-image: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)),url('Knowledgetree.jpg')">
+        </div>
+        <!-- Slide Three - Set the background image for this slide in the line below -->
+        <div class="carousel-item header-bg" style="background-image:linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)), url('Mainbldg5.jpg')">
+        </div>
+      </div>
+      <a class="carousel-control-prev button-control-header" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next button-control-header" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Intro Section -->
+
+  <div class="container  intro-section">
+    <div class="row">
+      <div style="text-align:center" class="col-12">
+
+        <div class="aspire-img show-on-scroll">
+          <img class="inline-photo show-on-scroll" src="whiteaspire.png" />
+          <h4 class="text-holder show-on-scroll">
+            Applied Science Park for Innovation Research and Entrepreneurship
+          </h4>
+        </div>
+
+        <br><br>
+      </div>
+      <div class="col-12 intro-text">
+        <p>
+          IIT Bombay’s intellectual capital, its state-of-the-art R&D infrastructure, and the vibrant technology industry converge at the Research Park to address real-world problems. What started with a vision to bring industry and academia next to each other is thriving today on maturing science and technology towards collaboratively addressing the real world problems. As ASPIRE continues to buzz with heavy research projects and technological discoveries, it is making its way for smarter solutions for the times ahead.
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="video-text">
+
+    <a style="text-decoration:none;" href="#" data-toggle="modal" data-target="#video">
+      <h4><span class="badge badge-info">New!</span> Video: A Glimpse at 5 Year Celebration</h4>
+    </a>
+  </div>
+  <div class="modal fade" id="video" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="container video-container">
+            <div class=" embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/eFCI1X8P8L4" allowfullscreen></iframe>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- What ASPIRE offers Industries -->
+
+  <div class="container offers-section">
+    <div class="col-12">
+      <h1>What ASPIRE Offers Industries?</h1>
+    </div>
+    <div class="row offers-features-section">
+      <div class="offset-lg-1 col-lg-2 col-md-4">
+        <div style="background-image:url('Multidisciplinaryexpertise.png')" class="card offers-feature">
+          <div class="feature-overlay">
+            <div class="feature-text">
+              <h6>Multidisciplinary Expertise</h6>
+              <p>
+                <a href="https://www.iitb.ac.in/en/education/academic-divisions" target="_blank">Leverage the expertise of the highly competent faculty and the synergistic collaborative environment to evolve multi-disciplinary approaches to conduct
+                  advanced research & its translation.</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-4">
+        <div style="background-image:url('stateoftheartfacilities.jpg')" class="card offers-feature">
+          <div class="feature-overlay">
+            <div class="feature-text">
+              <h6>State of the Art Faciliites</h6>
+              <p>
+                <a href="ecosystem.html">Seamless access to IIT Bombay’s labs, infrastructure in various academic units, and centres of excellence.</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-4">
+        <div style="background-image:url('area.jpg')" class="card offers-feature">
+          <div class="feature-overlay">
+            <div class="feature-text">
+              <h6>Space on Lease</h6>
+              <p>
+                <a href="infrastructure.html">Co-locate R&D assets at the ASPIRE premise.</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="offset-lg-0 col-lg-2 offset-md-2 col-md-4">
+        <div style="background-image:url('Library.png')" class="card offers-feature">
+          <div class="feature-overlay">
+            <div class="feature-text">
+              <h6>Library</h6>
+              <p>
+                <a href="https://www.library.iitb.ac.in/" target="_blank">Access the exhaustive collection of books at IIT Bombay’s library.</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-4">
+        <div style="background-image:url('collaborate.jpg')" class="card offers-feature">
+          <div class="feature-overlay">
+            <div class="feature-text">
+              <h6>Intellectual Capital</h6>
+              <p>
+                <a href="student-cells.html">Enables value creation through interactions with the intellectual capital of IITB - its students and faculty.</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Announcements and Events Section -->
+
+  <div class="container-fluid announcements-section">
+    <div class="col-12">
+      <h1>Announcements</h1>
+    </div>
+    <div class="row announcements-divider">
+      <div class="col-6 latest-section">
+        <h4>Latest News</h4>
+        <div class="latest-news-list">
+          <div class="news-item">
+          <marquee behavior="scroll" direction="up" style="height:15rem;" onmouseover="this.stop();" onmouseout="this.start();" scrollamount="5";>
+            <p>
+              <a data-toggle="modal" data-target="#mnst">
+              Congratulations to the Research Park Associate Multi Nano Sense Technologies Pvt. Ltd. (MNST) on receiving the National Award 2021 for Technology Startup by the Department of Science & Technology, Govt. of India.
+          </a>
+        </p>
+            <hr>
+            <p>
+              <a data-toggle="modal" data-target="#nanosniff">
+              Congratulations to the Research Park Member Client NanoSniff Technologies Pvt Ltd for launching NanoSniffer - World's First MEMS-based Explosive trace detector on 9th April 2021.
+            </a>
+          </p>
+            <hr>
+            <p>
+               <a href="https://www.techcircle.in/2020/12/17/applied-ventures-shortlists-eight-startups-for-astra-2020/" target="_blank">Research Park's oldest client Applied Materials India shortlists a recent associate MNST for its ASTRA 2020 programme.</a>
+               <br><span class="text-muted">17 December, 2020</span>
+            </p>
+            <hr>
+            <p>
+              <a href="https://analyticsindiamag.com/interview-with-dr-suraj-rengarajan-cto-applied-materials-india/" target="_blank">CTO of Applied Materials India, Dr. Suraj Rengarajan shares in an interview about its R&D partnership with IIT Bombay Research Park | RP mention</a>
+              <br><span class="text-muted">18 June, 2021</span>
+            </p>
+            <hr>
+          </marquee>
+          </div>
+          <!-- Modal -->
+  <div class="modal fade" id="mnst" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <img src="C:\Users\vandi\.atom\IITBRPF Website\Images\MNST_National Startup Award 2021.jpg" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal -->
+<div class="modal fade" id="nanosniff" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered" role="document">
+<div class="modal-content">
+<div class="modal-header">
+  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <img src="C:\Users\vandi\.atom\IITBRPF Website\Images\Launch of NanoSniffer_9.4.2021.jpg" />
+</div>
+</div>
+</div>
+</div>
+        </div>
+      </div>
+      <div class="col-6 updates-section">
+        <h4>Updates</h4>
+        <div class="updates-list">
+          <a style="text-decoration:none; color:black;" href="https://www.gita.org.in/OnlineRfp/ProgramInfo.aspx?GITA=kZdo4yRVS4gRExygXA1GyunWC62gp7w/JE0kGDJ4ID8=" target="_blank">
+            <div class="updates-item">
+              <span class="badge badge-warning">New</span> India-Spain Programme of Co-operation on Industrial
+              Research & Development 2021
+            </div>
+          </a>
+          <hr>
+        </div>
+      </div>
+      <!-- <div class="col-md-4 upcomingevents-section">
+        <h4>Upcoming Events</h4>
+        <div class="upcomingevents-list">
+          <p>
+            No Upcoming Events
+          </p>
+        </div>
+      </div> -->
+    </div>
+  </div>
+
+
+  <!-- Potential Sectors -->
+  <div class="container potential-section">
+    <h1>Potential Sectors</h1>
+    <div class="sector">
+      <span class="sector-name">Aerospace</span>
+    </div>
+    <div class="sector">
+      <span class="sector-name">Automobile</span>
+    </div>
+    <div class="sector">
+      <span class="sector-name">Chemical</span>
+    </div>
+    <div class="sector">
+      <span class="sector-name">Bio- <br>Technology</span>
+    </div>
+    <div class="sector">
+      <span class="sector-name">Energy</span>
+    </div>
+    <div class="sector">
+      <span class="sector-name">Industrial <br> Design</span>
+    </div>
+    <div class="sector">
+      <span class="sector-name">Infrastructure</span>
+    </div>
+    <div class="sector">
+      <span class="sector-name">IT <br>&<br> Telecom</span>
+    </div>
+    <div class="sector">
+      <span class="sector-name">Metals <br> &<br>Materials</span>
+    </div>
+    <div class="sector">
+      <span class="sector-name">Semi- <br>conductors</span>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- Emerging Sectors -->
+
+  <div class="container emerging-section">
+    <h1>Emerging Technology Domains</h1>
+    <div class="emerging-sector">
+      <span class="emerging-sector-name">Data Science <br>& Artificial <br>Intelligence</span>
+    </div>
+    <div class="emerging-sector">
+      <span class="emerging-sector-name">E- Mobility</span>
+    </div>
+    <div class="emerging-sector">
+      <span class="emerging-sector-name">Cyber <br>Security</span>
+    </div>
+    <div class="emerging-sector">
+      <span class="emerging-sector-name">Healthcare</span>
+    </div>
+  </div>
+
+  <!-- Modes of Engagement -->
+
+  <div class="container-fluid modes-of-engagement-section">
+
+    <div class="col-12">
+      <h1>Modes of Engagement</h1>
+    </div>
+    <div class="row">
+      <div class="col-lg-5 col-md-5 modes-text">
+        <p>
+          IIT Bombay continuously strives to have a tryst with excellence along the facets of teaching & learning, research and breakthrough innovations. In its continuous effort to develop and translate cutting-edge technology, IIT Bombay seeks to strengthen its partnership and has opened its gates for industries. The ASPIRE Research Park is designed to provide an excellent environment to nurture and sustain exciting collaborations for technology development and translation. The research park offers a very conducive ambience for start-ups, MSMEs, and industry giants to collaborate with IIT Bombay through the following modes of engagement.
+        </p>
+      </div>
+      <div class="col-lg-7 col-md-7">
+
+        <div class="owl-carousel owl-theme owl-loaded modes-slider">
+          <a style="text-decoration:none;color:black;" href="modesofengagement.html#01">
+            <div class="item modes-slide">
+              <div class="modes-textoverlay">
+                <p>Fellowships & Scholarships</p>
+              </div>
+              <img src="scholarship.jpg" />
+            </div>
+          </a>
+          <a style="text-decoration:none;color:black;" href="modesofengagement.html#02">
+            <div class="item modes-slide">
+              <div class="modes-textoverlay">
+                <p>Endowment for a Cause</p>
+              </div>
+              <img src="endowment_for_a_reason.jpg" />
+            </div>
+          </a>
+          <a style="text-decoration:none;color:black;" href="modesofengagement.html#03">
+            <div class="item modes-slide">
+              <div class="modes-textoverlay">
+                <p>Student Opportunities</p>
+              </div>
+              <img src="employment_creation.jpg" />
+            </div>
+          </a>
+          <a style="text-decoration:none;color:black;" href="modesofengagement.html#04">
+            <div class="item modes-slide">
+              <div class="modes-textoverlay">
+                <p>R & D Project Sponsorships</p>
+              </div>
+              <img src="R&D_project.jpg" />
+            </div>
+          </a>
+          <a style="text-decoration:none;color:black;" href="modesofengagement.html#05">
+            <div class="item modes-slide">
+              <div class="modes-textoverlay">
+                <p>Faculty Visiting Fellowship</p>
+              </div>
+              <img src="faculty_visiting_fellowship.jpg" />
+            </div>
+          </a>
+          <a style="text-decoration:none;color:black;" href="modesofengagement.html#06">
+            <div class="item modes-slide">
+              <div class="modes-textoverlay">
+                <p>Joint Project from Third Agency</p>
+              </div>
+              <img src="joint-project_from_third_agency.jpg" />
+            </div>
+          </a>
+          <a style="text-decoration:none;color:black;" href="modesofengagement.html#07">
+            <div class="item modes-slide">
+              <div class="modes-textoverlay">
+                <p>Joint Training/ CEP Courses</p>
+              </div>
+              <img src="joint_training.jpg" />
+            </div>
+          </a>
+          <a style="text-decoration:none;color:black;" href="modesofengagement.html#08">
+            <div class="item modes-slide">
+              <div class="modes-textoverlay">
+                <p>Topical Best Thesis Award</p>
+              </div>
+              <img src="topical_best_thesis.jpg" />
+            </div>
+          </a>
+          <a style="text-decoration:none;color:black;" href="modesofengagement.html#09">
+            <div class="item modes-slide">
+              <div class="modes-textoverlay">
+                <p>Adjunt Faculty</p>
+              </div>
+              <img src="adjunt_faculty.jpg" />
+            </div>
+          </a>
+          <a style="text-decoration:none;color:black;" href="modesofengagement.html#10">
+            <div class="item modes-slide">
+              <div class="modes-textoverlay">
+                <p>Associate Model</p>
+              </div>
+              <img src="associate_model.jpg" />
+            </div>
+          </a>
+        </div>
+        <div class="owl-dots">
+          <div class="owl-dot active"><span></span></div>
+          <div class="owl-dot"><span></span></div>
+          <div class="owl-dot"><span></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Testimonials -->
+
+  <div class="container testimonial-section">
+    <h1>Testimonials</h1>
+    <div id="carouselExampleControls1" class="carousel slide" data-ride="carousel" data-interval="false">
+      <div class="carousel-inner">
+        <div class="carousel-item testimonial active">
+          <img class="testimonial-img" src="Dr. Suraj rengarajan, Applied Materials India.png">
+          <p>
+            “Applied Materials is delighted to be the anchor client of the Research Park & congratulates IITB on realizing its vision of being an innovation hub. Our 15 year partnership with IIT Bombay is an exemplary benchmark for how a global innovation leader and a leading research university can collaborate to shape a rich & sustainable future."
+
+          </p>
+          <p class="text-muted">
+            - Dr Suraj Rengarajan, India CTO, Applied Materials India
+
+
+          </p>
+        </div>
+        <div class="carousel-item testimonial">
+          <img class="testimonial-img" src="Nitin Nanosniff Photo.png">
+          <p>
+            "We were the StartUp anchor for IIT Bombay Research Park and the association has been a fruitful one for us. Having a space to work in the IITB campus and access to several labs has helped in our product development and product testing.
+            With the help of the Research Park team, we hired some of the finest talents of IIT Bombay as student interns who benefitted by working on real cutting-edge problems."
+          </p>
+          <p class="text-muted">
+            - Dr Nitin Kale, Co-Founder & CTO, NanoSniff Technologies Pvt Ltd
+          </p>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleControls1" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon testimonial-control-prev" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleControls1" role="button" data-slide="next">
+        <span class="carousel-control-next-icon testimonial-control-next" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+
+
+  <a id="back-to-top" href="#" class="btn btn-light btn-lg back-to-top" role="button"><i class="fas fa-chevron-up"></i></a>
+
+  <section id="footer">
+
+    <div class="row">
+      <div class="col-md-6 footer-left">
+        <div class="row">
+          <div class="col-6 left-left">
+            <img src="WhiteTextLogo.png">
+          </div>
+          <div class="col-6 left-right">
+            <p>
+              IITB Research Park Foundation, <br>
+              Indian Institute of Technology Bombay, <br>
+              Main Building, 6B, Powai,
+              <br>Mumbai, Maharashtra 400076
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 footer-right">
+        <h6><a style="margin-right:3rem" href="about.html">About Us</a> <a style="margin-right:3rem" href="infrastructure.html"> Spaces </a> <a href="contact.html"> Contact</a></h6>
+        <p>
+          Follow us:
+        </p>
+        <div class="social-icons">
+          <a style="text-decoration:none;" href="https://www.facebook.com/IITBRP/" target="_blank"><i class="fab fa-facebook-f sicon"></i></a>
+          <a style="text-decoration:none;" href="https://www.instagram.com/iitbrp/" target="_blank"><i class="fab fa-instagram sicon"></i></a>
+          <a style="text-decoration:none;" href="https://twitter.com/IITBRP" target="_blank"><i class="fab fa-twitter sicon"></i></a>
+          <a style="text-decoration:none;" href="https://www.linkedin.com/company/iit-bombay-research-park-aspire-/" target="_blank"><i class="fab fa-linkedin-in sicon"></i></a>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+
+    <div class="footer-text">
+      Copyright  2021 IITB Research Park Foundation | All rights reserved
+
+    </div>
+  </section>
+
+
+
+  <!-- Jquery Default Link -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+
+  <!-- Owl Carousel Script Link -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+
+
+  <script>
+    // Circular Menu
+
+    var items = document.querySelectorAll('.circle a');
+
+    for (var i = 0, l = items.length; i < l; i++) {
+      items[i].style.left = (50 - 35 * Math.cos(-0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)).toFixed(4) + "%";
+
+      items[i].style.top = (50 + 35 * Math.sin(-0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)).toFixed(4) + "%";
+    }
+
+    document.querySelector('.menu-button').onclick = function(e) {
+      e.preventDefault();
+      document.querySelector('.circle').classList.toggle('open');
+    }
+
+    window.onload = function(e) {
+      e.preventDefault();
+      document.querySelector('.circle').classList.toggle('open');
+    }
+
+    $('.carousel').carousel({
+      interval: 5000
+    })
+  </script>
+
+  <script>
+    // Owl Carousel Modes of Engagement
+
+    $(document).ready(function() {
+
+      $('.owl-carousel').owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        autoPlay: 1000,
+        responsive: {
+          0: {
+            items: 1
+          },
+          600: {
+            items: 1
+          },
+          768: {
+            items: 1
+          },
+          1000: {
+            items: 2
+          }
+        }
+      })
+    });
+
+// Back to top
+
+    $(function() {
+      var text = $(".text");
+      $(window).scroll(function() {
+        var scroll = $(window).scrollTop();
+
+        if (scroll >= 400) {
+          text.removeClass("hidden");
+        }
+      });
+    });
+
+
+
+    // Detect request animation frame
+    var scroll = window.requestAnimationFrame ||
+      // IE Fallback
+      function(callback) {
+        window.setTimeout(callback, 1000 / 60)
+      };
+    var elementsToShow = document.querySelectorAll('.show-on-scroll');
+
+    function loop() {
+
+      Array.prototype.forEach.call(elementsToShow, function(element) {
+        if (isElementInViewport(element)) {
+          element.classList.add('is-visible');
+        } else {
+          element.classList.remove('is-visible');
+        }
+      });
+
+      scroll(loop);
+    }
+
+    // Call the loop for the first time
+    loop();
+
+    // Helper function from: http://stackoverflow.com/a/7557433/274826
+    function isElementInViewport(el) {
+      // special bonus for those using jQuery
+      if (typeof jQuery === "function" && el instanceof jQuery) {
+        el = el[0];
+      }
+      var rect = el.getBoundingClientRect();
+      return (
+        (rect.top <= 0 &&
+          rect.bottom >= 0) ||
+        (rect.bottom >= (window.innerHeight || document.documentElement.clientHeight) &&
+          rect.top <= (window.innerHeight || document.documentElement.clientHeight)) ||
+        (rect.top >= 0 &&
+          rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
+      );
+    }
+
+
+
+
+    $(document).ready(function() {
+      $(window).scroll(function() {
+        if ($(this).scrollTop() > 50) {
+          $('#back-to-top').fadeIn();
+        } else {
+          $('#back-to-top').fadeOut();
+        }
+      });
+      // scroll body to 0px on click
+      $('#back-to-top').click(function() {
+        $('body,html').animate({
+          scrollTop: 0
+        }, 400);
+        return false;
+      });
+    });
+  </script>
+</body>
+
+</html>

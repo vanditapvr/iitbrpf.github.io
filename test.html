@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <style>
+    body {
+	 background-color: #F3F3F1;
+}
+ .cards {
+	 width: 1320px;
+	 position: relative;
+	 margin: 80px auto;
+}
+ .card {
+	 width: 306px;
+	 height: 420px;
+	 float: left;
+	 margin: 12px;
+	 position: relative;
+}
+ .card:focus {
+	 z-index: 10;
+	 border: none;
+	 outline: none;
+}
+ .card-inner {
+	 overflow: hidden;
+	 user-select: none;
+	 background: #FFF;
+	 box-shadow: 0 2px 6px 0 rgba(0,0,0,0.1);
+	 position: absolute;
+	 left: 0;
+	 top: 0;
+	 width: 306px;
+	 height: 420px;
+	 transition: all 0.2s ease-out;
+	 text-align: center;
+	 font-family: "Segoe UI";
+	 border: 1px solid #fff;
+	 cursor: pointer;
+}
+ .card-inner .category {
+	 font-size: 13px;
+	 font-weight: 600;
+	 color: #585858;
+	 margin-top: 18px;
+}
+ .card-inner .icon {
+	 position: absolute;
+	 display: block;
+	 width: 152px;
+	 height: 152px;
+	 left: 77px;
+	 top: 52px;
+	 background-color: rebeccapurple;
+	 transition: all 0.15s ease-out;
+	 background-image: url('https://austchan.files.wordpress.com/2015/01/mzl-zppvzgfh.png');
+	 background-size: 188px 188px;
+	 background-position: center;
+}
+ .card-inner .prompt {
+	 position: absolute;
+	 font-weight: 400;
+	 font-size: 18px;
+	 padding: 0 24px;
+	 width: 306px;
+	 box-sizing: border-box;
+	 transition: all 0.1s ease;
+}
+ .card-inner .prompt-1 {
+	 left: 0;
+	 top: 216px;
+}
+ .card-inner .prompt-2 {
+	 transition: opacity 0.15s ease, transform 0 0.5s;
+	 left: 212px;
+	 top: 84px;
+	 opacity: 0;
+	 text-align: left;
+	 transform: translateX(0px);
+	 transform: translateY(4px);
+}
+ .card-inner .button {
+	 height: 34px;
+	 font-size: 13px;
+	 border: 1px solid #0179D7;
+	 line-height: 34px;
+	 text-transform: uppercase;
+	 color: #0179D7;
+	 position: absolute;
+	 bottom: 30px;
+	 left: 50%;
+	 transform: translate(-50%,0);
+	 text-align: center;
+	 width: 140px;
+}
+ .card-inner .try {
+	 display: none;
+}
+ .card-inner .detail {
+	 position: relative;
+	 top: 172px;
+	 text-align: left;
+	 transform: translateY(4px);
+	 font-size: 15px;
+	 padding: 0 36px 36px 36px;
+	 width: 504px;
+	 opacity: 0;
+	 transition: opacity 0.15s ease, transform 0 0.5s;
+}
+ .card-inner .detail h2 {
+	 font-size: 24px;
+	 font-weight: 300;
+	 margin-bottom: 0.5em;
+}
+ .card-inner .detail p {
+	 margin-top: 0.75em;
+}
+ .card:hover .card-inner .button {
+	 background-color: #0179D7;
+	 color: white;
+}
+ .card:focus .card-inner {
+	 width: 540px;
+	 margin-left: -117px;
+	 height: 696px;
+	 transform: translateY(-36px);
+	 border: none;
+	 outline: none;
+	 overflow: visible;
+	 box-shadow: 0 12px 40px 0 rgba(0,0,0,0.12);
+	 border: 1px solid #555;
+	 cursor: default;
+}
+ .card:focus .card-inner .icon {
+	 margin-left: -12px;
+}
+ .card:focus .card-inner .prompt-1 {
+	 opacity: 0;
+}
+ .card:focus .card-inner .prompt-2 {
+	 opacity: 1;
+	 transform: translateY(0px);
+	 transition: opacity 0.25s 0.2s ease-out, transform 0.25s 0.2s ease-out;
+}
+ .card:focus .card-inner .detail {
+	 opacity: 1;
+	 transform: translateY(0px);
+	 transition: opacity 0.25s 0.2s ease-out, transform 0.25s 0.2s ease-out;
+}
+ .card:focus .card-inner .try {
+	 display: block;
+}
+ .card:focus .card-inner .learn {
+	 display: none;
+}
+ .card:focus .card-inner .button {
+	 background-color: #0179D7;
+	 color: white;
+	 cursor: pointer;
+	 transform: translate(-50%,0);
+}
+ .card:focus .card-inner .button:hover {
+	 color: white;
+	 border-color: #005DA6;
+	 background-color: #005DA6;
+}
+ .card:nth-child(1) .icon {
+	 background-image: url('http://pixel.nymag.com/imgs/daily/vulture/2015/06/26/26-spotify.w529.h529.jpg');
+	 background-size: 180px;
+}
+ .card:nth-child(2) .icon {
+	 background-image: url('http://blogs.abc.net.au/.a/6a00e0097e4e688833017eeabee22e970d-800wi');
+	 background-size: 152px;
+}
+
+    </style>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div class="overlay">
+  <div class="articles-navigation">
+    <div class="prev-btn">
+      <div></div>
+      <div></div>
+    </div>
+    <div class="close">
+      <div></div>
+      <div></div>
+    </div>
+     <div class="next-btn">
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+</div>
+<div class="wrapper">
+
+  <section class="title-section">
+    <h1>Gallery</h1>
+    <p>Click on gallery images to open full project informations</p>
+  </section>
+  <section class="gallery">
+
+    <div class="gallery-inner">
+
+      <div class="item grid-sizer" data-article="article-1"><a href="#_"><img src="http://lorempixel.com/1080/675/abstract/1"/><div class="desc"><h4>Title 1</h4></div></a></div>
+      <div class="item" data-article="article-2"><a href="#_"><img src="http://lorempixel.com/1080/675/abstract/2"/><div class="desc"><h4>Title 2</h4></div></a></div>
+      <div class="item" data-article="article-3"><a href="#_"><img src="http://lorempixel.com/1080/675/abstract/3"/><div class="desc"><h4>Title 3</h4></div></a></div>
+      <div class="item" data-article="article-4"><a href="#_"><img src="http://lorempixel.com/1080/675/abstract/4"/><div class="desc" data-article="article-5"><h4>Title 4</h4></div></a></div>
+      <div class="item" data-article="article-5"><a href="#_"><img src="http://lorempixel.com/1080/675/abstract/5"/><div class="desc"><h4>Title 5</h4></div></a></div>
+      <div class="item" data-article="article-6"><a href="#_"><img src="http://lorempixel.com/1080/675/abstract/6"/><div class="desc"><h4>Title 6</h4></div></a></div>
+      <div class="item" data-article="article-7"><a href="#_"><img src="http://lorempixel.com/1080/675/abstract/1"/><div class="desc"><h4>Title 7</h4></div></a></div>
+      <div class="item" data-article="article-8"><a href="#_"><img src="http://lorempixel.com/1080/675/abstract/2"/><div class="desc"><h4>Title 8</h4></div></a></div>
+
+
+    </div>
+
+    <div class="logo"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/339950/profile/profile-512.jpg"/></div>
+  </section>
+  <section class="project-view">
+    <div class="project-container">
+      <article class="project-content">
+        <header class="project-article-header"></header>
+        <section class="project-article-content"></section>
+        <footer class="project-article-footer"></footer>
+      </article>
+    </div>
+  </section>
+</div>
+
+<section id="article-contents">
+  <div class="article-html" data-article="article-1">
+    <h2>Article 1</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam risus arcu, semper nec fermentum vitae, sodales eget orci. Morbi id bibendum sem. Quisque consequat tincidunt sollicitudin. Vivamus et urna id diam porttitor laoreet. Cras erat justo, eleifend quis commodo sed, ultrices nec tellus. Duis fermentum, orci et porta elementum, elit ligula lobortis arcu, quis consequat ante quam sed sapien. Pellentesque molestie id tortor non sodales. Donec luctus erat et purus tincidunt, iaculis tincidunt libero euismod. Mauris et erat a metus aliquam porttitor. Nunc ultricies lorem vel dui laoreet, id iaculis risus faucibus. Donec vehicula imperdiet ex, et euismod lectus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam risus arcu, semper nec fermentum vitae, sodales eget orci. Morbi id bibendum sem. Nunc ultricies lorem vel dui<img src="http://lorempixel.com/1280/780/people/1/"/>laoreet, id iaculis risus faucibus. Donec vehicula imperdiet ex, et euismod lectus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam risus arcu, semper nec fermentum vitae, sodales eget orci. Morbi id bibendum sem. Nunc ultricies lorem vel dui laoreet, id iaculis risus faucibus. Donec vehicula imperdiet ex, et euismod lectus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam risus arcu, semper nec fermentum vitae, sodales eget orci. Morbi id bibendum sem. Nunc ultricies lorem vel dui laoreet, id iaculis risus faucibus. Donec vehicula imperdiet ex, et euismod lectus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam risus arcu, semper nec fermentum vitae, sodales eget orci. Morbi id bibendum sem. Nunc ultricies lorem vel dui laoreet, id iaculis risus faucibus. Donec vehicula imperdiet ex, et euismod lectus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam risus arcu, semper nec fermentum vitae, sodales eget orci. Morbi id bibendum sem. Nunc ultricies lorem vel dui laoreet, id iaculis risus faucibus. Donec vehicula imperdiet ex, et euismod lectus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam risus arcu, semper nec fermentum vitae, sodales eget orci. Morbi id bibendum sem. Nunc ultricies lorem vel dui laoreet, id iaculis risus faucibus. Donec vehicula imperdiet ex, et euismod lectus.</p>
+  </div>
+  <div class="article-html" data-article="article-2">
+    <h2>Bonjour</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam risus arcu, semper nec fermentum vitae, sodales eget orci. Morbi id bibendum sem. Nunc ultricies lorem vel dui laoreet, id iaculis risus faucibus. Donec vehicula imperdiet ex, et euismod lectus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam risus arcu, semper nec fermentum vitae, sodales eget orci. Morbi id bibendum sem. Nunc ultricies lorem vel dui laoreet, id iaculis risus faucibus. Donec vehicula imperdiet ex, et euismod lectus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam risus arcu, semper nec fermentum vitae, sodales eget orci. Morbi id bibendum sem. Nunc ultricies lorem vel dui laoreet, id iaculis risus faucibus. Donec vehicula imperdiet ex, et euismod lectus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam risus arcu, semper nec fermentum vitae, sodales eget orci. Morbi id bibendum sem. Nunc ultricies lorem vel dui<img src="http://lorempixel.com/1280/780/people/7/"/>laoreet, id iaculis risus faucibus. Donec vehicula imperdiet ex, et euismod lectus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam risus arcu, semper nec fermentum vitae, sodales eget orci. Morbi id bibendum sem. Nunc ultricies lorem vel dui laoreet, id iaculis risus faucibus. Donec vehicula imperdiet ex, et euismod lectus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam risus arcu, semper nec fermentum vitae, sodales eget orci. Morbi id bibendum sem. Nunc ultricies lorem vel dui laoreet, id iaculis risus faucibus. Donec vehicula imperdiet ex, et euismod lectus.</p>
+     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam risus arcu, semper nec fermentum vitae, sodales eget orci. Morbi id bibendum sem. Nunc ultricies lorem vel dui laoreet, id iaculis risus faucibus. Donec vehicula imperdiet ex, et euismod lectus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam risus arcu, semper nec fermentum vitae, sodales eget orci. Morbi id bibendum sem. Nunc ultricies lorem vel dui laoreet, id iaculis risus faucibus. Donec vehicula imperdiet ex, et euismod lectus.</p>
+  </div>
+  <div class="article-html" data-article="article-3">
+    <h2>Comment ça va ?</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam risus arcu, semper nec fermentum vitae, sodales eget orci. Morbi id bibendum sem.</p><p><img src="http://lorempixel.com/1280/780/sports/1/"/></p><p> Nunc ultricies lorem vel dui laoreet, id iaculis risus faucibus. Donec vehicula imperdiet ex, et euismod lectus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam risus arcu, semper nec fermentum vitae, sodales eget orci. Morbi id bibendum sem. Nunc ultricies lorem vel dui laoreet, id iaculis risus faucibus. Donec vehicula imperdiet ex, et euismod lectus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam risus arcu, semper nec fermentum vitae, sodales eget orci. Morbi id bibendum sem. Nunc ultricies lorem vel dui laoreet, id iaculis risus faucibus. Donec vehicula imperdiet ex, et euismod lectus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam risus arcu, semper nec fermentum vitae, sodales eget orci. Morbi id bibendum sem.    <p><img src="http://lorempixel.com/1280/780/people/4/"/></p> Nunc ultricies lorem vel dui laoreet, id iaculis risus faucibus. Donec vehicula imperdiet ex, et euismod lectus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam risus arcu, semper nec fermentum vitae, sodales eget orci. Morbi id bibendum sem. Nunc ultricies lorem vel dui laoreet, id iaculis risus faucibus. Donec vehicula imperdiet ex, et euismod lectus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam risus arcu, semper nec fermentum vitae, sodales eget orci. Morbi id bibendum sem. Nunc ultricies lorem vel dui laoreet, id iaculis risus faucibus. Donec vehicula imperdiet ex, et euismod lectus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam risus arcu, semper nec fermentum vitae, sodales eget orci. Morbi id bibendum sem. Nunc ultricies lorem vel dui laoreet, id iaculis risus faucibus. Donec vehicula imperdiet ex, et euismod lectus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam risus arcu, semper nec fermentum vitae, sodales eget orci. Morbi id bibendum sem. Nunc ultricies lorem vel dui laoreet, id iaculis risus faucibus. Donec vehicula imperdiet ex, et euismod lectus.</p>
+     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam risus arcu, semper nec fermentum vitae, sodales eget orci. Morbi id bibendum sem. Nunc ultricies lorem vel dui laoreet, id iaculis risus faucibus. Donec vehicula imperdiet ex, et euismod lectus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam risus arcu, semper nec fermentum vitae, sodales eget orci. Morbi id bibendum sem. Nunc ultricies lorem vel dui laoreet, id iaculis risus faucibus. Donec vehicula imperdiet ex, et euismod lectus.</p>
+  </div>
+   <div class="article-html" data-article="article-4">
+    <h2>Hello !</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam risus arcu, semper nec fermentum vitae, sodales eget orci. Morbi id bibendum sem. Nunc ultricies lorem vel dui laoreet, id iaculis risus faucibus. Donec vehicula imperdiet ex, et euismod lectus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam risus arcu, semper nec fermentum vitae, sodales eget orci. Morbi id bibendum sem. Nunc ultricies lorem vel dui laoreet, id iaculis risus faucibus. Donec vehicula imperdiet ex, et euismod lectus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam risus arcu, semper nec fermentum vitae, sodales eget orci. Morbi id bibendum sem. Nunc ultricies lorem vel dui laoreet, id iaculis risus faucibus. Donec vehicula imperdiet ex, et euismod lectus.</p>
+     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam risus arcu, semper nec fermentum vitae, sodales eget orci. Morbi id bibendum sem. Nunc ultricies lorem vel dui laoreet, id iaculis risus faucibus. Donec vehicula imperdiet ex, et euismod lectus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam risus arcu, semper nec fermentum vitae, sodales eget orci. Morbi id bibendum sem. Nunc ultricies lorem vel dui laoreet, id iaculis risus faucibus. Donec vehicula imperdiet ex, et euismod lectus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam risus arcu, semper nec fermentum vitae, sodales eget orci. Morbi id bibendum sem. Nunc ultricies lorem vel dui laoreet, id iaculis risus faucibus. Donec vehicula imperdiet ex, et euismod lectus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam risus arcu, semper nec fermentum vitae, sodales eget orci. Morbi id bibendum sem. Nunc ultricies lorem vel dui laoreet, id iaculis risus faucibus. Donec vehicula imperdiet ex, et euismod lectus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam risus arcu, semper nec fermentum vitae, sodales eget orci. Morbi id bibendum sem. Nunc ultricies lorem vel dui laoreet, id iaculis risus faucibus. Donec vehicula imperdiet ex, et euismod lectus.</p>
+     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam risus arcu, semper nec fermentum vitae, sodales eget orci. Morbi id bibendum sem. Nunc ultricies lorem vel dui laoreet, id iaculis risus faucibus. Donec vehicula imperdiet ex, et euismod lectus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam risus arcu, semper nec fermentum vitae, sodales eget orci. Morbi id bibendum sem. Nunc ultricies lorem vel dui laoreet, id iaculis risus faucibus. Donec vehicula imperdiet ex, et euismod lectus.</p>
+
+  </div>
+
+  <div class="article-html" data-article="article-5">
+    <h2>Article title</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam risus arcu, semper nec fermentum vitae, sodales eget orci. Morbi id bibendum sem. Nunc ultricies lorem vel dui laoreet, id iaculis risus faucibus. Donec vehicula imperdiet ex, et euismod lectus.</p>
+   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam risus arcu, semper nec fermentum vitae, sodales eget orci. Morbi id bibendum sem. Nunc ultricies lorem vel dui laoreet, id iaculis risus faucibus. Donec vehicula imperdiet ex, et euismod lectus.</p>
+    <p><img src="http://lorempixel.com/1280/780/people/2/"/></p>
+     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam risus arcu, semper nec fermentum vitae, sodales eget orci. Morbi id bibendum sem. Nunc ultricies lorem vel dui laoreet, id iaculis risus faucibus. Donec vehicula imperdiet ex, et euismod lectus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam risus arcu, semper nec fermentum vitae, sodales eget orci. Morbi id bibendum sem. Nunc ultricies lorem vel dui laoreet, id iaculis risus faucibus. Donec vehicula imperdiet ex, et euismod lectus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam risus arcu, semper nec fermentum vitae, sodales eget orci. Morbi id bibendum sem. Nunc ultricies lorem vel dui laoreet, id iaculis risus faucibus. Donec vehicula imperdiet ex, et euismod lectus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam risus arcu, semper nec fermentum vitae, sodales eget orci. Morbi id bibendum sem. Nunc ultricies lorem vel dui laoreet, id iaculis risus faucibus. Donec vehicula imperdiet ex, et euismod lectus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam risus arcu, semper nec fermentum vitae, sodales eget orci. Morbi id bibendum sem. Nunc ultricies lorem vel dui laoreet, id iaculis risus faucibus. Donec vehicula imperdiet ex, et euismod lectus.</p>
+     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam risus arcu, semper nec fermentum vitae, sodales eget orci. Morbi id bibendum sem. Nunc ultricies lorem vel dui laoreet, id iaculis risus faucibus. Donec vehicula imperdiet ex, et euismod lectus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam risus arcu, semper nec fermentum vitae, sodales eget orci. Morbi id bibendum sem. Nunc ultricies lorem vel dui laoreet, id iaculis risus faucibus. Donec vehicula imperdiet ex, et euismod lectus.</p>
+  </div>
+  <div class="article-html" data-article="article-6">
+    <h2>Article 6</h2>
+    <p><strong>Pellentesque molestie id tortor non sodales. Donec luctus erat et purus tincidunt, iaculis tincidunt libero euismod. Mauris et erat a metus aliquam porttitor. Nunc ultricies lorem vel dui laoreet, id iaculis risus faucibus. Donec vehicula imperdiet ex, et euismod lectus.</strong></p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam risus arcu, semper nec fermentum vitae, sodales eget orci. Morbi id bibendum sem. Nunc ultricies lorem vel dui laoreet, id iaculis risus faucibus. Donec vehicula imperdiet ex, et euismod lectus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam risus arcu, semper nec fermentum vitae, sodales eget orci. Morbi id bibendum sem. Nunc ultricies lorem vel dui laoreet, id iaculis risus faucibus. Donec vehicula imperdiet ex, et euismod lectus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam risus arcu, semper nec fermentum vitae, sodales eget orci. Morbi id bibendum sem. Nunc ultricies lorem vel dui laoreet, id iaculis risus faucibus. Donec vehicula imperdiet ex, et euismod lectus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam risus arcu, semper nec fermentum vitae, sodales eget orci. Morbi id bibendum sem. Nunc ultricies lorem vel dui laoreet, id iaculis risus faucibus. Donec vehicula imperdiet ex, et euismod lectus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam risus arcu, semper nec fermentum vitae, sodales eget orci. Morbi id bibendum sem. Nunc ultricies lorem vel dui laoreet, id iaculis risus faucibus. Donec vehicula imperdiet ex, et euismod lectus.</p>
+     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam risus arcu, semper nec fermentum vitae, sodales eget orci. Morbi id bibendum sem. Nunc ultricies lorem vel dui laoreet, id iaculis risus faucibus. Donec vehicula imperdiet ex, et euismod lectus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam risus arcu, semper nec fermentum vitae, sodales eget orci. Morbi id bibendum sem. Nunc ultricies lorem vel dui laoreet, id iaculis risus faucibus. Donec vehicula imperdiet ex, et euismod lectus.</p>
+  </div>
+  <div class="article-html" data-article="article-7">
+    <h2>Article 7</h2>
+    <p><strong>Pellentesque molestie id tortor non sodales. Donec luctus erat et purus tincidunt, iaculis tincidunt libero euismod. Mauris et erat a metus aliquam porttitor. Nunc ultricies lorem vel dui laoreet, id iaculis risus faucibus. Donec vehicula imperdiet ex, et euismod lectus.</strong></p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam risus arcu, semper nec fermentum vitae, sodales eget orci. Morbi id bibendum sem. Nunc ultricies lorem vel dui laoreet, id iaculis risus faucibus. Donec vehicula imperdiet ex, et euismod lectus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam risus arcu, semper nec fermentum vitae, sodales eget orci. Morbi id bibendum sem. Nunc ultricies lorem vel dui laoreet, id iaculis risus faucibus. Donec vehicula imperdiet ex, et euismod lectus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam risus arcu, semper nec fermentum vitae, sodales eget orci. Morbi id bibendum sem. Nunc ultricies lorem vel dui laoreet, id iaculis risus faucibus. Donec vehicula imperdiet ex, et euismod lectus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam risus arcu, semper nec fermentum vitae, sodales eget orci. Morbi id bibendum sem. Nunc ultricies lorem vel dui laoreet, id iaculis risus faucibus. Donec vehicula imperdiet ex, et euismod lectus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam risus arcu, semper nec fermentum vitae, sodales eget orci. Morbi id bibendum sem. Nunc ultricies lorem vel dui laoreet, id iaculis risus faucibus. Donec vehicula imperdiet ex, et euismod lectus.</p>
+     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam risus arcu, semper nec fermentum vitae, sodales eget orci. Morbi id bibendum sem. Nunc ultricies lorem vel dui laoreet, id iaculis risus faucibus. Donec vehicula imperdiet ex, et euismod lectus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam risus arcu, semper nec fermentum vitae, sodales eget orci. Morbi id bibendum sem. Nunc ultricies lorem vel dui laoreet, id iaculis risus faucibus. Donec vehicula imperdiet ex, et euismod lectus.</p>
+  </div>
+  <div class="article-html" data-article="article-8">
+    <h2>Article 8</h2>
+    <p><strong>Pellentesque molestie id tortor non sodales. Donec luctus erat et purus tincidunt, iaculis tincidunt libero euismod. Mauris et erat a metus aliquam porttitor. Nunc ultricies lorem vel dui laoreet, id iaculis risus faucibus. Donec vehicula imperdiet ex, et euismod lectus.</strong></p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam risus arcu, semper nec fermentum vitae, sodales eget orci. Morbi id bibendum sem. Nunc ultricies lorem vel dui laoreet, id iaculis risus faucibus. Donec vehicula imperdiet ex, et euismod lectus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam risus arcu, semper nec fermentum vitae, sodales eget orci. Morbi id bibendum sem. Nunc ultricies lorem vel dui laoreet, id iaculis risus faucibus. Donec vehicula imperdiet ex, et euismod lectus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam risus arcu, semper nec fermentum vitae, sodales eget orci. Morbi id bibendum sem. Nunc ultricies lorem vel dui laoreet, id iaculis risus faucibus. Donec vehicula imperdiet ex, et euismod lectus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam risus arcu, semper nec fermentum vitae, sodales eget orci. Morbi id bibendum sem. Nunc ultricies lorem vel dui laoreet, id iaculis risus faucibus. Donec vehicula imperdiet ex, et euismod lectus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam risus arcu, semper nec fermentum vitae, sodales eget orci. Morbi id bibendum sem. Nunc ultricies lorem vel dui laoreet, id iaculis risus faucibus. Donec vehicula imperdiet ex, et euismod lectus.</p>
+     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam risus arcu, semper nec fermentum vitae, sodales eget orci. Morbi id bibendum sem. Nunc ultricies lorem vel dui laoreet, id iaculis risus faucibus. Donec vehicula imperdiet ex, et euismod lectus.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam risus arcu, semper nec fermentum vitae, sodales eget orci. Morbi id bibendum sem. Nunc ultricies lorem vel dui laoreet, id iaculis risus faucibus. Donec vehicula imperdiet ex, et euismod lectus.</p>
+  </div>
+</section>
+<script>
+$('.gallery-inner').isotope({
+itemSelector: '.item',
+masonry: {
+  columnWidth: '.grid-sizer',
+  gutter: 1
+}
+}).isotope('layout');
+
+
+
+$('.gallery-inner .item').on('click', function(event){
+event.stopPropagation();
+
+var nbrArticles = $('.item').length;
+var clickedArticle = $(this);
+var thisIndex = $(this).index();
+var clickedArticleNext = $(this).next('.item');
+var clickedArticlePrev = $(this).prev('.item');
+
+console.log('The article : ');
+console.log(clickedArticle);
+
+imgToShow = clickedArticle.find('img').attr('src');
+articleLink = clickedArticle.data('article');
+articleData = $('#article-contents').find('.article-html[data-article="'+articleLink+'"]').html();
+articleTitle = clickedArticle.find('.desc h4').html();
+i = clickedArticle.index()+1;
+var n=1;
+
+
+
+changeArticle();
+
+$('.next-btn').click(function(event){
+    event.stopPropagation();
+
+
+
+      var clickedArticle = $('.item:eq('+(i)+')');
+
+      console.log('New article ' + i + ' : ');
+      console.log(clickedArticle);
+      imgToShow = clickedArticle.find('img').attr('src');
+      articleLink = clickedArticle.data('article');
+      articleData = $('#article-contents').find('.article-html[data-article="'+articleLink+'"]').html();
+      articleTitle = clickedArticle.find('.desc h4').html();
+
+    if(i>= $('.item').length-1){
+
+      i=0;
+    }else{
+
+      i++;
+    }
+
+
+
+    changeArticle();
+
+
+});
+
+$('.prev-btn').click(function(event){
+    event.stopPropagation();
+
+
+      var clickedArticle = $('.item:eq('+i+')');
+      console.log('New article ' + i + ' : ');
+      console.log(clickedArticle);
+      imgToShow = clickedArticle.find('img').attr('src');
+      articleLink = clickedArticle.data('article');
+      articleData = $('#article-contents').find('.article-html[data-article="'+articleLink+'"]').html();
+      articleTitle = clickedArticle.find('.desc h4').html();
+
+    if(i < 1){
+      i= ($('.item').length);
+    }else{
+      i --;
+    }
+
+    changeArticle();
+});
+
+
+function changeArticle() {
+
+  $('.project-container').hide();
+
+  $('.project-view .project-article-header').css({
+    'background' : 'url('+imgToShow+') no-repeat top fixed'
+  });
+
+  $('.project-view .project-article-content').html('<div class="appended-data">'+articleData+'</div>');
+  $('.project-article-header').html('<div class="project-article-title"><h1>'+articleTitle+'</h1></div>');
+
+  $('.project-container').fadeIn(500);
+}
+
+
+
+
+if(!$('body').hasClass('article-opened')){
+
+  $('body').addClass('article-opened');
+
+
+
+}else{
+
+  $('body').removeClass('article-opened');
+
+}
+
+
+});
+
+$('.project-view').on('click', function(event){
+event.stopPropagation();
+});
+
+
+$('html, body, .overlay, .close').on('click', function(){
+$('body').removeClass('article-opened');
+var i = 0;
+});
+</script>
+  </body>
+</html>

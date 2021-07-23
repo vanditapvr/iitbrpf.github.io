@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Links -->
+    <!-- Bootstrap Links -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+    <!-- Font Awesome links -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/6c2bd266c9.js" crossorigin="anonymous"></script>
+
+    <!-- Font Links -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap" rel="stylesheet">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tinos&display=swap" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- CSS Stylesheet Links -->
+
+    <link href="header.css" rel="stylesheet">
+
+  <style>
+    body {
+      overflow-x: hidden;
+      background-color: #ffffed;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    /* Header */
+
+    .header {
+      background: linear-gradient(95deg, rgba(36, 16, 60, 0.9981034650188201) 36%, rgba(52, 17, 95, 1) 100%);
+      color: white;
+      text-align: center;
+      font-size: 10px;
+      height: 50vh;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      place-items: center;
+    }
+
+    .header img {
+      height: 9rem;
+      width: 20rem;
+      left: 0rem;
+      top: 0rem;
+      position: absolute;
+    }
+
+    .heading-holder {
+      position: relative;
+      text-align: center;
+    }
+
+    .heading {
+      font-size: 3rem;
+    }
+
+
+    /* Circular Menu */
+
+
+    .circular-menu {
+      width: 18rem;
+      height: 18rem;
+      position: absolute;
+      top: 0.5rem;
+      left: 75%;
+    }
+
+    .circle {
+      width: 18rem;
+      height: 18rem;
+      -webkit-transition: all 1s ease-out;
+      -moz-transition: all 1s ease-out;
+      transition: all 1s ease-out;
+    }
+
+
+    .change-icon-color {
+      color: transparent !important;
+      background-blend-mode: exclusion;
+      -webkit-text-stroke: 0.04rem white;
+    }
+
+    .name-color {
+      color: white;
+      -webkit-text-stroke: 0.28px black;
+      text-shadow: none;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width:998px){
+      .header {
+        background: linear-gradient(95deg, rgba(36, 16, 60, 0.9981034650188201) 36%, rgba(52, 17, 95, 1) 100%);
+        color: white;
+        text-align: center;
+        font-size: 10px;
+        height: 50vh;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        place-items: center;
+      }
+
+      .header img {
+        height: 7rem;
+        width: 17rem;
+      }
+
+      .heading {
+        font-size: 2.6rem;
+      }
+
+
+      /* Circular Menu */
+
+
+      .circular-menu {
+        width: 18rem;
+        height: 18rem;
+        top: 1rem;
+        left: 68%;
+      }
+
+      .circle {
+        width: 18rem;
+        height: 18rem;
+      }
+
+      .circle a {
+        font-size: 1.5rem;
+      }
+
+      .name-color {
+        color: white;
+        -webkit-text-stroke: 0.28px black;
+        text-shadow: none;
+        font-size: 0.87rem;
+      }
+
+    }
+
+    @media (max-width:768px){
+
+
+    .header {
+          background: linear-gradient(95deg, rgba(36, 16, 60, 0.9981034650188201) 36%, rgba(52, 17, 95, 1) 100%);
+          text-align: center;
+          font-size: 10px;
+          height: 65vh;
+          padding: 0;
+          margin: 0;
+          display:block;
+        }
+
+        .header img {
+          height: 7rem;
+          width: 17rem;
+        }
+
+        .heading {
+          font-size: 2rem;
+          position: absolute;
+          top:22rem;
+          left:3%;
+        }
+
+
+        /* Circular Menu */
+
+
+        .circular-menu {
+          width: 18rem;
+          height: 18rem;
+          top: 6rem;
+          left: 5rem;
+        }
+
+        .circle {
+          width: 18rem;
+          height: 18rem;
+        }
+
+        .circle a {
+          font-size: 1.5rem;
+        }
+
+        .name-color {
+          color: white;
+          -webkit-text-stroke: 0.28px black;
+          text-shadow: none;
+          font-size: 0.87rem;
+        }
+
+    }
+
+      .center { text-align: center; }
+
+.container {
+  width: 95%;
+  max-width: 1220px;
+  margin: 0 auto;
+}
+
+.episode {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  position: relative;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.episode__name {
+  font-size: 2.2vw;
+  font-weight: 600;
+  padding: 20px 0;
+  margin-left: 5rem;
+  position: sticky;
+  top: 50%;
+  margin-bottom: 4rem;
+  text-align: center;
+  height: calc(10vw + 20px);
+  transition: all 0.2s ease-in;
+  color:#933d41;
+}
+
+.episode__content {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-gap: 10px;
+  padding: 15px 0;
+  color:#c32148;
+  text-align: justify;
+}
+
+.episode__content .title {
+  font-weight: 600
+}
+
+.episode__content .story {
+  line-height: 26px;
+}
+
+.episode__content a {
+  color:grey;
+  text-decoration: none;
+}
+
+@media (max-width: 998px) {
+  .episode__content {
+    grid-template-columns: 2fr;
+  }
+
+  .episode {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    position: relative;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+
+  .episode__name {
+    font-size: 3vw;
+    font-weight: 600;
+    padding: 20px 0;
+    margin-left: 5rem;
+    position: sticky;
+    top: 50%;
+    text-align: center;
+    height: calc(10vw + 20px);
+    transition: all 0.2s ease-in;
+    color:#933d41;
+  }
+
+  .episode__content {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-gap: 2rem;
+    padding: 15px 0;
+    color:#c32148;
+    text-align: justify;
+  }
+
+  .episode__content .title {
+    font-weight: 600
+  }
+
+  .episode__content .story {
+    line-height: 26px;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .episode__content .story {
+    font-size: 11px;
+  }
+
+  .episode__name {
+    font-size: 4vw;
+    font-weight: 600;
+    padding: 20px 0;
+    margin-left: 1rem;
+    position: sticky;
+    top: 50%;
+    text-align: center;
+    height: calc(10vw + 20px);
+    transition: all 0.2s ease-in;
+    color:#933d41;
+  }
+
+  .episode__content {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-gap: 1rem;
+    padding: 15px 0;
+    color:#c32148;
+    text-align: justify;
+  }
+
+}
+
+.jumbotron {
+background-color:rgb( 231, 231, 231,0.8);
+}
+
+.intro{
+  padding:8%;
+  font-size:1.2rem;
+  text-align: justify;
+  color:#5a3448;
+}
+.episode__content p,li{
+  font-size:1.2rem;
+  line-height: 2rem;
+}
+
+hr{
+  height:0.01rem;
+  background-color:#881244;
+}
+
+/* Back to top button */
+
+.back-to-top {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  left:93%;
+  display: none;
+  width:5%;
+  color: #881244;
+  background: #ffffd4;
+}
+
+/* Footer */
+
+#footer {
+  padding: 1%;
+  background-color: #24103c;
+  padding-top: 2rem;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.footer-left {
+  padding: 1rem;
+  border-right: 0.1rem solid #881244;
+}
+
+.left-left {
+  display: grid;
+  place-items: center;
+}
+
+.left-left img {
+  height: 8rem;
+  width: 16rem;
+}
+
+.left-right {
+  display: grid;
+  place-items: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  font-weight: lighter;
+  padding-right: 3.5rem;
+  line-height: 1.8rem;
+  text-align: justify;
+  color: #ffffed;
+}
+
+.address-icon {
+  font-size: 2.6rem;
+  color: transparent;
+  -webkit-text-stroke: 0.04rem #ffffed;
+  position: absolute;
+  left: 52%;
+  top: 50%;
+}
+
+
+.footer-right {
+  padding: 1rem;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.footer-right a {
+  text-decoration: none;
+  color: #ffffed;
+  font-size: 1rem;
+}
+
+.footer-right p {
+  margin-top: 2rem;
+  color: #ffffed;
+  font-size: 0.85rem;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-text {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  margin-top: 4rem;
+  color: #881244;
+  margin-bottom: 2rem;
+}
+
+.sicon {
+  padding: 1rem;
+  font-size: 1.4rem;
+  color: #ffffed;
+}
+
+@media (max-width:768px){
+         .footer-left {
+      padding: 1rem;
+      border-right:none;
+    }
+
+    .left-left img {
+      height: 5rem;
+      width: 10rem;
+    }
+    }
+
+
+</style>
+<meta charset="utf-8">
+<title></title>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+  <img src="C:\Users\vandi\.atom\Research Park Official Website\Images\Research_Park_Logos\WhiteTextLogo.png">
+  <div class="heading-holder">
+    <h1 class="heading">Modes of <br> Engagement</h1>
+  </div>
+</div>
+
+<!-- Circular Menu -->
+
+<nav class="circular-menu">
+
+  <div class="circle">
+    <a style="text-decoration:none" href="#" class="fas fa-home change-icon-color" onclick="href='index.html'">
+      <div class="name name-color">Home</div>
+    </a>
+    <a style="text-decoration:none" href="#" class="fas fa-address-card change-icon-color" onclick="href='about.html'">
+      <div class="name name-color">About</div>
+    </a>
+    <a style="text-decoration:none" href="#" class="fas fa-user-tie change-icon-color" onclick="href='team-intro.html'">
+      <div class="name name-color">People</div>
+    </a>
+    <a style="text-decoration:none" href="#" class="fas fa-building change-icon-color" onclick="href='infrastructure.html'">
+      <div class="name name-color">Spaces</div>
+    </a>
+    <a style="text-decoration:none" href="#" class="fas fa-users change-icon-color" onclick="href='clients.html'">
+      <div class="name name-color">Clients</div>
+    </a>
+    <a style="text-decoration:none" href="#" class="fas fa-images change-icon-color" onclick="href='gallery.html'">
+      <div class="name name-color">Gallery</div>
+    </a>
+    <a style="text-decoration:none" href="#" class="fas fa-calendar-day change-icon-color" onclick="href='events.html'">
+      <div class="name name-color">Events</div>
+    </a>
+    <a style="text-decoration:none" href="#" class="fas fa-newspaper change-icon-color" onclick="href='mediacoverage.html'">
+      <div class="name name-color">Media</div>
+    </a>
+    <a style="text-decoration:none" href="#" class="fas fa-paper-plane change-icon-color" onclick="href='contact.html'">
+      <div class="name name-color">Contact</div>
+    </a>
+  </div>
+
+  <a style="text-decoration:none" href="" class="menu-button fa fa-bars fa-2x change-icon-color"></a>
+
+</nav>
+
+        <div class="container">
+      <p class="intro">
+        IIT Bombay continuously strives to have a tryst with excellence along the facets of teaching & learning, research and breakthrough innovations. In its continuous effort to develop and translate cutting-edge technology, IIT Bombay seeks to strengthen its partnership and has opened its gates for industries. The ASPIRE Research Park is designed to provide an excellent environment to nurture and sustain exciting collaborations for technology development and translation. The research park offers a very conducive ambience for start-ups, MSMEs, and industry giants to collaborate with IIT Bombay through the following modes of engagement.
+
+<hr>
+      </p>
+      <section id="01">
+      <article class="episode">
+        <div class="episode__name">Fellowships & Scholarships</div>
+        <div class="episode__content">
+          <div class="title"></div>
+          <div class="story">
+          <p>
+            The industry may sponsor a student in a field of their interest. The sponsorship includes a stipend and a contingency grant. Publications arising out of work done by the student will acknowledge the support from Industry.
+
+          </p>
+          <p>
+          Following are the kinds of sponsorships that can be done by an industry.
+          <ul>
+            <li>Sponsored Ph.D. Student</li>
+            <li>Sponsored M.Tech Student</li>
+            <li>Ph.D. fellowship (4-year TA)</li>
+            <li>M.Tech fellowship (2-year TA)</li>
+          </ul>
+          </p>
+          </div>
+        </div>
+      </article>
+      </section>
+<hr>
+<section id="02">
+  <article class="episode">
+    <div style="color:#c32148;" class="episode__name">Endowment for a Cause</div>
+    <div style="color:#933d41;" class="episode__content">
+      <div class="title"></div>
+      <div class="story">
+        <ul>
+          <li><b>Chair Professor Endowment</b></li>
+          <ul>
+            <li>Distinguished academic position in the Institute</li>
+            <li>Around 20 chairs have been established at IITB by industries and alumni</li>
+          </ul>
+          <li><b>Educational Infrastructure Endowment</b></li>
+          <ul>
+            <li>The fund supports infrastructure development in the IITB campus and thereby aids in teaching, research, and the advancement of technology</li>
+          </ul>
+        </ul>
+        </div>
+    </div>
+  </article>
+</section>
+
+<hr>
+<section id="03">
+      <article class="episode">
+        <div class="episode__name">Employment Creation</div>
+        <div class="episode__content">
+          <div class="title"></div>
+          <div class="story">
+            <ul>
+              <li><b>Full-Time Employment to an IITB Student</b></li>
+              <p>
+                Companies may recruit some of the outstanding talents graduating from IIT Bombay’s undergraduate, postgraduate and doctoral programs. <a href="https://campus.placements.iitb.ac.in/">Click here</a> to know more about the Placement Cell.
+              </p>
+              <li><b>Internship to IITB Student</b></li>
+              <p>
+                Companies may select some of the brilliant minds nurtured at IIT Bombay’s bachelor's, master's, and doctoral programmes for internship.
+              </p>
+              <p>
+                Internship duration*:
+    Summer internship (from May to July) - 2 months
+    Winter internship (December) - 1 month
+
+              </p>
+              <p class="text-muted">
+                *Please note that it is possible to extend the standard duration of internship through other engagement activities.
+              </p>
+            </ul>
+            </div>
+        </div>
+      </article>
+      </section>
+
+<hr>
+<section id="04">
+      <article class="episode">
+        <div style="color:#c32148;" class="episode__name">R&D Project</div>
+        <div style="color:#933d41;" class="episode__content">
+          <div class="title"></div>
+          <div class="story">
+            <ul>
+              <li><b>Sponsored R&D Project</b></li>
+              <ul>
+                <li>Long term projects for new knowledge generation in current, emerging and futuristic areas, lasting 2-5 years</li>
+                <li>Deliverables are more open than those in consultancy projects</li>
+                <li>A detailed project plan with a budget to be submitted to and approved by the sponsoring industry</li>
+              </ul>
+              <li><b>Consultancy Project</b></li>
+              <ul>
+                <li>Short term projects to solve specific problems of industry, lasting 1-2 years</li>
+                <li>Expected results at the end of the project are jointly defined at the beginning</li>
+                <li>The cost of a consultancy project usually depends on the nature of the problem to be solved</li>
+                <li>'Routine testing' is not encouraged</li>
+              </ul>
+              <li><b>Joint Publication/Patent and Royalty from Joint Project</b></li>
+              <ul>
+                <li>Please refer to the Intellectual Property Policy of IIT Bombay <a href="https://rnd.iitb.ac.in/ip-policy">here</a></li>
+              </ul>
+            </ul>
+          </div>
+        </div>
+      </article>
+      </section>
+<hr>
+<section id="05">
+      <article class="episode">
+        <div class="episode__name">Faculty Visiting Fellowship </div>
+        <div class="episode__content">
+          <div class="title"></div>
+          <div class="story">
+          <p>
+            For a more immersive and collaborative working, the industry member company could facilitate extended stints of IITB faculty at the industry workplace, and vice versa.
+
+          </p>
+          </div>
+        </div>
+      </article>
+      </section>
+<hr>
+<section id="06">
+      <article class="episode">
+        <div style="color:#c32148;" class="episode__name">Joint Project from Third Agency</div>
+        <div style="color:#933d41;" class="episode__content">
+          <div class="title"></div>
+          <div class="story">
+          <ul>
+            <li>An industry/ multiple industries may partner with IIT Bombay to set up a Research Consortium or join an existing Consortia to submit proposals to funding agencies</li>
+            <li>IITB has consortia with members from both industries and government funding agencies</li>
+            <li>This enables resource pooling for research in emerging areas</li>
+          </ul>
+          </div>
+        </div>
+      </article>
+      </section>
+<hr>
+<section id="07">
+      <article class="episode">
+        <div class="episode__name">Joint Training / CEP Courses</div>
+        <div class="episode__content">
+          <div class="title"></div>
+          <div class="story">
+            <ul>
+              <li>With a view to proliferate technology outcomes and speed up adoption, Industry member companies can jointly offer training programmes or technology advancement programmes with IITB faculty for the workforce at large, in emerging themes of interest.</li>
+              <li>Currently, the Continuing Education Programme (CEP) Office at IIT Bombay is one of the preferred education centres that offers carefully designed and tailored courses addressing the industry-specific competency development needs.</li>
+              <li>To know more about CEP courses, <a href = "http://www.cep.iitb.ac.in/">click here</a></li>
+            </ul>
+          </div>
+        </div>
+      </article>
+      </section>
+<hr>
+<section id="08">
+      <article class="episode">
+        <div style="color:#c32148;" class="episode__name">Topical Best Thesis</div>
+        <div style="color:#933d41;" class="episode__content">
+          <div class="title"></div>
+          <div class="story">
+            <ul>
+              <li>Industries can brainstorm research topic ideas with the talent pool of IITB – students and faculty</li>
+              <li>This will open floodgates for innovative solutions which shall help resolve critical problems, and would potentially contribute to the accelerated and differentiating growth of the industry</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+      </section>
+<hr>
+<section id="09">
+      <article class="episode">
+        <div class="episode__name">Adjunct Faculty</div>
+        <div class="episode__content">
+          <div class="title"></div>
+          <div class="story">
+          <p>
+            IIT Bombay welcomes industrial researchers to participate in research and teaching at the Institute. The adjunct faculty position enables an industrial researcher to teach courses with IITB faculty, so as to bring in perspectives of industrial practice and enrich the courses.   Likewise, the position of professor of practice facilitate industrial researchers to work collaboratively with IITB faculty to translate research towards industrial impact.
+          </p>
+          </div>
+        </div>
+      </article>
+      </section>
+<hr>
+<section id="10">
+      <article class="episode">
+        <div style="color:#c32148;" class="episode__name">Associate Model</div>
+        <div style="color:#933d41;" class="episode__content">
+          <div class="title"></div>
+          <div class="story">
+          <p>
+            The ASPIRE Research Park building is expected to be fully functional by early 2022. However, in the interim period, an industry member company can initiate collaboration as an associate (virtual) member of the research park. The research park office would facilitate this mode of engagement, which would help define collaboration areas, develop problem statements and begin joint work almost immediately. This mode will therefore help to intensify the collaboration when the industry member company co-locates into the research park building by early 2022.
+          </p>
+          </div>
+        </div>
+      </article>
+</section>
+    </div>
+
+    <a id="back-to-top" href="#" class="btn btn-light btn-lg back-to-top" role="button"><i class="fas fa-chevron-up"></i></a>
+
+    <section id="footer">
+
+      <div class="row">
+        <div class="col-md-6 footer-left">
+          <div class="row">
+            <div class="col-6 left-left">
+              <img src="C:\Users\vandi\.atom\IITBRPF Website\Images\Research_Park_Logos\WhiteTextLogo.png">
+            </div>
+            <div class="col-6 left-right">
+              <p>
+                IITB Research Park Foundation, <br>
+                Indian Institute of Technology Bombay, <br>
+                Main Building, 6B, Powai,
+                <br>Mumbai, Maharashtra 400076
+
+
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 footer-right">
+          <h6><a style="margin-right:3rem" href="about.html">About Us</a> <a style="margin-right:3rem" href="infrastructure.html"> Spaces </a> <a href="contact.html"> Contact</a></h6>
+          <p>
+            Follow us:
+          </p>
+          <div class="social-icons">
+            <a style="text-decoration:none;" href="https://www.facebook.com/IITBRP/" target="_blank"><i class="fab fa-facebook-f sicon"></i></a>
+            <a style="text-decoration:none;" href="https://www.instagram.com/iitbrp/" target="_blank"><i class="fab fa-instagram sicon"></i></a>
+            <a style="text-decoration:none;" href="https://twitter.com/IITBRP" target="_blank"><i class="fab fa-twitter sicon"></i></a>
+            <a style="text-decoration:none;" href="https://www.linkedin.com/company/iit-bombay-research-park-aspire-/" target="_blank"><i class="fab fa-linkedin-in sicon"></i></a>
+          </div>
+        </div>
+      </div>
+      </div>
+      </div>
+
+      <div class="footer-text">
+        Copyright line
+      </div>
+    </section>
+
+
+
+    <script>
+
+    // Circular Menu
+
+    var items = document.querySelectorAll('.circle a');
+
+    for (var i = 0, l = items.length; i < l; i++) {
+    items[i].style.left = (50 - 35 * Math.cos(-0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)).toFixed(4) + "%";
+
+    items[i].style.top = (50 + 35 * Math.sin(-0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)).toFixed(4) + "%";
+    }
+
+    document.querySelector('.menu-button').onclick = function(e) {
+    e.preventDefault();
+    document.querySelector('.circle').classList.toggle('open');
+    }
+
+    window.onload = function(e) {
+    e.preventDefault();
+    document.querySelector('.circle').classList.toggle('open');
+    }
+
+    // Back to top
+
+      $(function() {
+        var text = $(".text");
+        $(window).scroll(function() {
+          var scroll = $(window).scrollTop();
+
+          if (scroll >= 400) {
+            text.removeClass("hidden");
+          }
+        });
+      });
+
+
+
+      // Detect request animation frame
+      var scroll = window.requestAnimationFrame ||
+        // IE Fallback
+        function(callback) {
+          window.setTimeout(callback, 1000 / 60)
+        };
+      var elementsToShow = document.querySelectorAll('.show-on-scroll');
+
+      function loop() {
+
+        Array.prototype.forEach.call(elementsToShow, function(element) {
+          if (isElementInViewport(element)) {
+            element.classList.add('is-visible');
+          } else {
+            element.classList.remove('is-visible');
+          }
+        });
+
+        scroll(loop);
+      }
+
+      // Call the loop for the first time
+      loop();
+
+      // Helper function from: http://stackoverflow.com/a/7557433/274826
+      function isElementInViewport(el) {
+        // special bonus for those using jQuery
+        if (typeof jQuery === "function" && el instanceof jQuery) {
+          el = el[0];
+        }
+        var rect = el.getBoundingClientRect();
+        return (
+          (rect.top <= 0 &&
+            rect.bottom >= 0) ||
+          (rect.bottom >= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.top <= (window.innerHeight || document.documentElement.clientHeight)) ||
+          (rect.top >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
+        );
+      }
+
+
+
+
+      $(document).ready(function() {
+        $(window).scroll(function() {
+          if ($(this).scrollTop() > 50) {
+            $('#back-to-top').fadeIn();
+          } else {
+            $('#back-to-top').fadeOut();
+          }
+        });
+        // scroll body to 0px on click
+        $('#back-to-top').click(function() {
+          $('body,html').animate({
+            scrollTop: 0
+          }, 400);
+          return false;
+        });
+      });
+    </script>
+
+    </body>
+
+    </html>
