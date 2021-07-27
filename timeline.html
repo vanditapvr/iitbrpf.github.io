@@ -105,6 +105,58 @@
       font-size: 0.9rem;
     }
 
+    #drop {
+      background-color: transparent;
+      color: whitesmoke;
+      font-size: 2rem;
+      visibility: hidden;
+      margin-top: 1.5rem;
+
+    }
+
+    #drop:hover {
+      cursor: pointer;
+    }
+
+    #drop-down {
+      position: relative;
+      display: inline-block;
+      box-shadow: none;
+      visibility: hidden;
+    }
+
+    #dropdown-menu {
+      display: none;
+      position: absolute;
+      background-color: whitesmoke;
+      width: 14rem;
+      border-radius: 5px;
+      z-index: 1;
+      margin-left: -12rem;
+      font-size: 1.3rem;
+    }
+
+    #dropdown-menu a {
+      color: black;
+      padding: 0.5rem;
+      text-decoration: none;
+      display: block;
+      border-radius: 5px;
+    }
+
+
+    #dropdown-menu a:hover {
+      background-color: #ddd;
+      border-radius: 5px;
+    }
+
+    #drop-down:hover #dropdown-menu {
+      display: block;
+      border-radius: 5px;
+    }
+
+
+
     @media (max-width:998px){
       .header {
         background: linear-gradient(95deg, rgba(36, 16, 60, 0.9981034650188201) 36%, rgba(52, 17, 95, 1) 100%);
@@ -158,54 +210,54 @@
 
     @media (max-width:768px){
 
-        .header {
-              background: linear-gradient(95deg, rgba(36, 16, 60, 0.9981034650188201) 36%, rgba(52, 17, 95, 1) 100%);
-              text-align: center;
-              font-size: 10px;
-              height: 65vh;
-              padding: 0;
-              margin: 0;
-              display:block;
-            }
+      .header {
+        background: linear-gradient(95deg, rgba(36, 16, 60, 0.9981034650188201) 36%, rgba(52, 17, 95, 1) 100%);
+        text-align: center;
+        font-size: 10px;
+        height: 45vh;
+        padding: 0;
+        margin: 0;
+        display: block;
+      }
 
-            .header img {
-              height: 7rem;
-              width: 17rem;
-            }
+      .header img {
+        height: 7rem;
+        width: 17rem;
+      }
 
-            .heading {
-              font-size: 2rem;
-              position: absolute;
-              top:22rem;
-              left:3%;
-            }
+      .heading-holder {
+        display: grid;
+        place-items: center;
+        text-align: center;
+      }
+
+      .heading {
+        font-size: 2rem;
+        position: absolute;
+        top: 25vh;
+        left: 35%;
+      }
 
 
-            /* Circular Menu */
+      /* Circular Menu */
 
 
-            .circular-menu {
-              width: 18rem;
-              height: 18rem;
-              top: 6rem;
-              left: 5rem;
-            }
+      #drop {
+        visibility: visible;
+      }
 
-            .circle {
-              width: 18rem;
-              height: 18rem;
-            }
+      #drop-down {
+        visibility: visible;
+      }
 
-            .circle a {
-              font-size: 1.5rem;
-            }
+      .overlay img {
+        height: 8rem;
+        width: 18rem;
+      }
 
-            .name-color {
-              color: white;
-              -webkit-text-stroke: 0.28px black;
-              text-shadow: none;
-              font-size: 0.87rem;
-            }
+      .circular-menu {
+        visibility: hidden;
+      }
 
 
     }
@@ -327,8 +379,10 @@
 .content p {
   color:#5a3448;
   line-height: 2rem;
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   margin:1rem;
+  display:grid;
+  place-items:center;
 }
 
 /* Media queries - Responsive timeline on screens less than 600px wide */
@@ -365,8 +419,9 @@
 }
 
 .timeline-image{
-  height:60%;
-  width:60%;
+  height:100%;
+  width:100%;
+  text-align: center;
 }
 
 /* Back to top button */
@@ -457,7 +512,7 @@
   place-items: center;
   text-align: center;
   margin-top: 4rem;
-  color: #881244;
+    color: #cc397b;
   margin-bottom: 2rem;
 }
 
@@ -468,28 +523,44 @@
 }
 
 @media (max-width:768px){
-       .footer-left {
-    padding: 1rem;
-    border-right:none;
-  }
+     .footer-left {
+  padding: 1rem;
+  border-right:none;
+}
 
-  .left-left img {
-    height: 5rem;
-    width: 10rem;
-  }
-  }
-
+.left-left img {
+  height: 5rem;
+  width: 10rem;
+}
+}
 
     </style>
     <meta charset="utf-8">
-    <title></title>
+    <title>IITBRPF-Timeline</title>
+    <link rel="icon" href="OnlySymbolLogo.png" type="image">
   </head>
   <body>
 
 
         <!-- Header -->
         <div class="header">
-          <img src="C:\Users\vandi\.atom\IITBRPF Website\Images\Research_Park_Logos\WhiteTextLogo.png">
+          <img src="WhiteTextLogo.png">
+
+          <div id="drop-down" style=" float: right;margin-right:20px;">
+            <div id="drop"><i class="fas fa-bars"></i></div>
+            <div id="dropdown-menu">
+              <a href="index.html">Home</a>
+              <a href="about.html">About Us</a>
+              <a href="team-intro.html">People</a>
+              <a href="infrastructure.html">Spaces</a>
+              <a href="clients.html">Our Clients</a>
+              <a href="gallery.html">Gallery</a>
+              <a href="events.html">Events</a>
+              <a href="mediacoverage.html">Media Coverage</a>
+              <a href="contact.html">Contact Us</a>
+            </div>
+          </div>
+
           <div class="heading-holder">
             <h1 class="heading">Journey so far...</h1>
           </div>
@@ -538,7 +609,7 @@
 
     <div class="container timeline-container">
     <div class="timeline">
-      <div class="container1 left">
+      <div class="container1 right">
         <div class="content">
           <h2>2021</h2>
           <h4>ASPIRE today</h4>
@@ -549,6 +620,20 @@
 
           </p></div>
       </div>
+
+
+        <div class="container1 left">
+          <div class="content">
+            <h2>June, 2021</h2>
+            <h4>Celebrated 5 years of connecting industry & academia</h4>
+            <p>
+
+              <img style="text-align:center"class= "timeline-image"src="5yearlogo.png">
+
+            </p></div>
+        </div>
+
+
       <div class="container1 right">
         <div class="content">
             <h2>2020</h2>
@@ -560,8 +645,9 @@
           <h2>2018</h2>
           <h4>Bhoomi Pujan</h4>
           <p style="text-align:justify">
-            <img style="text-align:center"class= "timeline-image"src="C:\Users\vandi\.atom\Model Website\Images\Event_Pictures\Event_BhoomiPujan1.png">
-          <br>  <br>The foundation stone for the Research Park building at IIT Bombay was laid on 10th October 2018. The much-awaited building is now in its final stage of construction and shall begin operations by early 2022.
+            <img style="text-align:center"class= "timeline-image"src="Event_BhoomiPujan1.png">
+          <br>The foundation stone for the Research Park building at IIT Bombay was laid on 10th October 2018. The much-awaited building is now in its final stage of construction and shall begin operations by early 2022.
+
 
           </p>
         </div>
@@ -586,7 +672,6 @@
             The IIT Bombay Research Park Foundation (IITBRPF) was incorporated on 28th June 2016. It was registered as a non-profit entity established by IIT Bombay under an initiative by the Ministry of Education (formerly the Ministry of Human Resource Development), Govt. of India.
 
 
-
       </p>
             </div>
       </div>
@@ -597,7 +682,7 @@
           <h4>Launched logo of ‘ASPIRE’ & ‘Applied Materials’ joins IITB Research Park as an Anchor Client</h4>
 
           <p>
-            <img style="text-align:center"class= "timeline-image"src="C:\Users\vandi\.atom\Model Website\Images\Event_Pictures\Event_LogoLaunch.png"><br><br>
+            <img style="text-align:center"class= "timeline-image"src="Event_LogoLaunch.png"><br>
 
             The IIT Bombay Research Park Foundation logo, ASPIRE, was launched on 22nd October 2015. On the same day, Applied Materials joined hands with IIT Bombay Research Park, to become its first anchor client. This marked a significant step to a strengthening partnership and the beginning of many more industry-academia collaborations with the sole intent of growth in research and development.
 
@@ -617,16 +702,14 @@
     <div class="col-md-6 footer-left">
       <div class="row">
         <div class="col-6 left-left">
-          <img src="C:\Users\vandi\.atom\IITBRPF Website\Images\Research_Park_Logos\WhiteTextLogo.png">
+          <img src="WhiteTextLogo.png">
         </div>
         <div class="col-6 left-right">
           <p>
             IITB Research Park Foundation, <br>
-              Indian Institute of Technology Bombay, <br>
-              Main Building, 6B, Powai,
-              <br>Mumbai, Maharashtra 400076
-
-
+            Indian Institute of Technology Bombay, <br>
+            Main Building, 6B, Powai,
+            <br>Mumbai, Maharashtra 400076
           </p>
         </div>
       </div>
@@ -648,9 +731,11 @@
   </div>
 
   <div class="footer-text">
-    Copyright line
+    Copyright  2021 IITB Research Park Foundation | All rights reserved
+
   </div>
 </section>
+
 
 
 

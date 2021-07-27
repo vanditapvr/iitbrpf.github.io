@@ -107,6 +107,59 @@
     font-size: 0.9rem;
   }
 
+  #drop {
+    background-color: transparent;
+    color: whitesmoke;
+    font-size: 2rem;
+    visibility: hidden;
+    margin-top: 1.5rem;
+
+  }
+
+  #drop:hover {
+    cursor: pointer;
+  }
+
+  #drop-down {
+    position: relative;
+    display: inline-block;
+    box-shadow: none;
+    visibility: hidden;
+  }
+
+  #dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: whitesmoke;
+    width: 14rem;
+    border-radius: 5px;
+    z-index: 1;
+    margin-left: -12rem;
+    font-size: 1.3rem;
+  }
+
+  #dropdown-menu a {
+    color: black;
+    padding: 0.5rem;
+    text-decoration: none;
+    display: block;
+    border-radius: 5px;
+  }
+
+
+  #dropdown-menu a:hover {
+    background-color: #ddd;
+    border-radius: 5px;
+  }
+
+  #drop-down:hover #dropdown-menu {
+    display: block;
+    border-radius: 5px;
+  }
+
+
+
+
   @media (max-width:998px){
     .header {
       background: linear-gradient(95deg, rgba(36, 16, 60, 0.9981034650188201) 36%, rgba(52, 17, 95, 1) 100%);
@@ -160,54 +213,53 @@
 
   @media (max-width:768px){
     .header {
-          background: linear-gradient(95deg, rgba(36, 16, 60, 0.9981034650188201) 36%, rgba(52, 17, 95, 1) 100%);
-          text-align: center;
-          font-size: 10px;
-          height: 65vh;
-          padding: 0;
-          margin: 0;
-          display:block;
-        }
+      background: linear-gradient(95deg, rgba(36, 16, 60, 0.9981034650188201) 36%, rgba(52, 17, 95, 1) 100%);
+      text-align: center;
+      font-size: 10px;
+      height: 45vh;
+      padding: 0;
+      margin: 0;
+      display: block;
+    }
 
-        .header img {
-          height: 7rem;
-          width: 17rem;
-        }
+    .header img {
+      height: 7rem;
+      width: 17rem;
+    }
 
-        .heading {
-          font-size: 2rem;
-          position: absolute;
-          top:22rem;
-          left:3%;
-        }
+    .heading-holder {
+      display: grid;
+      place-items: center;
+      text-align: center;
+    }
+
+    .heading {
+      font-size: 2rem;
+      position: absolute;
+      top: 25vh;
+      left: 35%;
+    }
 
 
-        /* Circular Menu */
+    /* Circular Menu */
 
 
-        .circular-menu {
-          width: 18rem;
-          height: 18rem;
-          top: 6rem;
-          left: 5rem;
-        }
+    #drop {
+      visibility: visible;
+    }
 
-        .circle {
-          width: 18rem;
-          height: 18rem;
-        }
+    #drop-down {
+      visibility: visible;
+    }
 
-        .circle a {
-          font-size: 1.5rem;
-        }
+    .overlay img {
+      height: 8rem;
+      width: 18rem;
+    }
 
-        .name-color {
-          color: white;
-          -webkit-text-stroke: 0.28px black;
-          text-shadow: none;
-          font-size: 0.87rem;
-        }
-
+    .circular-menu {
+      visibility: hidden;
+    }
 
   }
 
@@ -334,7 +386,7 @@
         place-items: center;
         text-align: center;
         margin-top: 4rem;
-        color: #881244;
+          color: #cc397b;
         margin-bottom: 2rem;
       }
 
@@ -360,13 +412,30 @@
 
       </style>
       <meta charset="utf-8">
-      <title></title>
+      <title>IITBRPF-Media Coverage</title>
+      <link rel="icon" href="OnlySymbolLogo.png" type="image">
     </head>
     <body>
 
       <!-- Header -->
       <div class="header">
         <img src="WhiteTextLogo.png">
+
+        <div id="drop-down" style=" float: right;margin-right:20px;">
+          <div id="drop"><i class="fas fa-bars"></i></div>
+          <div id="dropdown-menu">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="team-intro.html">People</a>
+            <a href="infrastructure.html">Spaces</a>
+            <a href="clients.html">Our Clients</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="events.html">Events</a>
+            <a href="mediacoverage.html">Media Coverage</a>
+            <a href="contact.html">Contact Us</a>
+          </div>
+        </div>
+
         <div class="heading-holder">
           <h1 class="heading">Media Coverage</h1>
         </div>
@@ -411,7 +480,8 @@
       </nav>
 
       <div class="container">
-        <p class="lead">IIT Bombay To Start A Company To Run Research Park</p>
+        <p class="lead">IIT Bombay to start a Company to run the Research Park
+</p>
       </div>
 
     <div class = "content">
@@ -471,7 +541,7 @@
   </div>
 
   <div class="footer-text">
-    Copyright line
+      Copyright &copy 2021 IITB Research Park Foundation | All rights reserved
   </div>
 </section>
 

@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Links -->
   <!-- Bootstrap Links -->
 
@@ -25,8 +25,8 @@
 
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Tinos&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tinos&display=swap" rel="stylesheet">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
@@ -107,6 +107,57 @@
       font-size: 0.9rem;
     }
 
+    #drop {
+      background-color: transparent;
+      color: whitesmoke;
+      font-size: 2rem;
+      visibility: hidden;
+      margin-top: 1.5rem;
+
+    }
+
+    #drop:hover {
+      cursor: pointer;
+    }
+
+    #drop-down {
+      position: relative;
+      display: inline-block;
+      box-shadow: none;
+      visibility: hidden;
+    }
+
+    #dropdown-menu {
+      display: none;
+      position: absolute;
+      background-color: whitesmoke;
+      width: 14rem;
+      border-radius: 5px;
+      z-index: 1;
+      margin-left: -12rem;
+      font-size: 1.3rem;
+    }
+
+    #dropdown-menu a {
+      color: black;
+      padding: 0.5rem;
+      text-decoration: none;
+      display: block;
+      border-radius: 5px;
+    }
+
+
+    #dropdown-menu a:hover {
+      background-color: #ddd;
+      border-radius: 5px;
+    }
+
+    #drop-down:hover #dropdown-menu {
+      display: block;
+      border-radius: 5px;
+    }
+
+
 
     /* Formation of ASPIRE */
 
@@ -130,24 +181,24 @@
       margin: 1rem;
       font-size: 1.2rem;
       text-align: left;
-      color:#5a3448;
+      color: #5a3448;
       border-left: 0.1rem solid #5a3448;
-      padding:1rem;
+      padding: 1rem;
     }
 
     .formation h2 {
       font-size: 2.2rem;
       margin-bottom: 2rem;
-      color:#5a3448;
+      color: #5a3448;
     }
 
     .btn {
       position: absolute;
-      left:50%;
+      left: 50%;
       margin-top: 2rem;
       font-size: 1.3rem;
-      background-color: rgba(255,255,255,0.3);
-      color:#5a3448;
+      background-color: rgba(255, 255, 255, 0.3);
+      color: #5a3448;
     }
 
     /* What ASPIRE Offers */
@@ -158,16 +209,16 @@
       padding: 5%;
     }
 
-    .offers-container h2{
+    .offers-container h2 {
       font-size: 2.5rem;
       margin-bottom: 2rem;
-      color:#881244;
+      color: #881244;
     }
 
-    .offers-container ul{
+    .offers-container ul {
       font-size: 1.2rem;
       line-height: 2.2rem;
-      color:#5a3448;
+      color: #5a3448;
     }
 
     /* Vision */
@@ -186,19 +237,19 @@
       text-align: center;
       position: relative;
       top: 40vh;
-      left:0;
-      background-color: rgba(255,255,255,0.1);
+      left: 0;
+      background-color: rgba(255, 255, 255, 0.1);
     }
 
     .vision-text h2 {
       margin-bottom: 2rem;
       font-size: 2.5rem;
-      color:white;
-      background-color: rgba(0,0,0,0.3);
+      color: white;
+      background-color: rgba(0, 0, 0, 0.3);
     }
 
-    .vision-text p{
-      color:white;
+    .vision-text p {
+      color: white;
       font-size: 1.5rem;
       font-style: italic;
     }
@@ -208,12 +259,12 @@
     .mission-container {
       display: grid;
       place-items: center;
-      margin-top:7%;
+      margin-top: 7%;
     }
 
-    .mission-container h2{
-        font-size: 2.5rem;
-        color:#881244;
+    .mission-container h2 {
+      font-size: 2.5rem;
+      color: #881244;
     }
 
     .mission-deck {
@@ -223,11 +274,11 @@
     .mission-point {
       display: grid;
       place-items: center;
-      background: linear-gradient(180deg, rgba(228,240,0,0.9981034650188201) 29%, rgba(190,190,24,1) 97%);
-      height:20rem;
-      width:13rem;
-      padding:1%;
-      box-shadow:0.5rem 0.6rem 0.5rem 0.5rem lightgrey;
+      background: linear-gradient(180deg, rgba(228, 240, 0, 0.9981034650188201) 29%, rgba(190, 190, 24, 1) 97%);
+      height: 20rem;
+      width: 13rem;
+      padding: 1%;
+      box-shadow: 0.5rem 0.6rem 0.5rem 0.5rem lightgrey;
     }
 
 
@@ -235,11 +286,11 @@
       display: grid;
       place-items: center;
       text-align: center;
-      font-size:1.3rem;
-      color:#5a3448;
+      font-size: 1.3rem;
+      color: #5a3448;
       /* border-top: 0.07rem solid #5a3448;
       border-bottom: 0.07rem solid #5a3448; */
-      padding:4%;
+      padding: 4%;
     }
 
 
@@ -270,15 +321,15 @@
 
     .IIT-text h2 {
       text-align: center;
-      color:#881244;
+      color: #881244;
     }
 
     .IIT-text p {
-      color:#5a3448;
-      padding:4%;
+      color: #5a3448;
+      padding: 4%;
     }
 
-    @media (max-width:998px){
+    @media (max-width:998px) {
 
       .header {
         background: linear-gradient(95deg, rgba(36, 16, 60, 0.9981034650188201) 36%, rgba(52, 17, 95, 1) 100%);
@@ -350,40 +401,40 @@
         margin: 1rem;
         font-size: 1.2rem;
         text-align: left;
-        color:#5a3448;
+        color: #5a3448;
         border-left: 0.1rem solid #5a3448;
-        padding:1rem;
+        padding: 1rem;
       }
 
       .formation h2 {
         font-size: 2.2rem;
         margin-bottom: 2rem;
-        color:#5a3448;
+        color: #5a3448;
       }
 
       .btn {
         position: absolute;
-        left:50%;
+        left: 50%;
         margin-top: 2rem;
         font-size: 1.3rem;
-        background-color: rgba(255,255,255,0.3);
-        color:#5a3448;
+        background-color: rgba(255, 255, 255, 0.3);
+        color: #5a3448;
       }
 
 
     }
 
 
-    @media (max-width:768px){
+    @media (max-width:768px) {
 
       .header {
         background: linear-gradient(95deg, rgba(36, 16, 60, 0.9981034650188201) 36%, rgba(52, 17, 95, 1) 100%);
         text-align: center;
         font-size: 10px;
-        height: 65vh;
+        height: 45vh;
         padding: 0;
         margin: 0;
-        display:block;
+        display: block;
       }
 
       .header img {
@@ -391,39 +442,40 @@
         width: 17rem;
       }
 
+      .heading-holder {
+        display: grid;
+        place-items: center;
+        text-align: center;
+      }
+
       .heading {
         font-size: 2rem;
         position: absolute;
-        top:22rem;
-        left:3%;
+        top: 25vh;
+        left: 35%;
       }
 
 
       /* Circular Menu */
 
 
+      #drop {
+        visibility: visible;
+      }
+
+      #drop-down {
+        visibility: visible;
+      }
+
+      .overlay img {
+        height: 8rem;
+        width: 18rem;
+      }
+
       .circular-menu {
-        width: 18rem;
-        height: 18rem;
-        top: 6rem;
-        left: 5rem;
+        visibility: hidden;
       }
 
-      .circle {
-        width: 18rem;
-        height: 18rem;
-      }
-
-      .circle a {
-        font-size: 1.5rem;
-      }
-
-      .name-color {
-        color: white;
-        -webkit-text-stroke: 0.28px black;
-        text-shadow: none;
-        font-size: 0.87rem;
-      }
 
       /* Formation of ASPIRE */
 
@@ -446,33 +498,33 @@
         top: 3vh;
         font-size: 1.2rem;
         text-align: left;
-          color:#5a3448;
+        color: #5a3448;
         border-left: none;
-        padding:0rem;
+        padding: 0rem;
       }
 
       .formation h2 {
         font-size: 2rem;
         margin-bottom: 1rem;
-        color:#5a3448;
+        color: #5a3448;
       }
 
-      .formation p{
-        background: rgba(255,255,255,0.5);
+      .formation p {
+        background: rgba(255, 255, 255, 0.5);
       }
 
       .btn {
         position: absolute;
-        left:50%;
+        left: 50%;
         margin-top: 2rem;
         font-size: 1.3rem;
-        background-color: rgba(255,255,255,0.8);
-        color:#5a3448;
+        background-color: rgba(255, 255, 255, 0.8);
+        color: #5a3448;
       }
 
       .mission-point {
-        height:20rem;
-        width:20rem;
+        height: 20rem;
+        width: 20rem;
       }
 
 
@@ -484,9 +536,9 @@
       position: fixed;
       bottom: 25px;
       right: 3rem;
-      left:93%;
+      left: 93%;
       display: none;
-      width:5%;
+      width: 5%;
       color: #881244;
       background: #ffffd4;
     }
@@ -566,7 +618,7 @@
       place-items: center;
       text-align: center;
       margin-top: 4rem;
-      color: #881244;
+      color: #cc397b;
       margin-bottom: 2rem;
     }
 
@@ -576,20 +628,21 @@
       color: #ffffed;
     }
 
-      @media (max-width:768px){
-         .footer-left {
-      padding: 1rem;
-      border-right:none;
-    }
+    @media (max-width:768px) {
+      .footer-left {
+        padding: 1rem;
+        border-right: none;
+      }
 
-    .left-left img {
-      height: 5rem;
-      width: 10rem;
-    }
+      .left-left img {
+        height: 5rem;
+        width: 10rem;
+      }
     }
   </style>
   <meta charset="utf-8">
-  <title></title>
+  <title>IITBRPF-About Us</title>
+  <link rel="icon" href="OnlySymbolLogo.png" type="image">
 </head>
 
 <body>
@@ -597,6 +650,22 @@
   <!-- Header -->
   <div class="header">
     <img src="WhiteTextLogo.png">
+
+    <div id="drop-down" style=" float: right;margin-right:20px;">
+      <div id="drop"><i class="fas fa-bars"></i></div>
+      <div id="dropdown-menu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="team-intro.html">People</a>
+        <a href="infrastructure.html">Spaces</a>
+        <a href="clients.html">Our Clients</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="events.html">Events</a>
+        <a href="mediacoverage.html">Media Coverage</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+    </div>
+
     <div class="heading-holder">
       <h1 class="heading">About Us</h1>
     </div>
@@ -648,7 +717,9 @@
     <div class="formation">
       <h2>Formation of ASPIRE</h2>
       <p>
-        The Ministry of Education (formerly, the Ministry of Human Resource Development), Government of India commissioned IIT Bombay to build a Research Park at the IIT Bombay campus in Powai, Mumbai. Set up in 2016, ASPIRE - IIT Bombay’s Research Park Foundation (IITBRPF) is a non-profit entity to accelerate innovation and research to achieve impactful outcomes. Modelled on learnings from successful national and global research parks, ASPIRE is set to become the nerve centre linking knowledge, expertise, and resources to boost industry-academia culture in India.
+        The Ministry of Education (formerly, the Ministry of Human Resource Development), Government of India commissioned IIT Bombay to build a Research Park at the IIT Bombay campus in Powai, Mumbai. Set up in 2016, ASPIRE - IIT Bombay’s Research
+        Park Foundation (IITBRPF) is a non-profit entity to accelerate innovation and research to achieve impactful outcomes. Modelled on learnings from successful national and global research parks, ASPIRE is set to become the nerve centre linking
+        knowledge, expertise, and resources to boost industry-academia culture in India.
         <a href="timeline.html"><button type="button" class="btn">The Journey so far..</button></a>
       </p>
     </div>
@@ -745,7 +816,7 @@
               IITB Research Park Foundation, <br>
               Indian Institute of Technology Bombay, <br>
               Main Building, 6B, Powai,
-              <br>Mumbai, Maharashtra 400076 
+              <br>Mumbai, Maharashtra 400076
 
             </p>
           </div>
@@ -768,15 +839,14 @@
     </div>
 
     <div class="footer-text">
-      Copyright line
+      Copyright &copy 2021 IITB Research Park Foundation | All rights reserved
     </div>
   </section>
 
 
 
   <script>
-
-  // Circular Menu
+    // Circular Menu
     var items = document.querySelectorAll('.circle a');
 
     for (var i = 0, l = items.length; i < l; i++) {
@@ -798,11 +868,9 @@
     $('.carousel').carousel({
       interval: 5000
     })
-
-
   </script>
-<script>
-// Back to top
+  <script>
+    // Back to top
 
     $(function() {
       var text = $(".text");
@@ -877,7 +945,7 @@
         return false;
       });
     });
-</script>
+  </script>
 </body>
 
 </html>

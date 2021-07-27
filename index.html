@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Links -->
   <!-- bootstrap links -->
 
@@ -44,13 +44,13 @@
     body {
       background-color: #ffffed;
       font-family: 'Roboto', sans-serif;
-    overflow-x: hidden;
+      overflow-x: hidden;
     }
 
     /* Header */
     .header-bg {
       height: 100vh;
-      width:100%;
+      width: 100%;
       min-height: 350px;
       background: no-repeat center center scroll;
       -webkit-background-size: cover;
@@ -128,6 +128,57 @@
 
     }
 
+    #drop {
+      background-color: transparent;
+      color: whitesmoke;
+      font-size: 2rem;
+      visibility: hidden;
+
+    }
+
+    #drop:hover {
+      cursor: pointer;
+    }
+
+    #drop-down {
+      position: relative;
+      display: inline-block;
+      box-shadow: none;
+      visibility: hidden;
+    }
+
+    #dropdown-menu {
+      display: none;
+      position: absolute;
+      background-color: whitesmoke;
+      width: 14rem;
+      border-radius: 5px;
+      z-index: 1;
+      margin-left: -12rem;
+      font-size: 1.3rem;
+      text-align: center;
+
+    }
+
+    #dropdown-menu a {
+      color: black;
+      padding: 0.5rem;
+      text-decoration: none;
+      display: block;
+      border-radius: 5px;
+    }
+
+
+    #dropdown-menu a:hover {
+      background-color: #ddd;
+      border-radius: 5px;
+    }
+
+    #drop-down:hover #dropdown-menu {
+      display: block;
+      border-radius: 5px;
+    }
+
 
 
 
@@ -201,7 +252,7 @@
         position: absolute;
         top: 40vh;
         border-left: 3px solid whitesmoke;
-        left:5%;
+        left: 5%;
       }
 
       .tagline-text {
@@ -215,24 +266,22 @@
 
     @media (max-width:768px) {
 
+      #drop {
+        visibility: visible;
+      }
+
+      #drop-down {
+        visibility: visible;
+      }
+
       .overlay img {
         height: 8rem;
         width: 18rem;
       }
 
       .circular-menu {
-        width: 20rem;
-        height: 20rem;
-        position: absolute;
-        top: 18vh;
-        left: 2rem;
+        visibility: hidden;
       }
-
-      .circle {
-        width: 20rem;
-        height: 20rem;
-      }
-
 
 
       .tagline-holder {
@@ -240,8 +289,8 @@
         position: absolute;
         top: 70vh;
         text-align: center;
-        left:15%;
-        border:none;
+        left: 15%;
+        border: none;
       }
 
       .tagline-text {
@@ -549,14 +598,14 @@
         font-size: 1.3rem;
         line-height: 2.5rem;
         color: #5a3448;
-        margin:0;
+        margin: 0;
       }
 
 
 
       .offers-feature {
         height: 20rem;
-        left:15%;
+        left: 15%;
         width: 70%;
         margin-top: 1.5rem;
         box-shadow: 0.5rem 0.5rem 0.5rem 0.5rem gainsboro;
@@ -606,24 +655,24 @@
         text-align: center;
       }
 
-      .announcements-section{
-        margin:0;
-        padding:0;
+      .announcements-section {
+        margin: 0;
+        padding: 0;
       }
 
       .announcements-divider {
         padding: 0;
-        margin:0;
+        margin: 0;
       }
 
-      .latest-section{
-        margin:0;
-        padding:0;
+      .latest-section {
+        margin: 0;
+        padding: 0;
       }
 
-      .updates-section{
-        margin:0;
-        padding:0;
+      .updates-section {
+        margin: 0;
+        padding: 0;
       }
 
 
@@ -654,46 +703,46 @@
       overflow-y: hidden;
     }
 
-    .latest-section:hover{
+    .latest-section:hover {
       overflow-y: auto;
-      cursor:pointer;
+      cursor: pointer;
     }
 
 
 
     /* width */
-.latest-section::-webkit-scrollbar {
-  width: 0.4rem;
-  cursor: pointer;
-}
+    .latest-section::-webkit-scrollbar {
+      width: 0.4rem;
+      cursor: pointer;
+    }
 
-.latest-section::-webkit-scrollbar:hover {
-  cursor: pointer;
-}
+    .latest-section::-webkit-scrollbar:hover {
+      cursor: pointer;
+    }
 
-/* Track */
-.latest-section::-webkit-scrollbar-track {
-  background: transparent;
-  cursor: pointer;
-}
+    /* Track */
+    .latest-section::-webkit-scrollbar-track {
+      background: transparent;
+      cursor: pointer;
+    }
 
-/* Handle */
-.latest-section::-webkit-scrollbar-thumb {
-  background: #f8de7e;
-  border-radius: 15rem;
-  cursor: pointer;
-}
+    /* Handle */
+    .latest-section::-webkit-scrollbar-thumb {
+      background: #f8de7e;
+      border-radius: 15rem;
+      cursor: pointer;
+    }
 
-/* Handle on hover */
-.latest-section::-webkit-scrollbar-thumb:hover {
-  background: gold;
-  cursor: pointer;
-}
+    /* Handle on hover */
+    .latest-section::-webkit-scrollbar-thumb:hover {
+      background: gold;
+      cursor: pointer;
+    }
 
-.modal-content img {
-  height: 100%;
-  width:100%;
-}
+    .modal-content img {
+      height: 100%;
+      width: 100%;
+    }
 
 
     .latest-section h4 {
@@ -718,7 +767,7 @@
       color: #5a3448;
     }
 
-    .news-item span{
+    .news-item span {
       font-size: 0.9rem;
       margin-top: 1rem;
     }
@@ -889,6 +938,53 @@
       font-size: 1.3rem;
     }
 
+    @media (max-width:768px) {
+
+
+      .sector {
+        background-color: olive;
+        border-radius: 50%;
+        width: 8rem;
+        height: 8rem;
+        position: relative;
+        display: inline-block;
+        shape-outside: circle();
+      }
+
+
+      .sector-name {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 140%;
+        font-size: 1.1rem;
+      }
+
+
+
+      .emerging-sector {
+        background-color: olive;
+        border-radius: 50%;
+        width: 8rem;
+        height: 8rem;
+        position: relative;
+        display: inline-block;
+        shape-outside: circle();
+      }
+
+
+
+      .emerging-sector-name {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 140%;
+        font-size: 1.1rem;
+      }
+    }
+
     /* Modes of Engagement */
 
     .modes-of-engagement-section {
@@ -909,7 +1005,7 @@
     .modes-text {
       height: 80vh;
       padding: 1%;
-      padding-left:1rem;
+      padding-left: 1rem;
     }
 
     .modes-text p {
@@ -948,7 +1044,7 @@
     .modes-textoverlay {
       position: absolute;
       display: grid;
-      place-items: end center;
+      place-items: center;
       text-align: center;
       background-color: transparent;
       transition: transform .5s ease;
@@ -974,25 +1070,26 @@
       background-color: rgba(0, 0, 0, 0.3);
     }
 
-    @media (max-width:768px){
+    @media (max-width:768px) {
       .modes-slide {
-      height: 15rem;
+        height: 15rem;
       }
 
       .modes-slider {
-    margin-top:1rem;
-    }
+        margin-top: 1rem;
+      }
 
-    .modes-textoverlay p {
-      display: grid;
-      place-items: center;
-      color: white;
-      font-size: 1.1rem;
-      font-weight: bold;
-      width: 100%;
-      height: 20%;
-      background-color: rgba(0, 0, 0, 0.3);
-    }
+      .modes-textoverlay p {
+        display: grid;
+        place-items: center;
+        color: white;
+        font-size: 1.1rem;
+        font-weight: bold;
+        width: 100%;
+        height: 20%;
+        background-color: rgba(0, 0, 0, 0.3);
+        margin-bottom: 1rem;
+      }
 
 
     }
@@ -1052,7 +1149,7 @@
     .back-to-top {
       position: fixed;
       bottom: 25px;
-      right:3rem;
+      right: 3rem;
       display: none;
       color: #881244;
       background: #ffffd4;
@@ -1133,7 +1230,7 @@
       place-items: center;
       text-align: center;
       margin-top: 4rem;
-      color: #881244;
+      color: #cc397b;
       margin-bottom: 2rem;
     }
 
@@ -1143,20 +1240,24 @@
       color: #ffffed;
     }
 
-    @media (max-width:768px){
-         .footer-left {
-      padding: 1rem;
-      border-right:none;
-    }
+    @media (max-width:768px) {
+      .footer-left {
+        padding: 1rem;
+        border-right: none;
+      }
 
-    .left-left img {
-      height: 5rem;
-      width: 10rem;
-    }
+      .left-left img {
+        height: 5rem;
+        width: 10rem;
+      }
     }
   </style>
   <meta charset="utf-8">
-  <title></title>
+  <title>
+
+    IITBRPF-Home
+  </title>
+  <link rel="icon" href="OnlySymbolLogo.png" type="image">
 </head>
 
 <body>
@@ -1164,10 +1265,25 @@
   <!-- Header -->
 
   <header>
+
     <div class="overlay">
 
       <div class="container display-overlay">
         <img src="WhiteTextLogo.png">
+        <div id="drop-down" style=" float: right;margin-right:10px;">
+          <div id="drop"><i class="fas fa-bars"></i></div>
+          <div id="dropdown-menu">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="team-intro.html">People</a>
+            <a href="infrastructure.html">Spaces</a>
+            <a href="clients.html">Our Clients</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="events.html">Events</a>
+            <a href="mediacoverage.html">Media Coverage</a>
+            <a href="contact.html">Contact Us</a>
+          </div>
+        </div>
 
         <!-- Tagline -->
 
@@ -1223,6 +1339,8 @@
 
 
 
+
+
     </div>
 
     <!-- Header Background Slideshow -->
@@ -1267,7 +1385,9 @@
       </div>
       <div class="col-12 intro-text">
         <p>
-          IIT Bombay’s intellectual capital, its state-of-the-art R&D infrastructure, and the vibrant technology industry converge at the Research Park to address real-world problems. What started with a vision to bring industry and academia next to each other is thriving today on maturing science and technology towards collaboratively addressing the real world problems. As ASPIRE continues to buzz with heavy research projects and technological discoveries, it is making its way for smarter solutions for the times ahead.
+          IIT Bombay’s intellectual capital, its state-of-the-art R&D infrastructure, and the vibrant technology industry converge at the Research Park to address real-world problems. What started with a vision to bring industry and academia next to
+          each other is thriving today on maturing science and technology towards collaboratively addressing the real world problems. As ASPIRE continues to buzz with heavy research projects and technological discoveries, it is making its way for
+          smarter solutions for the times ahead.
         </p>
       </div>
     </div>
@@ -1292,8 +1412,8 @@
         <div class="modal-body">
           <div class="container video-container">
             <div class=" embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/eFCI1X8P8L4" allowfullscreen></iframe>
-          </div>
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/eFCI1X8P8L4" allowfullscreen></iframe>
+            </div>
           </div>
         </div>
       </div>
@@ -1382,61 +1502,63 @@
         <h4>Latest News</h4>
         <div class="latest-news-list">
           <div class="news-item">
-          <marquee behavior="scroll" direction="up" style="height:15rem;" onmouseover="this.stop();" onmouseout="this.start();" scrollamount="5";>
-            <p>
-              <a data-toggle="modal" data-target="#mnst">
-              Congratulations to the Research Park Associate Multi Nano Sense Technologies Pvt. Ltd. (MNST) on receiving the National Award 2021 for Technology Startup by the Department of Science & Technology, Govt. of India.
-          </a>
-        </p>
-            <hr>
-            <p>
-              <a data-toggle="modal" data-target="#nanosniff">
-              Congratulations to the Research Park Member Client NanoSniff Technologies Pvt Ltd for launching NanoSniffer - World's First MEMS-based Explosive trace detector on 9th April 2021.
-            </a>
-          </p>
-            <hr>
-            <p>
-               <a href="https://www.techcircle.in/2020/12/17/applied-ventures-shortlists-eight-startups-for-astra-2020/" target="_blank">Research Park's oldest client Applied Materials India shortlists a recent associate MNST for its ASTRA 2020 programme.</a>
-               <br><span class="text-muted">17 December, 2020</span>
-            </p>
-            <hr>
-            <p>
-              <a href="https://analyticsindiamag.com/interview-with-dr-suraj-rengarajan-cto-applied-materials-india/" target="_blank">CTO of Applied Materials India, Dr. Suraj Rengarajan shares in an interview about its R&D partnership with IIT Bombay Research Park | RP mention</a>
-              <br><span class="text-muted">18 June, 2021</span>
-            </p>
-            <hr>
-          </marquee>
+            <marquee behavior="scroll" direction="up" style="height:15rem;" onmouseover="this.stop();" onmouseout="this.start();" scrollamount="5" ;>
+              <p>
+                <a data-toggle="modal" data-target="#mnst">
+                  Congratulations to the Research Park Associate Multi Nano Sense Technologies Pvt. Ltd. (MNST) on receiving the National Award 2021 for Technology Startup by the Department of Science & Technology, Govt. of India.
+                </a>
+              </p>
+              <hr>
+              <p>
+                <a data-toggle="modal" data-target="#nanosniff">
+                  Congratulations to the Research Park Member Client NanoSniff Technologies Pvt Ltd for launching NanoSniffer - World's First MEMS-based Explosive trace detector on 9th April 2021.
+                </a>
+              </p>
+              <hr>
+              <p>
+                <a href="https://www.techcircle.in/2020/12/17/applied-ventures-shortlists-eight-startups-for-astra-2020/" target="_blank">Research Park's oldest client Applied Materials India shortlists a recent associate MNST for its ASTRA 2020
+                  programme.</a>
+                <br><span class="text-muted">17 December, 2020</span>
+              </p>
+              <hr>
+              <p>
+                <a href="https://analyticsindiamag.com/interview-with-dr-suraj-rengarajan-cto-applied-materials-india/" target="_blank">CTO of Applied Materials India, Dr. Suraj Rengarajan shares in an interview about its R&D partnership with IIT
+                  Bombay Research Park | RP mention</a>
+                <br><span class="text-muted">18 June, 2021</span>
+              </p>
+              <hr>
+            </marquee>
           </div>
           <!-- Modal -->
-  <div class="modal fade" id="mnst" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <img src="C:\Users\vandi\.atom\IITBRPF Website\Images\MNST_National Startup Award 2021.jpg" />
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Modal -->
-<div class="modal fade" id="nanosniff" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-<div class="modal-dialog modal-dialog-centered" role="document">
-<div class="modal-content">
-<div class="modal-header">
-  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
-  </button>
-</div>
-<div class="modal-body">
-  <img src="C:\Users\vandi\.atom\IITBRPF Website\Images\Launch of NanoSniffer_9.4.2021.jpg" />
-</div>
-</div>
-</div>
-</div>
+          <div class="modal fade" id="mnst" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <img src="MNST_National Startup Award 2021.jpg" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Modal -->
+          <div class="modal fade" id="nanosniff" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <img src="Launch of NanoSniffer_9.4.2021.jpg" />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="col-6 updates-section">
@@ -1528,7 +1650,9 @@
     <div class="row">
       <div class="col-lg-5 col-md-5 modes-text">
         <p>
-          IIT Bombay continuously strives to have a tryst with excellence along the facets of teaching & learning, research and breakthrough innovations. In its continuous effort to develop and translate cutting-edge technology, IIT Bombay seeks to strengthen its partnership and has opened its gates for industries. The ASPIRE Research Park is designed to provide an excellent environment to nurture and sustain exciting collaborations for technology development and translation. The research park offers a very conducive ambience for start-ups, MSMEs, and industry giants to collaborate with IIT Bombay through the following modes of engagement.
+          IIT Bombay continuously strives to have a tryst with excellence along the facets of teaching & learning, research and breakthrough innovations. In its continuous effort to develop and translate cutting-edge technology, IIT Bombay seeks to
+          strengthen its partnership and has opened its gates for industries. The ASPIRE Research Park is designed to provide an excellent environment to nurture and sustain exciting collaborations for technology development and translation. The
+          research park offers a very conducive ambience for start-ups, MSMEs, and industry giants to collaborate with IIT Bombay through the following modes of engagement.
         </p>
       </div>
       <div class="col-lg-7 col-md-7">
@@ -1577,7 +1701,7 @@
           <a style="text-decoration:none;color:black;" href="modesofengagement.html#06">
             <div class="item modes-slide">
               <div class="modes-textoverlay">
-                <p>Joint Project from Third Agency</p>
+                <p>Collaborative Research Proposals</p>
               </div>
               <img src="joint-project_from_third_agency.jpg" />
             </div>
@@ -1633,15 +1757,18 @@
         <div class="carousel-item testimonial active">
           <img class="testimonial-img" src="Dr. Suraj rengarajan, Applied Materials India.png">
           <p>
-            “Applied Materials is delighted to be the anchor client of the Research Park & congratulates IITB on realizing its vision of being an innovation hub. Our 15 year partnership with IIT Bombay is an exemplary benchmark for how a global innovation leader and a leading research university can collaborate to shape a rich & sustainable future."
+            “Applied Materials is delighted to be the anchor client of the Research Park & congratulates IITB on realizing its vision of being an innovation hub. Our 15 year partnership with IIT Bombay is an exemplary benchmark for how a global
+            innovation leader and a leading research university can collaborate to shape a rich & sustainable future."
 
           </p>
           <p class="text-muted">
-            - Dr Suraj Rengarajan, India CTO, Applied Materials India
+            - Dr. Suraj Rengarajan, India CTO, Applied Materials India
 
 
           </p>
         </div>
+
+
         <div class="carousel-item testimonial">
           <img class="testimonial-img" src="Nitin Nanosniff Photo.png">
           <p>
@@ -1649,7 +1776,18 @@
             With the help of the Research Park team, we hired some of the finest talents of IIT Bombay as student interns who benefitted by working on real cutting-edge problems."
           </p>
           <p class="text-muted">
-            - Dr Nitin Kale, Co-Founder & CTO, NanoSniff Technologies Pvt Ltd
+            - Dr. Nitin Kale, Co-Founder & CTO, NanoSniff Technologies Pvt Ltd
+          </p>
+        </div>
+
+        <div class="carousel-item testimonial">
+          <img class="testimonial-img" src="Syed-Abbas-Ubisoft.png">
+          <p>
+            "We come from a video gaming industry that is young & dynamic, and being integrated with one of India’s premier institutes has opened up numerous avenues of collaboration and opportunities. No matter how ambitious the vision is, the
+            Research Park team has always assisted us to the best of their abilities, thereby solidifying our presence at IIT Bombay."
+          </p>
+          <p class="text-muted">
+            - Mr. Syed Abbas, Managing Director, Ubisoft India Studios
           </p>
         </div>
       </div>
@@ -1702,7 +1840,7 @@
     </div>
 
     <div class="footer-text">
-      Copyright  2021 IITB Research Park Foundation | All rights reserved
+      Copyright &copy 2021 IITB Research Park Foundation | All rights reserved
 
     </div>
   </section>
@@ -1772,7 +1910,7 @@
       })
     });
 
-// Back to top
+    // Back to top
 
     $(function() {
       var text = $(".text");

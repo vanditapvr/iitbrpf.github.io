@@ -104,6 +104,57 @@
       font-size: 0.9rem;
     }
 
+    #drop {
+      background-color: transparent;
+      color: whitesmoke;
+      font-size: 2rem;
+      visibility: hidden;
+      margin-top: 1.5rem;
+
+    }
+
+    #drop:hover {
+      cursor: pointer;
+    }
+
+    #drop-down {
+      position: relative;
+      display: inline-block;
+      box-shadow: none;
+      visibility: hidden;
+    }
+
+    #dropdown-menu {
+      display: none;
+      position: absolute;
+      background-color: whitesmoke;
+      width: 14rem;
+      border-radius: 5px;
+      z-index: 1;
+      margin-left: -12rem;
+      font-size: 1.3rem;
+    }
+
+    #dropdown-menu a {
+      color: black;
+      padding: 0.5rem;
+      text-decoration: none;
+      display: block;
+      border-radius: 5px;
+    }
+
+
+    #dropdown-menu a:hover {
+      background-color: #ddd;
+      border-radius: 5px;
+    }
+
+    #drop-down:hover #dropdown-menu {
+      display: block;
+      border-radius: 5px;
+    }
+
+
     @media (max-width:998px){
       .header {
         background: linear-gradient(95deg, rgba(36, 16, 60, 0.9981034650188201) 36%, rgba(52, 17, 95, 1) 100%);
@@ -161,10 +212,10 @@
         background: linear-gradient(95deg, rgba(36, 16, 60, 0.9981034650188201) 36%, rgba(52, 17, 95, 1) 100%);
         text-align: center;
         font-size: 10px;
-        height: 65vh;
+        height: 45vh;
         padding: 0;
         margin: 0;
-        display:block;
+        display: block;
       }
 
       .header img {
@@ -172,39 +223,40 @@
         width: 17rem;
       }
 
+      .heading-holder {
+        display: grid;
+        place-items: center;
+        text-align: center;
+      }
+
       .heading {
         font-size: 2rem;
         position: absolute;
-        top:22rem;
-        left:3%;
+        top: 25vh;
+        left: 35%;
       }
 
 
       /* Circular Menu */
 
 
+      #drop {
+        visibility: visible;
+      }
+
+      #drop-down {
+        visibility: visible;
+      }
+
+      .overlay img {
+        height: 8rem;
+        width: 18rem;
+      }
+
       .circular-menu {
-        width: 18rem;
-        height: 18rem;
-        top: 6rem;
-        left: 5rem;
+        visibility: hidden;
       }
 
-      .circle {
-        width: 18rem;
-        height: 18rem;
-      }
-
-      .circle a {
-        font-size: 1.5rem;
-      }
-
-      .name-color {
-        color: white;
-        -webkit-text-stroke: 0.28px black;
-        text-shadow: none;
-        font-size: 0.87rem;
-      }
     }
 
     .form-container{
@@ -245,8 +297,8 @@
   text-align: right;
 }
 
-.btn {
-  background-color: lightyellow;
+input[type=submit] {
+  background-color: #eedc82;
   color: brown;
   font-weight: bold;
   padding: 12px 20px;
@@ -255,9 +307,9 @@
   cursor: pointer;
 }
 
-.btn:hover {
-  background-color: lightgreen;
-  color:white;
+input[type=submit]:hover {
+  background-color: #f6eabe;
+  color:brown;
   font-weight: bolder;
 }
 
@@ -388,7 +440,7 @@
   place-items: center;
   text-align: center;
   margin-top: 4rem;
-  color: #881244;
+  color: #cc397b;
   margin-bottom: 2rem;
 }
 
@@ -435,18 +487,36 @@ width: 10rem;
             cursor: pointer;
          }
          #confirm .message {
-            text-align: left;
+            text-align: center;
          }
 
     </style>
     <meta charset="utf-8">
-    <title></title>
+    <title>IITBRPF-Contact Us</title>
+    <link rel="icon" href="OnlySymbolLogo.png" type="image">
   </head>
   <body>
 
     <!-- Header -->
     <div class="header">
-      <img src="C:\Users\vandi\.atom\Research Park Official Website\Images\Research_Park_Logos\WhiteTextLogo.png">
+      <img src="WhiteTextLogo.png">
+
+
+          <div id="drop-down" style=" float: right;margin-right:20px;">
+            <div id="drop"><i class="fas fa-bars"></i></div>
+            <div id="dropdown-menu">
+              <a href="index.html">Home</a>
+              <a href="about.html">About Us</a>
+              <a href="team-intro.html">People</a>
+              <a href="infrastructure.html">Spaces</a>
+              <a href="clients.html">Our Clients</a>
+              <a href="gallery.html">Gallery</a>
+              <a href="events.html">Events</a>
+              <a href="mediacoverage.html">Media Coverage</a>
+              <a href="contact.html">Contact Us</a>
+            </div>
+          </div>
+
       <div class="heading-holder">
         <h1 class="heading">Contact Us!</h1>
       </div>
@@ -505,17 +575,17 @@ width: 10rem;
 
       <div class="form-holder">
         <label for="name">Name</label>
-        <input type="text" value="" id="name"  required name="entry.1352535366" placeholder="">
+        <input type="text" value="" id="name"  name="entry.1352535366" placeholder="">
         <br>
 
         <label for="email">Email</label>
-                <input id="email" required name="entry.1317427523" type="email" value=""
+                <input id="email" name="entry.1317427523" type="email" value=""
                 required placeholder="xyz@email.com"/>
                 <span class="email-invalid" style="display:none">
                   Must be a valid email address</span><br><br>
 
         <label for="subject">Message/ Query</label>
-        <textarea id="subject" value="" required name="entry.1404109469" placeholder="" style="height:200px"></textarea>
+        <textarea id="subject" value="" name="entry.1404109469" placeholder="" style="height:200px"></textarea>
 
         <div class="button-holder">
           <input name="Submit" id="mybtn" value="Submit" type="submit" onclick="return validateForm();">
@@ -550,7 +620,7 @@ width: 10rem;
 
 
 <div id="confirm">
-         <div class="message">Thankyou</div><br>
+         <div class="message">Thankyou for connecting with us! <br>Please click 'OK' to continue. </div><br>
          <a href="thankyou-contact.html"><button class="yes">OK</button></a>
       </div>
 
@@ -570,7 +640,7 @@ width: 10rem;
             IITB Research Park Foundation, <br>
             Indian Institute of Technology Bombay, <br>
             Main Building, 6B, Powai,
-            <br>Mumbai, Maharashtra 400076 
+            <br>Mumbai, Maharashtra 400076
           </p>
         </div>
       </div>
@@ -592,7 +662,7 @@ width: 10rem;
   </div>
 
   <div class="footer-text">
-    Copyright line
+    Copyright &copy 2021 IITB Research Park Foundation | All rights reserved
   </div>
 </section>
 
@@ -651,8 +721,13 @@ width: 10rem;
             return false;
           }
           else {
+
+            alert('Succesfully Submitted');
+
             submitted=true;
+          //  document.getElementById("query").addEventListener("submit", myFunction);
             return true;
+
           }
         }
 
@@ -664,12 +739,7 @@ functionAlert();
 
 
 <script>
-$(document).ready(function(){
-  $("form").submit(function(){
-    alert("Submitted");
-    window.location='thankyou-contact.html';
-  });
-});
+
 
 // Circular Menu
 

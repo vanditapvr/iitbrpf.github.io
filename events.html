@@ -105,6 +105,58 @@
     font-size: 0.9rem;
   }
 
+  #drop {
+    background-color: transparent;
+    color: whitesmoke;
+    font-size: 2rem;
+    visibility: hidden;
+    margin-top: 1.5rem;
+
+  }
+
+  #drop:hover {
+    cursor: pointer;
+  }
+
+  #drop-down {
+    position: relative;
+    display: inline-block;
+    box-shadow: none;
+    visibility: hidden;
+  }
+
+  #dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: whitesmoke;
+    width: 14rem;
+    border-radius: 5px;
+    z-index: 1;
+    margin-left: -12rem;
+    font-size: 1.3rem;
+  }
+
+  #dropdown-menu a {
+    color: black;
+    padding: 0.5rem;
+    text-decoration: none;
+    display: block;
+    border-radius: 5px;
+  }
+
+
+  #dropdown-menu a:hover {
+    background-color: #ddd;
+    border-radius: 5px;
+  }
+
+  #drop-down:hover #dropdown-menu {
+    display: block;
+    border-radius: 5px;
+  }
+
+
+
   @media (max-width:998px){
     .header {
       background: linear-gradient(95deg, rgba(36, 16, 60, 0.9981034650188201) 36%, rgba(52, 17, 95, 1) 100%);
@@ -161,10 +213,10 @@
       background: linear-gradient(95deg, rgba(36, 16, 60, 0.9981034650188201) 36%, rgba(52, 17, 95, 1) 100%);
       text-align: center;
       font-size: 10px;
-      height: 65vh;
+      height: 45vh;
       padding: 0;
       margin: 0;
-      display:block;
+      display: block;
     }
 
     .header img {
@@ -172,38 +224,38 @@
       width: 17rem;
     }
 
+    .heading-holder {
+      display: grid;
+      place-items: center;
+      text-align: center;
+    }
+
     .heading {
       font-size: 2rem;
       position: absolute;
-      top:22rem;
-      left:3%;
+      top: 25vh;
+      left: 35%;
     }
 
 
     /* Circular Menu */
 
 
+    #drop {
+      visibility: visible;
+    }
+
+    #drop-down {
+      visibility: visible;
+    }
+
+    .overlay img {
+      height: 8rem;
+      width: 18rem;
+    }
+
     .circular-menu {
-      width: 18rem;
-      height: 18rem;
-      top: 6rem;
-      left: 5rem;
-    }
-
-    .circle {
-      width: 18rem;
-      height: 18rem;
-    }
-
-    .circle a {
-      font-size: 1.5rem;
-    }
-
-    .name-color {
-      color: white;
-      -webkit-text-stroke: 0.28px black;
-      text-shadow: none;
-      font-size: 0.87rem;
+      visibility: hidden;
     }
 
   }
@@ -302,7 +354,7 @@
     left:93%;
     display: none;
     width:5%;
-    color: #881244;
+    color: #cc397b;
     background: #ffffd4;
   }
 
@@ -381,7 +433,7 @@
     place-items: center;
     text-align: center;
     margin-top: 4rem;
-    color: #881244;
+    color: #cc397b;
     margin-bottom: 2rem;
   }
 
@@ -405,13 +457,30 @@
 
     </style>
     <meta charset="utf-8">
-    <title></title>
+    <title>IITBRPF-Events</title>
+    <link rel="icon" href="OnlySymbolLogo.png" type="image">
   </head>
   <body>
 
     <!-- Header -->
     <div class="header">
       <img src="WhiteTextLogo.png">
+
+      <div id="drop-down" style=" float: right;margin-right:20px;">
+        <div id="drop"><i class="fas fa-bars"></i></div>
+        <div id="dropdown-menu">
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="team-intro.html">People</a>
+          <a href="infrastructure.html">Spaces</a>
+          <a href="clients.html">Our Clients</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="events.html">Events</a>
+          <a href="mediacoverage.html">Media Coverage</a>
+          <a href="contact.html">Contact Us</a>
+        </div>
+      </div>
+
       <div class="heading-holder">
         <h1 class="heading">Events</h1>
       </div>
@@ -459,15 +528,49 @@
     <div class="row">
 
       <div class="col-md-6 event-holder">
+        <img class="events-img " src="Techmeet2.jpg">
+      </div>
+      <div class="col-md-6 event-text">
+        <div class="event-section">
+          <h2>Tech Meet_1.0</h2>
+          <p class="event-brief">
+            On 8th May, 2021, a virtual meeting between the Institute Technical Council and Research
+  Park Clients was organized by IITB Research Park Foundation. Prof. Ravindra Gudi, Principal-
+  in-Charge, IITB Research Park gave the opening remarks and welcomed representatives
+  from Student cells and key functionaries from the client side.
+          </p>
+          <a href="event14.html"><button type="button" class="btn ">Read More</button></a>
+        </div>
+      </div>
+
+
+      <div class="col-md-6 event-holder">
+        <img class="events-img " src="5yeartimeline.png">
+      </div>
+      <div class="col-md-6 event-text">
+        <div class="event-section">
+          <h2>Celebrating 5 years of ASPIRE</h2>
+          <p class="event-brief">
+        On 28th June 2021, IIT Bombay Research Park Foundation celebrated the completion of 5 successful years since its inception in 2016. What had then started with a vision to bring industry and academia together has been thriving today on maturing science and technology.
+          </p>
+          <a href="event13.html"><button type="button" class="btn ">Read More</button></a>
+        </div>
+      </div>
+
+
+
+      <div class="col-md-6 event-holder">
         <img class="events-img " src="ClientsDay.png">
       </div>
       <div class="col-md-6 event-text">
         <div class="event-section">
           <h2>Research park- Clients Day</h2>
           <p class="event-brief">
-          The first edition of Research Park – Clients Day on held on 11th December 2019.
+            The first edition of Research Park – Clients Day on held on 11th December 2019. It was a half-day event, the purpose of this event was to introduce the clients of Research Park to each other.
+
+  IITB Research Park Clients shared their experience so far with the Research Park and IIT Bombay.
           </p>
-          <a href="event12.html"><button type="button" class="btn ">Read More</button></a>
+
         </div>
       </div>
 
@@ -512,8 +615,7 @@
         <div class="event-section">
           <h2>Diversity in the Gaming Industry</h2>
           <p class="event-brief">
-            Ubisoft in collaboration with IITB Research Park is organizing a conference on Diversity in Gaming to share all the diverse profiles, jobs which are existing in the gaming Industry. </p>
-          <a href="event9.html"><button type="button" class="btn">Read More</button></a>
+          Ubisoft in collaboration with IITB Research Park organizing a conference on “Diversity in Gaming” on 10th Jan 2019, to share all the diverse profiles, jobs which are existing in the Gaming Industry. </p>
         </div>
       </div>
 
@@ -556,7 +658,7 @@
           <h2>Bhoomi Pujan</h2>
           <p class="event-brief">
             IITB Research Park’s Bhoomi Poojan was held on 10th October 2019 </p>
-          <a href="event6.html"><button type="button" class="btn ">Read More</button></a>
+
         </div>
       </div>
 
@@ -568,9 +670,10 @@
         <div class="event-section">
           <h2>Suzlon Day</h2>
           <p class="event-brief">
-            A half day event. Suzlon team met faculties from MEMS & Aerospace department and discussed about the possible collaboration areas.
+            A half-day event. Suzlon team met faculties from MEMS & Aerospace department and discussed the possible collaboration areas. The expertise available in the mentioned department</p>
+
           </p>
-          <a href="event5.html"><button type="button" class="btn ">Read More</button></a>
+
         </div>
       </div>
 
@@ -675,7 +778,7 @@ IITB Research Park Foundation, <br>
     </div>
 
     <div class="footer-text">
-      Copyright line
+      Copyright &copy 2021 IITB Research Park Foundation | All rights reserved
     </div>
   </section>
 

@@ -105,6 +105,58 @@
       font-size: 0.9rem;
     }
 
+    #drop {
+      background-color: transparent;
+      color: whitesmoke;
+      font-size: 2rem;
+      visibility: hidden;
+      margin-top: 1.5rem;
+
+    }
+
+    #drop:hover {
+      cursor: pointer;
+    }
+
+    #drop-down {
+      position: relative;
+      display: inline-block;
+      box-shadow: none;
+      visibility: hidden;
+    }
+
+    #dropdown-menu {
+      display: none;
+      position: absolute;
+      background-color: whitesmoke;
+      width: 14rem;
+      border-radius: 5px;
+      z-index: 1;
+      margin-left: -12rem;
+      font-size: 1.3rem;
+    }
+
+    #dropdown-menu a {
+      color: black;
+      padding: 0.5rem;
+      text-decoration: none;
+      display: block;
+      border-radius: 5px;
+    }
+
+
+    #dropdown-menu a:hover {
+      background-color: #ddd;
+      border-radius: 5px;
+    }
+
+    #drop-down:hover #dropdown-menu {
+      display: block;
+      border-radius: 5px;
+    }
+
+
+
     @media (max-width:998px){
       .header {
         background: linear-gradient(95deg, rgba(36, 16, 60, 0.9981034650188201) 36%, rgba(52, 17, 95, 1) 100%);
@@ -158,55 +210,54 @@
 
     @media (max-width:768px){
 
-    .header {
-          background: linear-gradient(95deg, rgba(36, 16, 60, 0.9981034650188201) 36%, rgba(52, 17, 95, 1) 100%);
-          text-align: center;
-          font-size: 10px;
-          height: 65vh;
-          padding: 0;
-          margin: 0;
-          display:block;
-        }
+      .header {
+        background: linear-gradient(95deg, rgba(36, 16, 60, 0.9981034650188201) 36%, rgba(52, 17, 95, 1) 100%);
+        text-align: center;
+        font-size: 10px;
+        height: 45vh;
+        padding: 0;
+        margin: 0;
+        display: block;
+      }
 
-        .header img {
-          height: 7rem;
-          width: 17rem;
-        }
+      .header img {
+        height: 7rem;
+        width: 17rem;
+      }
 
-        .heading {
-          font-size: 2rem;
-          position: absolute;
-          top:22rem;
-          left:3%;
-        }
+      .heading-holder {
+        display: grid;
+        place-items: center;
+        text-align: center;
+      }
+
+      .heading {
+        font-size: 2rem;
+        position: absolute;
+        top: 25vh;
+        left: 35%;
+      }
 
 
-        /* Circular Menu */
+      /* Circular Menu */
 
 
-        .circular-menu {
-          width: 18rem;
-          height: 18rem;
-          top: 6rem;
-          left: 5rem;
-        }
+      #drop {
+        visibility: visible;
+      }
 
-        .circle {
-          width: 18rem;
-          height: 18rem;
-        }
+      #drop-down {
+        visibility: visible;
+      }
 
-        .circle a {
-          font-size: 1.5rem;
-        }
+      .overlay img {
+        height: 8rem;
+        width: 18rem;
+      }
 
-        .name-color {
-          color: white;
-          -webkit-text-stroke: 0.28px black;
-          text-shadow: none;
-          font-size: 0.87rem;
-        }
-
+      .circular-menu {
+        visibility: hidden;
+      }
 
 
     }
@@ -222,7 +273,7 @@
     }
 
     .bod {
-      margin-top: 5rem;
+      margin-top: 3rem;
       text-align: center;
     }
 
@@ -407,7 +458,7 @@
       place-items: center;
       text-align: center;
       margin-top: 4rem;
-      color: #881244;
+        color: #cc397b;
       margin-bottom: 2rem;
     }
 
@@ -431,13 +482,30 @@
 
     </style>
     <meta charset="utf-8">
-    <title></title>
+    <title>IITBRPF-People</title>
+    <link rel="icon" href="OnlySymbolLogo.png" type="image">
   </head>
   <body>
 
     <!-- Header -->
     <div class="header">
       <img src="WhiteTextLogo.png">
+
+      <div id="drop-down" style=" float: right;margin-right:20px;">
+        <div id="drop"><i class="fas fa-bars"></i></div>
+        <div id="dropdown-menu">
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="team-intro.html">People</a>
+          <a href="infrastructure.html">Spaces</a>
+          <a href="clients.html">Our Clients</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="events.html">Events</a>
+          <a href="mediacoverage.html">Media Coverage</a>
+          <a href="contact.html">Contact Us</a>
+        </div>
+      </div>
+
       <div class="heading-holder">
         <h1 class="heading">People</h1>
       </div>
@@ -591,7 +659,7 @@ sponsored research and consultancy projects at IIT Bombay.
             Prof. Ravindra Gudi
           </h3>
           <h5>
-            <em>Principal-in-charge, IITB Research Park Foundation</em>
+            <em>Professor-in-charge, IITB Research Park Foundation</em>
           </h5>
           </a>
           <!-- Modal -->
@@ -648,7 +716,7 @@ sponsored research and consultancy projects at IIT Bombay.
             Prof. M. S. Ananth
           </h3>
           <h5>
-            <em>Former Director IIT Madras</em>
+            <em>Former Director, IIT Madras</em>
           </h5>
           </a>
           <!-- Modal -->
@@ -702,7 +770,7 @@ the first university based research park in India, the IIT Madras Research Park 
           <a href="#" data-toggle="modal" data-target="#bod8">
           <img class="bod-image" src="Dr.Hemant Kanakia- President Kanakia Ventures.jpg" alt="Personal Trainer 1" >
           <h3>
-            Dr Hemant Kanakia
+            Dr. Hemant Kanakia
           </h3>
           <h5>
             <em>President, Kanakia Ventures</em>
@@ -741,7 +809,8 @@ the first university based research park in India, the IIT Madras Research Park 
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Dr. Nitin Kareer<br>Additional Chief Secretary (Revenue), Government of Maharashtra</h5>
+        <h5 class="modal-title" id="exampleModalLongTitle">Dr. Nitin Kareer<br>Additional Chief Secretary, Revenue & Forest Department, Government of Maharashtra
+</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -758,7 +827,7 @@ the first university based research park in India, the IIT Madras Research Park 
           <a href="#" data-toggle="modal" data-target="#bod10">
           <img class="bod-image" src="Ms.Rekha Koita- Co founder Koita Foundation.jpg" alt="Personal Trainer 1" >
           <h3>
-            Ms Rekha Koita
+            Ms. Rekha Koita
           </h3>
           <h5>
             <em>Co-Founder, Koita Foundation</em>
@@ -769,13 +838,13 @@ the first university based research park in India, the IIT Madras Research Park 
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Ms Rekha Koita<br>Co-Founder, Koita Foundation</h5>
+        <h5 class="modal-title" id="exampleModalLongTitle">Ms. Rekha Koita<br>Co-Founder, Koita Foundation</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        Rekha is the co-founder of Koita Foundation, an organization which works with NGOs to build scale and enhance impact through process improvements and technology enhancements. She has also been a corporate trainer for the past 10 years and specializes in business process consulting. Rekha was a management consultant at Accenture for over 8 years where her key focus areas included operations (business process re-engineering, ERP design and implementation, performance/profitability enhancement), and human resources (corporate governance, recruitment and training).Based on her experience in management consulting, Rekha conducts corporate training for leading Indian and multinational organizations. She also conducts training workshops for start-ups and NGOs in niche areas like problem solving and presentation skills. Rekha has done her B.Tech from IIT Mumbai in 1992, after she completed her Master of Science degree in Materials Science and Engineering from Carnegie Mellon University (USA) in 1994.
+        Rekha is the co-founder of Koita Foundation, an organization which works with NGOs to build scale and enhance impact through process improvements and technology enhancements. She has also been a corporate trainer for the past 10 years and specializes in business process consulting. Rekha was a management consultant at Accenture for over 8 years where her key focus areas included operations (business process re-engineering, ERP design and implementation, performance/profitability enhancement), and human resources (corporate governance, recruitment and training). Based on her experience in management consulting, Rekha conducts corporate training for leading Indian and multinational organizations. She also conducts training workshops for start-ups and NGOs in niche areas like problem solving and presentation skills. Rekha has done her B.Tech from IIT Mumbai in 1992, after she completed her Master of Science degree in Materials Science and Engineering from Carnegie Mellon University (USA) in 1994.
       </div>
     </div>
   </div>
@@ -791,50 +860,50 @@ the first university based research park in India, the IIT Madras Research Park 
         <div class="col-md-4 team">
           <img class="team-image"src="Prof.Ravindra Gudi- PIC R&D.jpeg">
           <h3>Prof. Ravindra Gudi</h3>
-          <p class="title">Professor- In- Charge</p>
-          <p class="email">example@example.com</p>
+          <p class="title">Professor-in-charge</p>
+          <p class="email">pic-iitbrp@iitb.ac.in</p>
       </div>
 
       <div class="col-md-4 team">
         <img class="team-image"src="Ms.Kameshwari Mangalampalli- COO R&D.png">
-        <h3>Ms.Kameshwari Mangalampalli</h3>
+        <h3>Ms. Kameshwari Mangalampalli</h3>
         <p class="title">Chief Operating Officer</p>
-        <p class="email">example@example.com</p>
+        <p class="email">coo@iitbresearchpark.com</p>
     </div>
 
     <div class="col-md-4 team">
       <img class="team-image"src="Ms.Prerana Yadav- APM Operations.png">
         <h3>Ms. Prerana Yadav</h3>
         <p class="title">Assistant Project Manager- Operations</p>
-        <p class="email">example@example.com</p>
+        <p class="email">prerana@iitbresearch.com</p>
   </div>
 
   <div class="col-md-4 team">
     <img class="team-image"src="Mr.Vinay Gupta- APM Infrastructure.png">
      <h3>Mr. Vinay Gupta</h3>
      <p class="title">Assistant Project Manager- Infrastructure</p>
-     <p class="email">example@example.com</p>
+     <p class="email">vinay@iitbresearchpark.com</p>
 </div>
 
 <div class="col-md-4 team">
   <img class="team-image"src="Ms.Shubhra Moondra- Senior Project Assistant Finance.png">
       <h3>Mrs. Shubhra Moondra</h3>
       <p class="title">Senior Project Assistant- Finance & Accounts</p>
-  <p class="email">example@example.com</p>
+  <p class="email">shubhra@iitbresearchpark.com</p>
 </div>
 
 <div class="col-md-4 team">
   <img class="team-image"src="Ms.Divyashree Rai- Senior Project Assistant Communications.png">
     <h3>Ms. Divyashree Rai</h3>
-    <p class="title">Senior project Assistant- Communications</p>
-    <p class="email">example@example.com</p>
+    <p class="title">Senior Project Assistant- Communications</p>
+    <p class="email">divyashree@iitbresearchpark.com</p>
 </div>
 
 <div class="col-md-4 team">
   <img class="team-image"src="Ms.Vandita Reddy- Project Assistant IT.png">
   <h3>Ms. Vandita Reddy</h3>
     <p class="title">Project Assistant- IT Operations & Maintenance</p>
-    <p class="email">example@example.com</p>
+    <p class="email">vandita@iitbresearchpark.com</p>
 </div>
       </div>
     </div>
@@ -847,7 +916,7 @@ the first university based research park in India, the IIT Madras Research Park 
         <div class="col-md-6 footer-left">
           <div class="row">
             <div class="col-6 left-left">
-              <img src="C:\Users\vandi\.atom\IITBRPF Website\Images\Research_Park_Logos\WhiteTextLogo.png">
+              <img src="WhiteTextLogo.png">
             </div>
             <div class="col-6 left-right">
               <p>
@@ -877,7 +946,7 @@ the first university based research park in India, the IIT Madras Research Park 
       </div>
 
       <div class="footer-text">
-        Copyright line
+          Copyright &copy 2021 IITB Research Park Foundation | All rights reserved
       </div>
     </section>
 

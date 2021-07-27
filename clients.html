@@ -106,7 +106,58 @@
       font-size: 0.9rem;
     }
 
-    @media (max-width:998px){
+    #drop {
+      background-color: transparent;
+      color: whitesmoke;
+      font-size: 2rem;
+      visibility: hidden;
+      margin-top: 1.5rem;
+
+    }
+
+    #drop:hover {
+      cursor: pointer;
+    }
+
+    #drop-down {
+      position: relative;
+      display: inline-block;
+      box-shadow: none;
+      visibility: hidden;
+    }
+
+    #dropdown-menu {
+      display: none;
+      position: absolute;
+      background-color: whitesmoke;
+      width: 14rem;
+      border-radius: 5px;
+      z-index: 1;
+      margin-left: -12rem;
+      font-size: 1.3rem;
+    }
+
+    #dropdown-menu a {
+      color: black;
+      padding: 0.5rem;
+      text-decoration: none;
+      display: block;
+      border-radius: 5px;
+    }
+
+
+    #dropdown-menu a:hover {
+      background-color: #ddd;
+      border-radius: 5px;
+    }
+
+    #drop-down:hover #dropdown-menu {
+      display: block;
+      border-radius: 5px;
+    }
+
+
+    @media (max-width:998px) {
       .header {
         background: linear-gradient(95deg, rgba(36, 16, 60, 0.9981034650188201) 36%, rgba(52, 17, 95, 1) 100%);
         color: white;
@@ -157,16 +208,16 @@
 
     }
 
-    @media (max-width:768px){
+    @media (max-width:768px) {
 
       .header {
         background: linear-gradient(95deg, rgba(36, 16, 60, 0.9981034650188201) 36%, rgba(52, 17, 95, 1) 100%);
         text-align: center;
         font-size: 10px;
-        height: 65vh;
+        height: 45vh;
         padding: 0;
         margin: 0;
-        display:block;
+        display: block;
       }
 
       .header img {
@@ -174,51 +225,53 @@
         width: 17rem;
       }
 
+      .heading-holder {
+        display: grid;
+        place-items: center;
+        text-align: center;
+      }
+
       .heading {
         font-size: 2rem;
         position: absolute;
-        top:22rem;
-        left:3%;
+        top: 25vh;
+        left: 35%;
       }
 
 
       /* Circular Menu */
 
 
+      #drop {
+        visibility: visible;
+      }
+
+      #drop-down {
+        visibility: visible;
+      }
+
+      .overlay img {
+        height: 8rem;
+        width: 18rem;
+      }
+
       .circular-menu {
-        width: 18rem;
-        height: 18rem;
-        top: 6rem;
-        left: 5rem;
+        visibility: hidden;
       }
 
-      .circle {
-        width: 18rem;
-        height: 18rem;
-      }
-
-      .circle a {
-        font-size: 1.5rem;
-      }
-
-      .name-color {
-        color: white;
-        -webkit-text-stroke: 0.28px black;
-        text-shadow: none;
-        font-size: 0.87rem;
-      }
     }
 
     /* Client cards */
 
     .cards-container {
       padding: 5%;
+      margin-bottom:3rem;
     }
 
     .card {
       box-shadow: 0.1rem 0.5rem 0.3rem 0.1rem grey;
       margin-top: 5rem;
-      height:28rem;
+      height: 28rem;
       background: white;
     }
 
@@ -232,31 +285,31 @@
 
     .image-holder {
       text-align: center;
-      margin-top:10%;
+      margin-top: 10%;
     }
 
     .image-holder img {
-      height: 7.5rem;
-      width: 10rem;
+      height: 8rem;
+      width: 13rem;
     }
 
     .company-intro {
       text-align: center;
       display: grid;
-      place-items:center;
+      place-items: center;
     }
 
     .company-name {
       display: grid;
-      place-items:center;
+      place-items: center;
       margin-top: 20%;
-      padding:1rem;
-      color:#881244;
+      padding: 1rem;
+      color: #881244;
     }
 
-    .company a{
+    .company a {
       text-decoration: none;
-      color:black;
+      color: black;
     }
 
 
@@ -293,15 +346,15 @@
 
     .inside-association {
       font-style: italic;
-      display:grid;
-      place-items:center;
-      margin-top:2rem;
+      display: grid;
+      place-items: center;
+      margin-top: 2rem;
     }
 
     .inside-association h5 {
       font-weight: bold;
       text-align: center;
-      color:#a53463;
+      color: #a53463;
     }
 
     .company-brief {
@@ -311,7 +364,19 @@
       margin-top: 3rem;
       padding-top: 0rem;
       font-size: 1.2rem;
-      color:#5a3448;
+      color: #5a3448;
+    }
+
+    @media(max-width:768px){
+      .card {
+        box-shadow: 0.1rem 0.5rem 0.3rem 0.1rem grey;
+        margin-top: 5rem;
+        height: 28rem;
+        width:20rem;
+        background: white;
+        margin:auto;
+        margin-top:2rem;
+      }
     }
 
     /* Back to top button */
@@ -320,9 +385,9 @@
       position: fixed;
       bottom: 25px;
       right: 25px;
-      left:93%;
+      left: 93%;
       display: none;
-      width:5%;
+      width: 5%;
       color: #881244;
       background: #ffffd4;
     }
@@ -402,7 +467,7 @@
       place-items: center;
       text-align: center;
       margin-top: 4rem;
-      color: #881244;
+      color: #cc397b;
       margin-bottom: 2rem;
     }
 
@@ -412,22 +477,21 @@
       color: #ffffed;
     }
 
-    @media (max-width:768px){
-       .footer-left {
-    padding: 1rem;
-    border-right:none;
-  }
+    @media (max-width:768px) {
+      .footer-left {
+        padding: 1rem;
+        border-right: none;
+      }
 
-  .left-left img {
-    height: 5rem;
-    width: 10rem;
-  }
-  }
-
-
+      .left-left img {
+        height: 5rem;
+        width: 10rem;
+      }
+    }
   </style>
   <meta charset="utf-8">
-  <title></title>
+  <title>IITBRPF-Clients & Associates</title>
+  <link rel="icon" href="OnlySymbolLogo.png" type="image">
 </head>
 
 <body>
@@ -435,6 +499,22 @@
   <!-- Header -->
   <div class="header">
     <img src="WhiteTextLogo.png">
+
+    <div id="drop-down" style=" float: right;margin-right:20px;">
+      <div id="drop"><i class="fas fa-bars"></i></div>
+      <div id="dropdown-menu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="team-intro.html">People</a>
+        <a href="infrastructure.html">Spaces</a>
+        <a href="clients.html">Our Clients</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="events.html">Events</a>
+        <a href="mediacoverage.html">Media Coverage</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+    </div>
+
     <div class="heading-holder">
       <h1 class="heading">Clients <br> & Associates</h1>
     </div>
@@ -481,18 +561,18 @@
   <div class="container cards-container">
     <div class="row">
       <div class="col-12 col-md-6 col-lg-4 company">
-        <a href="#"  data-toggle="modal" data-target="#applied_materials">
-        <div class="card">
-          <div class="card-header">Client</div>
-          <div class="image-holder">
-            <img src="AppliedMaterials.png" />
-          </div>
-          <div class="company-intro">
-            <div class="company-name">
-              <h4>Applied Materials India</h4>
+        <a href="#" data-toggle="modal" data-target="#applied_materials">
+          <div class="card">
+            <div class="card-header">Client</div>
+            <div class="image-holder">
+              <img src="AppliedMaterials.png" />
+            </div>
+            <div class="company-intro">
+              <div class="company-name">
+                <h4>Applied Materials India</h4>
+              </div>
             </div>
           </div>
-        </div>
         </a>
         <div class="modal fade bd-example-modal-lg" id="applied_materials" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
@@ -515,35 +595,13 @@
                   </div>
                   <div class="col-12 company-brief">
                     <p>
-                      In line with its to IIT Bombay and in support of India’s vision of becoming an electronics manufacturing hub, Applied Materials India became the first anchor client at IIT Bombay’s Research Park in 2015. Occupying one of the
-                      largest
-                      areas, the facility enables close interaction with faculty and student researchers and benefits from seamless access to labs, equipment and services. <br><br>
-
-                      The successful partnership between the two entities has led to a series of industry-first initiatives and has become a reference point for industry-academia collaborations. The journey that started with few sponsored programs in
-                      2005,
-                      over the last decade and half has grown exponentially to include India’s first university –based facility with 200 mm fab tools, three on-site labs focusing on Nanotechnology, Chemistry & Material Sciences and R&D on
-                      next-generation
-                      technologies, and a jointly offered Semiconductor Technology and Manufacturing Certification Program, the first of its kind in India. The 200 mm semiconductor fabrication facility is one of few university-based 200 mm fabs in
-                      the
-                      world, and is currently being used by 144 research institutions across India for nanoelectronics research. <br>
-
-                      The collaboration has also catalyzed the establishment of two national research centers at IIT Bombay – the Center of Excellence in Nanoelectronics (CEN) and the National Center for Photovoltaics Research & Education (NCPRE).
-                      These
-                      research centers provide world-class research facilities and skills training opportunities for India’s researchers and workforce through national programs like the INUP (Indian Nanoelectronics Users Program). <br>
-
-                      In 2013, Applied Materials inaugurated the Exploration Centre at IIT Bombay, which serves as an important R&D lab for the company. The Centre drives innovation in exciting areas of nanofabrication, materials synthesis and
-                      commercialization, sustainable chemical science, health sciences and engineering. This on-campus center has over 50+ Applied engineers and chemists conducting cutting-edge research on advanced materials, coatings and chemistry.
-                      Such
-                      advanced research supports Applied Materials’ semiconductor and display business units in emerging areas like AI, life sciences, energy storage and AR/VR. <br>
-
-                      Over the past 15 years, Applied Materials India has sponsored more than 100 projects as a research partner for IIT Bombay in cutting-edge technology involving semiconductors, materials engineering, nanotechnology, renewable
-                      energy,
-                      bioscience and more. The collaboration has not only grown and flourished, but also adapted to evolving technology needs. A testament to this is IIT Bombay and Applied Materials India coming together to support India’s fight
-                      against
-                      COVID-19 by exploring solutions like anti-viral coatings which can be sprayed on surfaces, human-safe UV sanitizing solutions, ozone sterilizers and low-cost ventilator solutions.<br>
-                      As we look to the future with IIT Bombay as an ‘institute of eminence’, we have an opportunity to expand this visionary collaboration into more exciting, emerging areas like nanofabrication, manufacturing and materials,
-                      sustainable
-                      chemical science, health sciences and engineering. <br><br>
+                      In line with its commitment to IIT Bombay and in support of India’s vision of becoming an electronics manufacturing hub, Applied Materials India became the first anchor client at IIT Bombay’s Research Park in 2015. The facility
+                      enables close interaction with faculty and student researchers and benefits from seamless access to labs, equipment and services. The journey that started with few sponsored programs in 2005, over the last decade and half has
+                      grown exponentially to include India’s first university –based facility with 200 mm fab tools, three on-site labs focusing on Nanotechnology, Chemistry & Material Sciences and R&D on next-generation technologies, and a jointly
+                      offered Semiconductor Technology and Manufacturing Certification Program, the first of its kind in India. The collaboration has also catalyzed the establishment of two national research centers at IIT Bombay – the Center of
+                      Excellence in Nanoelectronics (CEN) and the National Center for Photovoltaics Research & Education (NCPRE). Applied Materials India has sponsored more than 100 projects as a research partner for IIT Bombay to develop
+                      cutting-edge technology in various areas. As Applied Materials India looks to the future with IIT Bombay as an ‘institute of eminence’, it finds an opportunity to expand this visionary collaboration into more exciting and
+                      emerging areas like nanofabrication, manufacturing and materials, sustainable chemical science, health sciences and engineering. <br><br>
                       <i>To know more about Applied Materials India,<a style="color:black;" onclick="href='https://www.appliedmaterials.com/en-in/company/about/india-overview'" target="_blank"><b> click here</b></a>
                       </i>
                     </p>
@@ -557,17 +615,17 @@
 
       <div class="col-12 col-md-6 col-lg-4 company">
         <a href="#" data-toggle="modal" data-target="#nanosniff">
-        <div class="card">
-          <div class="card-header">Client</div>
-          <div class="image-holder">
-            <img src="Nanosniff.png" />
-          </div>
-          <div class="company-intro">
-            <div class="company-name">
-              <h4>NanoSniff Technologies Pvt. Ltd.</h4>
+          <div class="card">
+            <div class="card-header">Client</div>
+            <div class="image-holder">
+              <img src="Nanosniff.png" />
+            </div>
+            <div class="company-intro">
+              <div class="company-name">
+                <h4>NanoSniff Technologies Pvt. Ltd.</h4>
+              </div>
             </div>
           </div>
-        </div>
         </a>
         <div class="modal fade bd-example-modal-lg" id="nanosniff" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
@@ -590,8 +648,11 @@
                   </div>
                   <div class="col-12 company-brief">
                     <p>
-                      Our association with IITB Research Park has brought several benefits to our work. Most important is the access to the various laboratories of IITB: for fabricating devices & 3D printed structures, characterizing devices, conducting bio experiments, access to faculty for discussion & collaboration etc. We have also benefited from our association with students of IITB as our interns. It has worked both ways - the students got to work on cutting edge projects that have a 'product', & we got interns who were brilliant at work. Through IITB Research Park we were allowed to test our security product: Nanosniffer - Explosives Trace Detector, at IITB's Main Gate. This allowed us to collect and test field data in real-time. This activity was immensely useful in improving the field performance of our product.<br><br>
-    <i>To know more about Nanosniff Technologies Pvt Ltd, <a onclick="href='https://nanosniff.com/'"target="_blank"><b> click here</b></a></i>
+                      Our association with IITB Research Park has brought several benefits to our work. Most important is the access to the various laboratories of IITB: for fabricating devices & 3D printed structures, characterizing devices,
+                      conducting bio experiments, access to faculty for discussion & collaboration etc. We have also benefited from our association with students of IITB as our interns. It has worked both ways - the students got to work on cutting
+                      edge projects that have a 'product', & we got interns who were brilliant at work. Through IITB Research Park we were allowed to test our security product: Nanosniffer - Explosives Trace Detector, at IITB's Main Gate. This
+                      allowed us to collect and test field data in real-time. This activity was immensely useful in improving the field performance of our product.<br><br>
+                      <i>To know more about Nanosniff Technologies Pvt Ltd, <a onclick="href='https://nanosniff.com/'" target="_blank"><b> click here</b></a></i>
                     </p>
                   </div>
                 </div>
@@ -603,17 +664,17 @@
 
       <div class="col-12 col-md-6 col-lg-4 company">
         <a href="#" data-toggle="modal" data-target="#igrenEnergi">
-        <div class="card">
-          <div class="card-header">Client</div>
-          <div class="image-holder">
-            <img src="igrenEnergi.png" />
-          </div>
-          <div class="company-intro">
-            <div class="company-name">
-              <h4>igrenEnergi Services Pvt. Ltd.</h4>
+          <div class="card">
+            <div class="card-header">Client</div>
+            <div class="image-holder">
+              <img src="igrenEnergi.png" />
+            </div>
+            <div class="company-intro">
+              <div class="company-name">
+                <h4>igrenEnergi Services Pvt. Ltd.</h4>
+              </div>
             </div>
           </div>
-        </div>
         </a>
         <div class="modal fade bd-example-modal-lg" id="igrenEnergi" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
@@ -636,8 +697,12 @@
                   </div>
                   <div class="col-12 company-brief">
                     <p>
-                      At igrenEnergi we build intelligent technologies and products to make EV batteries economically viable for all. During our brief association with IITB Research Park, we have had the opportunity to meet numerous faculty members from Electrical Engineering, Energy Engineering, and Computer Science departments, and to identify areas for research collaboration. We hope to bring one or more of these collaborations to fruition in the near future.  Additionally, our R&D activities sometimes require the use of sophisticated equipment which is not economical if we need access only for short durations.  In such cases, we have found it very helpful to use the equipment available in IIT labs, on a time-shared basis and a pay-per-use model.   Finally, we have had interactions with students at all levels of study, and in fact, one student has joined our company on a full-time basis recently after completing his Ph.D.<br><br>
-    <i>To know more about igrenEnergi Services Pvt Ltd,<a onclick="href='https://igrenenergi.com/'"target="_blank"><b> click here</b></a></i>
+                      At igrenEnergi we build intelligent technologies and products to make EV batteries economically viable for all. During our brief association with IITB Research Park, we have had the opportunity to meet numerous faculty members
+                      from Electrical Engineering, Energy Engineering, and Computer Science departments, and to identify areas for research collaboration. We hope to bring one or more of these collaborations to fruition in the near future.
+                      Additionally, our R&D activities sometimes require the use of sophisticated equipment which is not economical if we need access only for short durations. In such cases, we have found it very helpful to use the equipment
+                      available in IIT labs, on a time-shared basis and a pay-per-use model. Finally, we have had interactions with students at all levels of study, and in fact, one student has joined our company on a full-time basis recently after
+                      completing his Ph.D.<br><br>
+                      <i>To know more about igrenEnergi Services Pvt Ltd,<a onclick="href='https://igrenenergi.com/'" target="_blank"><b> click here</b></a></i>
                     </p>
                   </div>
                 </div>
@@ -649,18 +714,18 @@
 
       <div class="col-12 col-md-6 col-lg-4 company">
         <a href="#" data-toggle="modal" data-target="#viacom18">
-        <div class="card">
-          <div class="card-header">Client</div>
-          <div class="image-holder">
-            <img src="Viacom18.png" />
-          </div>
-          <div class="company-intro">
-            <div class="company-name">
-              <h4>Viacom18 Media Pvt. Ltd.</h4>
+          <div class="card">
+            <div class="card-header">Client</div>
+            <div class="image-holder">
+              <img src="Viacom18.png" />
+            </div>
+            <div class="company-intro">
+              <div class="company-name">
+                <h4>Viacom18 Media Pvt. Ltd.</h4>
+              </div>
             </div>
           </div>
-        </div>
-          </a>
+        </a>
         <div class="modal fade bd-example-modal-lg" id="viacom18" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
             <div class="modal-content">
@@ -678,12 +743,15 @@
                     <img src="Viacom18.png" />
                   </div>
                   <div class="col-md-6 inside-association">
-                    <h5>"Associated with IITB Research Park since January 2018"</h5>
+                    <h5>"Associated with IITB Research Park since November 2018"</h5>
                   </div>
                   <div class="col-12 company-brief">
                     <p>
-                      Viacom18 has been associated with IITB Research Park for almost two years now and has been working on media industry-centric R&D cases using modern cutting edge technologies such as Blockchain, AI/ML, NLP; that have helped us reimagine and reinvent the way we do our business operations. Through these projects, IITB is helping us advance our organization in ways that provide us with a significant competitive advantage and benefit our viewers, communities, and the society. We consider the partnership with IITB Research Park as a mutually beneficial bridge between the industry and the academic community (students & faculty) that will aim to solve today's pressing challenges using next-generation technology platforms.<br><br>
-      <i>To know more about Viacom18 Media Pvt. Ltd.,<a onclick="href='https://www.viacom18.com'"target="_blank"><b> click here</b></a></i>
+                      Viacom18 has been associated with IITB Research Park for almost two years now and has been working on media industry-centric R&D cases using modern cutting edge technologies such as Blockchain, AI/ML, NLP; that have helped us
+                      reimagine and reinvent the way we do our business operations. Through these projects, IITB is helping us advance our organization in ways that provide us with a significant competitive advantage and benefit our viewers,
+                      communities, and the society. We consider the partnership with IITB Research Park as a mutually beneficial bridge between the industry and the academic community (students & faculty) that will aim to solve today's pressing
+                      challenges using next-generation technology platforms.<br><br>
+                      <i>To know more about Viacom18 Media Pvt. Ltd.,<a onclick="href='https://www.viacom18.com'" target="_blank"><b> click here</b></a></i>
                     </p>
                   </div>
                 </div>
@@ -695,17 +763,17 @@
 
       <div class="col-12 col-md-6 col-lg-4 company">
         <a href="#" data-toggle="modal" data-target="#ubisoft">
-        <div class="card">
-          <div class="card-header">Client</div>
-          <div class="image-holder">
-            <img src="Ubisoft.png" />
-          </div>
-          <div class="company-intro">
-            <div class="company-name">
-              <h4>Ubisoft Entertainment India Pvt. Ltd.</h4>
+          <div class="card">
+            <div class="card-header">Client</div>
+            <div class="image-holder">
+              <img src="Ubisoft.png" />
+            </div>
+            <div class="company-intro">
+              <div class="company-name">
+                <h4>Ubisoft Entertainment India Pvt. Ltd.</h4>
+              </div>
             </div>
           </div>
-        </div>
         </a>
         <div class="modal fade bd-example-modal-lg" id="ubisoft" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
@@ -728,8 +796,11 @@
                   </div>
                   <div class="col-12 company-brief">
                     <p>
-                      Ubisoft in India has been associated with the IITB Research Park since 2018. The Ubisoft team at IITB Research Park works on developing solutions involving Computer Vision and Machine Learning that can be integrated with QC and Production needs in the future. To our benefit, most of our team members at the Ubisoft India Research Unit hail from the very institute and they work in close collaboration with faculties and students from IITB on research projects. We work closely with two professors who are renowned scholars in the field of AI/ML and computer vision. Apart from this, we have access to many other Professors in the field of Artificial Intelligence, Computer Engineering, Mathematics, Physics etc., and also to students who are seeking Bachelors, Masters and PhD's in these subjects.<br><br>
-    <i>To know more about Ubisoft Entertainment India Pvt. Ltd, <a onclick="href='https://www.ubisoft.com/en-US/studio/pune.aspx'"target="_blank"><b> click here</b></a></i>
+                      Ubisoft in India has been associated with the IITB Research Park since 2018. The Ubisoft team at IITB Research Park works on developing solutions involving Computer Vision and Machine Learning that can be integrated with QC and
+                      Production needs in the future. To our benefit, most of our team members at the Ubisoft India Research Unit hail from the very institute and they work in close collaboration with faculties and students from IITB on research
+                      projects. We work closely with two professors who are renowned scholars in the field of AI/ML and computer vision. Apart from this, we have access to many other Professors in the field of Artificial Intelligence, Computer
+                      Engineering, Mathematics, Physics etc., and also to students who are seeking Bachelors, Masters and PhD's in these subjects.<br><br>
+                      <i>To know more about Ubisoft Entertainment India Pvt. Ltd, <a onclick="href='https://www.ubisoft.com/en-US/studio/pune.aspx'" target="_blank"><b> click here</b></a></i>
                     </p>
                   </div>
                 </div>
@@ -741,17 +812,17 @@
 
       <div class="col-12 col-md-6 col-lg-4 company">
         <a href="#" data-toggle="modal" data-target="#NCIIPC">
-        <div class="card">
-          <div class="card-header">Client</div>
-          <div class="image-holder">
-            <img src="NCIIPC.png" />
-          </div>
-          <div class="company-intro">
-            <div class="company-name">
-              <h4>National Critical Information Infrastructure Protection Centre (NCIIPC)</h4>
+          <div class="card">
+            <div class="card-header">Client</div>
+            <div class="image-holder">
+              <img src="NCIIPC.png" />
+            </div>
+            <div class="company-intro">
+              <div class="company-name">
+                <h4>National Critical Information Infrastructure Protection Centre (NCIIPC)</h4>
+              </div>
             </div>
           </div>
-        </div>
         </a>
         <div class="modal fade bd-example-modal-lg" id="NCIIPC" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
@@ -775,7 +846,7 @@
                   <div class="col-12 company-brief">
                     <p>
                       NCIIPC and IITB are jointly working towards building adaptive cyber defence solutions for the critical information infrastructure (CII) of the country.<br><br>
-    <i>To know more about NCIIPC, <a onclick="href='https://nciipc.gov.in/'"target="_blank"><b> click here</b></a></i>
+                      <i>To know more about NCIIPC, <a onclick="href='https://nciipc.gov.in/'" target="_blank"><b> click here</b></a></i>
                     </p>
                   </div>
                 </div>
@@ -787,17 +858,17 @@
 
       <div class="col-12 col-md-6 col-lg-4 company">
         <a href="#" data-toggle="modal" data-target="#bharat_forge">
-        <div class="card">
-          <div class="card-header">Client</div>
-          <div class="image-holder">
-            <img src="BharatForge.png" />
-          </div>
-          <div class="company-intro">
-            <div class="company-name">
-              <h4>Bharat Forge Ltd.</h4>
+          <div class="card">
+            <div class="card-header">Client</div>
+            <div class="image-holder">
+              <img src="BharatForge.png" />
+            </div>
+            <div class="company-intro">
+              <div class="company-name">
+                <h4>Bharat Forge Ltd.</h4>
+              </div>
             </div>
           </div>
-        </div>
         </a>
         <div class="modal fade bd-example-modal-lg" id="bharat_forge" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
@@ -820,10 +891,12 @@
                   </div>
                   <div class="col-12 company-brief">
                     <p>
-                      Bharat Forge Ltd (BFL) is a Pune-based Indian multinational company with a global presence. BFL provides innovative & high-performance solutions to various industrial sectors including Automotive, Railways, Power, Defence, Construction & Mining, Aerospace, Marine and Oil & Gas. <br><br>
+                      Bharat Forge Ltd (BFL) is a Pune-based Indian multinational company with a global presence. BFL provides innovative & high-performance solutions to various industrial sectors including Automotive, Railways, Power, Defence,
+                      Construction & Mining, Aerospace, Marine and Oil & Gas. <br><br>
 
-BFL is in collaboration with IITB Research Park (IITBRP) since its inception in 2017. IITBRP provides an excellent opportunity for bridging the gap and delivering an outcome-oriented academia-industry handshake. BFL has conducted several research and training activities with various departments at IIT Bombay in association with IITBRP.<br><br>
-<i>To know more about Bharat Forge Limited, <a onclick="href='https://www.bharatforge.com/'"target="_blank"><b> click here</b></a></i>
+                      BFL is in collaboration with IITB Research Park (IITBRP) since its inception in 2017. IITBRP provides an excellent opportunity for bridging the gap and delivering an outcome-oriented academia-industry handshake. BFL has
+                      conducted several research and training activities with various departments at IIT Bombay in association with IITBRP.<br><br>
+                      <i>To know more about Bharat Forge Limited, <a onclick="href='https://www.bharatforge.com/'" target="_blank"><b> click here</b></a></i>
                     </p>
                   </div>
                 </div>
@@ -835,17 +908,17 @@ BFL is in collaboration with IITB Research Park (IITBRP) since its inception in 
 
       <div class="col-12 col-md-6 col-lg-4 company">
         <a href="#" data-toggle="modal" data-target="#atomberg">
-        <div class="card">
-          <div class="card-header">Client</div>
-          <div class="image-holder">
-            <img src="Atomberg.png" />
-          </div>
-          <div class="company-intro">
-            <div class="company-name">
-              <h4>Atomberg Technologies Pvt. Ltd.</h4>
+          <div class="card">
+            <div class="card-header">Client</div>
+            <div class="image-holder">
+              <img src="Atomberg.png" />
+            </div>
+            <div class="company-intro">
+              <div class="company-name">
+                <h4>Atomberg Technologies Pvt. Ltd.</h4>
+              </div>
             </div>
           </div>
-        </div>
         </a>
         <div class="modal fade bd-example-modal-lg" id="atomberg" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
@@ -869,7 +942,7 @@ BFL is in collaboration with IITB Research Park (IITBRP) since its inception in 
                   <div class="col-12 company-brief">
                     <p>
                       Atomberg Technologies Pvt Ltd is working on IOT activities for future products. There are plans to collaborate with IIT Bombay professors and students for upcoming future integration. <br><br>
-      <i>To know more about Atomberg Technologies Pvt Ltd, <a onclick="href='https://atomberg.com/'"target="_blank"><b> click here</b></a></i>
+                      <i>To know more about Atomberg Technologies Pvt Ltd, <a onclick="href='https://atomberg.com/'" target="_blank"><b> click here</b></a></i>
                     </p>
                   </div>
                 </div>
@@ -880,18 +953,18 @@ BFL is in collaboration with IITB Research Park (IITBRP) since its inception in 
       </div>
 
       <div class="col-12 col-md-6 col-lg-4 company">
-      <a href="#" data-toggle="modal" data-target="#murata">
-        <div class="card">
-          <div class="card-header">Client</div>
-          <div class="image-holder">
-            <img src="Murata.png" />
-          </div>
-          <div class="company-intro">
-            <div class="company-name">
-              <h4>Murata Business Engineering (India) Pvt. Ltd.</h4>
+        <a href="#" data-toggle="modal" data-target="#murata">
+          <div class="card">
+            <div class="card-header">Client</div>
+            <div class="image-holder">
+              <img src="Murata.png" />
+            </div>
+            <div class="company-intro">
+              <div class="company-name">
+                <h4>Murata Business Engineering (India) Pvt. Ltd.</h4>
+              </div>
             </div>
           </div>
-        </div>
         </a>
         <div class="modal fade bd-example-modal-lg" id="murata" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
@@ -914,9 +987,13 @@ BFL is in collaboration with IITB Research Park (IITBRP) since its inception in 
                   </div>
                   <div class="col-12 company-brief">
                     <p>
-                      Murata Business Engineering (India) Private Limited is a 100% owned subsidiary of Murata Manufacturing Co. Ltd, Kyoto, Japan (MMC). MMC is a profitable global company with 65000+ employees and annual sales of over 15BUS$. It is frequently cited as one of the top companies in electronics and technology. With access to cutting edge technologies and products, we are an important stakeholder in India's emerging hi-tech power electronics landscape.  We have adopted a modus operandi of “Find, Connect and Grow”. We try to utilize existing Indian eco-systems including university research to create new businesses and/or business models in India in the areas of Energy Storage, Energy Management and Healthcare. We have engaged a multidisciplinary team in IIT Bombay to develop the next generation solution in Energy Management after a successful engagement with the Electrical Department to commercialize an innovative product. We are also engaged with multiple organizations incubated within SINE.
-    <br><br>
-    <i>To know more about Murata Business Engineering (India) Private Limited, <a onclick="href='https://www.murata.com/'"target="_blank"><b> click here</b></a></i>
+                      Murata Business Engineering (India) Private Limited is a 100% owned subsidiary of Murata Manufacturing Co. Ltd, Kyoto, Japan (MMC). MMC is a profitable global company with 65000+ employees and annual sales of over 15BUS$. It is
+                      frequently cited as one of the top companies in electronics and technology. With access to cutting edge technologies and products, we are an important stakeholder in India's emerging hi-tech power electronics landscape. We have
+                      adopted a modus operandi of “Find, Connect and Grow”. We try to utilize existing Indian eco-systems including university research to create new businesses and/or business models in India in the areas of Energy Storage, Energy
+                      Management and Healthcare. We have engaged a multidisciplinary team in IIT Bombay to develop the next generation solution in Energy Management after a successful engagement with the Electrical Department to commercialize an
+                      innovative product. We are also engaged with multiple organizations incubated within SINE.
+                      <br><br>
+                      <i>To know more about Murata Business Engineering (India) Private Limited, <a onclick="href='https://www.murata.com/'" target="_blank"><b> click here</b></a></i>
                     </p>
                   </div>
                 </div>
@@ -928,17 +1005,17 @@ BFL is in collaboration with IITB Research Park (IITBRP) since its inception in 
 
       <div class="col-12 col-md-6 col-lg-4 company">
         <a href="#" data-toggle="modal" data-target="#TATA">
-        <div class="card">
-          <div class="card-header">Client</div>
-          <div class="image-holder">
-            <img src="TATA.png" />
-          </div>
-          <div class="company-intro">
-            <div class="company-name">
-              <h4>TATA Advanced Systems Limited</h4>
+          <div class="card">
+            <div class="card-header">Client</div>
+            <div class="image-holder">
+              <img src="TATA.png" />
+            </div>
+            <div class="company-intro">
+              <div class="company-name">
+                <h4>TATA Advanced Systems Limited</h4>
+              </div>
             </div>
           </div>
-        </div>
         </a>
         <div class="modal fade bd-example-modal-lg" id="TATA" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
@@ -961,9 +1038,10 @@ BFL is in collaboration with IITB Research Park (IITBRP) since its inception in 
                   </div>
                   <div class="col-12 company-brief">
                     <p>
-                      Tata Advanced Systems Limited (earlier Tata Power SED)  has been working on GIS and cloud based analytics from the IITB Research Park office. We have engaged with the GIS team from IITB for some consultancy and taken up interns regularly for hands-on work in our projects.
+                      Tata Advanced Systems Limited (earlier Tata Power SED) has been working on GIS and cloud based analytics from the IITB Research Park office. We have engaged with the GIS team from IITB for some consultancy and taken up interns
+                      regularly for hands-on work in our projects.
 
-<i>To know more about Tata Advanced Systems Limited, <a onclick="href='https://www.tataadvancedsystems.com'"target="_blank"><b> click here</b></a></i>
+                      <i>To know more about Tata Advanced Systems Limited, <a onclick="href='https://www.tataadvancedsystems.com'" target="_blank"><b> click here</b></a></i>
                     </p>
                   </div>
                 </div>
@@ -975,18 +1053,18 @@ BFL is in collaboration with IITB Research Park (IITBRP) since its inception in 
 
       <div class="col-12 col-md-6 col-lg-4 company">
         <a href="#" data-toggle="modal" data-target="#MNST">
-        <div class="card">
-          <div class="card-header">Associate</div>
-          <div class="image-holder">
-            <img src="MNST.png" />
-          </div>
-          <div class="company-intro">
-            <div class="company-name">
-              <h4>Multi Nano Sense Technologies Pvt. Ltd.</h4>
+          <div class="card">
+            <div class="card-header">Associate</div>
+            <div class="image-holder">
+              <img src="MNST.png" />
+            </div>
+            <div class="company-intro">
+              <div class="company-name">
+                <h4>Multi Nano Sense Technologies Pvt. Ltd.</h4>
+              </div>
             </div>
           </div>
-        </div>
-          </a>
+        </a>
         <div class="modal fade bd-example-modal-lg" id="MNST" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
             <div class="modal-content">
@@ -1008,8 +1086,12 @@ BFL is in collaboration with IITB Research Park (IITBRP) since its inception in 
                   </div>
                   <div class="col-12 company-brief">
                     <p>
-                      Multi Nano Sense Technologies PL is a cutting-edge gas sensing technology Start-Up with patented innovations in Solid State Electrochemical Sensors for Hydrogen analysis with a niche clientele in a growing Hydrogen economy. Our next generation of patented platform CMOS MEMS Gas Sensors can potentially sense almost all kinds of gases quantitatively and selectively over a wide range from PPT levels to 100% purity. We have strong Industry Academia partnerships with the University of Cambridge, IIITD&M Chennai, and are building a sound foundation with IIT Bombay through the IIT-B Research Park Foundation. Our roadmap with IIT-B envisages engagement with inter-disciplinary faculties and students for several projects through academic and funded routes encompassing MEMS fabrication, packaging, CMOS & ASIC development, IoT, and AI & ML algorithm building to develop world leading gas sensors. We also look forward to ambitious technologists joining our mission to touch a billion lives through disruptive gas sensing.<br><br>
-    <i>To know more about Multi Nano Sense Technologies Private Limited, <a onclick="href='https://www.multinanosense.com/'"target="_blank"><b> click here</b></a></i>
+                      Multi Nano Sense Technologies PL is a cutting-edge gas sensing technology Start-Up with patented innovations in Solid State Electrochemical Sensors for Hydrogen analysis with a niche clientele in a growing Hydrogen economy. Our
+                      next generation of patented platform CMOS MEMS Gas Sensors can potentially sense almost all kinds of gases quantitatively and selectively over a wide range from PPT levels to 100% purity. We have strong Industry Academia
+                      partnerships with the University of Cambridge, IIITD&M Chennai, and are building a sound foundation with IIT Bombay through the IIT-B Research Park Foundation. Our roadmap with IIT-B envisages engagement with inter-disciplinary
+                      faculties and students for several projects through academic and funded routes encompassing MEMS fabrication, packaging, CMOS & ASIC development, IoT, and AI & ML algorithm building to develop world leading gas sensors. We also
+                      look forward to ambitious technologists joining our mission to touch a billion lives through disruptive gas sensing.<br><br>
+                      <i>To know more about Multi Nano Sense Technologies Private Limited, <a onclick="href='https://www.multinanosense.com/'" target="_blank"><b> click here</b></a></i>
                     </p>
                   </div>
                 </div>
@@ -1021,17 +1103,17 @@ BFL is in collaboration with IITB Research Park (IITBRP) since its inception in 
 
       <div class="col-12 col-md-6 col-lg-4 company">
         <a href="#" data-toggle="modal" data-target="#Ideaforge">
-        <div class="card">
-          <div class="card-header">Client</div>
-          <div class="image-holder">
-            <img src="Idea Forge.png" />
-          </div>
-          <div class="company-intro">
-            <div class="company-name">
-              <h4>Ideaforge</h4>
+          <div class="card">
+            <div class="card-header">Client</div>
+            <div class="image-holder">
+              <img src="Idea Forge.png" />
+            </div>
+            <div class="company-intro">
+              <div class="company-name">
+                <h4>ideaForge</h4>
+              </div>
             </div>
           </div>
-        </div>
         </a>
         <div class="modal fade bd-example-modal-lg" id="Ideaforge" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
@@ -1054,12 +1136,9 @@ BFL is in collaboration with IITB Research Park (IITBRP) since its inception in 
                   </div>
                   <div class="col-12 company-brief">
                     <p>
-                      In line with its to IIT Bombay and in support of India’s vision of becoming an electronics manufacturing hub, Applied Materials India became the first anchor client at IIT Bombay’s Research Park in 2015. Occupying one of the
-                      largest
-                      areas, the facility enables close interaction with faculty and student researchers and benefits from seamless access to labs, equipment and services. <br><br>
 
-                       <br><br>
-                      <i>To know more about Applied Materials India,<a style="color:black;" onclick="href='https://www.appliedmaterials.com/en-in/company/about/india-overview'" target="_blank"><b> click here</b></a>
+                      <br><br>
+                      <i>To know more about ideaForge,<a style="color:black;" onclick="href=''" target="_blank"><b> click here</b></a>
                       </i>
                     </p>
                   </div>
@@ -1072,17 +1151,17 @@ BFL is in collaboration with IITB Research Park (IITBRP) since its inception in 
 
       <div class="col-12 col-md-6 col-lg-4 company">
         <a href="#" data-toggle="modal" data-target="#amar_chemistry">
-        <div class="card">
-          <div class="card-header">Associate</div>
-          <div class="image-holder">
-            <img src="AmarChemistry.png" />
-          </div>
-          <div class="company-intro">
-            <div class="company-name">
-              <h4>Ideaforge</h4>
+          <div class="card">
+            <div class="card-header">Associate</div>
+            <div class="image-holder">
+              <img src="AmarChemistry.png" />
+            </div>
+            <div class="company-intro">
+              <div class="company-name">
+                <h4>Amar Chemistry Pvt. Ltd.</h4>
+              </div>
             </div>
           </div>
-        </div>
         </a>
         <div class="modal fade bd-example-modal-lg" id="amar_chemistry" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
@@ -1105,11 +1184,13 @@ BFL is in collaboration with IITB Research Park (IITBRP) since its inception in 
                   </div>
                   <div class="col-12 company-brief">
                     <p>
-                      Amar Chemistry has benefitted from the IITB Research Park collaboration, mainly through access to distinguished faculty like Professor Kaliappan who has given timely advice in our research efforts and assisted us to find scientists of exceptional caliber. Additionally, ACPL now has access to the IIT Placement Center which is enabling us to meet highly talented candidates to fill our pipeline for recruitment. This in turn, significantly helps the company to attract clients to the CRO business.
+                      Amar Chemistry has benefitted from the IITB Research Park collaboration, mainly through access to distinguished faculty like Professor Kaliappan who has given timely advice in our research efforts and assisted us to find
+                      scientists of exceptional caliber. Additionally, ACPL now has access to the IIT Placement Center which is enabling us to meet highly talented candidates to fill our pipeline for recruitment. This in turn, significantly helps the
+                      company to attract clients to the CRO business.
 
                       <br><br>
-                     <i>To know more about Amar Chemistry,<a style="color:black;" onclick="href='https://amarchemistry.com/'" target="_blank"><b> click here</b></a>
-                     </i>
+                      <i>To know more about Amar Chemistry,<a style="color:black;" onclick="href='https://amarchemistry.com/'" target="_blank"><b> click here</b></a>
+                      </i>
 
                     </p>
                   </div>
@@ -1122,17 +1203,17 @@ BFL is in collaboration with IITB Research Park (IITBRP) since its inception in 
 
       <div class="col-12 col-md-6 col-lg-4 company">
         <a href="#" data-toggle="modal" data-target="#Virenxia">
-        <div class="card">
-          <div class="card-header">Associate</div>
-          <div class="image-holder">
-            <img src="Virenxia.jpg" />
-          </div>
-          <div class="company-intro">
-            <div class="company-name">
-              <h4>Virenxia</h4>
+          <div class="card">
+            <div class="card-header">Associate</div>
+            <div class="image-holder">
+              <img src="Virenxia.jpg" />
+            </div>
+            <div class="company-intro">
+              <div class="company-name">
+                <h4>Virenxia</h4>
+              </div>
             </div>
           </div>
-        </div>
         </a>
         <div class="modal fade bd-example-modal-lg" id="Virenxia" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
@@ -1155,12 +1236,16 @@ BFL is in collaboration with IITB Research Park (IITBRP) since its inception in 
                   </div>
                   <div class="col-12 company-brief">
                     <p>
-                      The IITB Research Park offers a one-stop window for all our developmental Projects. VIRENXIA is setting up a development centre at ASPIRE, to work on Digital Transformation journey with the VE4 Global e-Collaboration Project, encompassing technology including Blockchain, which will transform the way the world, industry, farmers and governments do business.
- There are several IITB faculty working in a variety of areas we will be partnering with, including in circular economy & sustainable development. We will have a number of student interns working with us on internships for our Projects in development at ASPIRE. We are also engaging with distinguished faculty in a number of areas including Data, Policy, Governance & Technology demonstration for Government, ESG, Contract Farming, CCS, increasing crop shelf life, micro-insurance development in India, digitisation of processes and supply chain, applied econometrics & insurance markets
+                      The IITB Research Park offers a one-stop window for all our developmental Projects. VIRENXIA is setting up a development centre at ASPIRE, to work on Digital Transformation journey with the VE4 Global e-Collaboration Project,
+                      encompassing technology including Blockchain, which will transform the way the world, industry, farmers and governments do business.
+                      There are several IITB faculty working in a variety of areas we will be partnering with, including in circular economy & sustainable development. We will have a number of student interns working with us on internships for our
+                      Projects in development at ASPIRE. We are also engaging with distinguished faculty in a number of areas including Data, Policy, Governance & Technology demonstration for Government, ESG, Contract Farming, CCS, increasing crop
+                      shelf life, micro-insurance development in India, digitisation of processes and supply chain, applied econometrics & insurance markets
 
- CTARA & SINE will facilitate the conversion of research activity into entrepreneurial ventures, for our Rural Reboot Project. Prof Ravi Gudi of IITB has accepted co-opted membership of our AquaF Project – a path-breaking Project to progress at Oman & India, producing electricity free large volumes of water from the air, which will forever change the issue of dependency of rain on agriculture.
+                      CTARA & SINE will facilitate the conversion of research activity into entrepreneurial ventures, for our Rural Reboot Project. Prof Ravi Gudi of IITB has accepted co-opted membership of our AquaF Project – a path-breaking Project
+                      to progress at Oman & India, producing electricity free large volumes of water from the air, which will forever change the issue of dependency of rain on agriculture.
 
-                       <br><br>
+                      <br><br>
                       <i>To know more about Virenxia,<a style="color:black;" onclick="href='https://www.virenxia.com/'" target="_blank"><b> click here</b></a>
                       </i>
                     </p>
@@ -1172,67 +1257,20 @@ BFL is in collaboration with IITB Research Park (IITBRP) since its inception in 
         </div>
       </div>
 
-      <div class="col-12 col-md-6 col-lg-4 company">
-        <a href="#" data-toggle="modal" data-target="#Cepton">
-        <div class="card">
-          <div class="card-header">Associate</div>
-          <div class="image-holder">
-            <img src="Cepton.jpg" />
-          </div>
-          <div class="company-intro">
-            <div class="company-name">
-              <h4>Cepton</h4>
-            </div>
-          </div>
-        </div>
-        </a>
-        <div class="modal fade bd-example-modal-lg" id="Cepton" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <div class="modal-title">
-                  Associate
-                </div>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                <div class="row">
-                  <div class="col-md-6 inside-img">
-                    <img src="Cepton.jpg" />
-                  </div>
-                  <div class="col-md-6 inside-association">
-                    <h5>"Associated with IITB Research Park since "</h5>
-                  </div>
-                  <div class="col-12 company-brief">
-                    <p>
-                      ...
-                       <br><br>
-                      <i>To know more about Cepton,<a style="color:black;" onclick="href=''" target="_blank"><b> click here</b></a>
-                      </i>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
 
       <div class="col-12 col-md-6 col-lg-4 company">
         <a href="#" data-toggle="modal" data-target="#Google">
-        <div class="card">
-          <div class="card-header">Associate</div>
-          <div class="image-holder">
-            <img src="Google.png" />
-          </div>
-          <div class="company-intro">
-            <div class="company-name">
-              <h4>Google</h4>
+          <div class="card">
+            <div class="card-header">Associate</div>
+            <div class="image-holder">
+              <img src="Google.png" />
+            </div>
+            <div class="company-intro">
+              <div class="company-name">
+                <h4>Google</h4>
+              </div>
             </div>
           </div>
-        </div>
         </a>
         <div class="modal fade bd-example-modal-lg" id="Google" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
@@ -1256,7 +1294,7 @@ BFL is in collaboration with IITB Research Park (IITBRP) since its inception in 
                   <div class="col-12 company-brief">
                     <p>
                       ...
-                       <br><br>
+                      <br><br>
                       <i>To know more about Google,<a style="color:black;" onclick="href=''" target="_blank"><b> click here</b></a>
                       </i>
                     </p>
@@ -1270,17 +1308,17 @@ BFL is in collaboration with IITB Research Park (IITBRP) since its inception in 
 
       <div class="col-12 col-md-6 col-lg-4 company">
         <a href="#" data-toggle="modal" data-target="#Ceremorphic">
-        <div class="card">
-          <div class="card-header">Associate</div>
-          <div class="image-holder">
-            <img src="Ceremorphic.png" />
-          </div>
-          <div class="company-intro">
-            <div class="company-name">
-              <h4>Associate</h4>
+          <div class="card">
+            <div class="card-header">Associate</div>
+            <div class="image-holder">
+              <img src="Ceremorphic.png" />
+            </div>
+            <div class="company-intro">
+              <div class="company-name">
+                <h4>Ceremorphic, Inc.</h4>
+              </div>
             </div>
           </div>
-        </div>
         </a>
         <div class="modal fade bd-example-modal-lg" id="Ceremorphic" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
@@ -1303,11 +1341,15 @@ BFL is in collaboration with IITB Research Park (IITBRP) since its inception in 
                   </div>
                   <div class="col-12 company-brief">
                     <p>
-                      Ceremorphic, Inc.  is a startup company, founded by industry veterans in the semiconductor industry, headquartered in Silicon Valley (San Jose, CA USA) with a development center in Hyderabad, India.  The Company focuses on research backed product development and has formed a highly talented team of over 150 people world-wide. Ceremorphic has an advisory panel which includes accomplished academicians from Stanford University, University of Texas Austin, and University of California Los Angeles and IITs.
+                      Ceremorphic, Inc. is a startup company, founded by industry veterans in the semiconductor industry, headquartered in Silicon Valley (San Jose, CA USA) with a development center in Hyderabad, India. The Company focuses on
+                      research backed product development and has formed a highly talented team of over 150 people world-wide. Ceremorphic has an advisory panel which includes accomplished academicians from Stanford University, University of Texas
+                      Austin, and University of California Los Angeles and IITs.
 
-Ceremorphic is developing an advanced System-on-Chip (SoC) and system product in TSMC 5nm node for the next industrial revolution. The company has done extensive research in machine learning algorithms, multi-thread processing, quantum resistant security algorithms, reliability engineering, analog computing and low energy device architectures and has over 100 patents. Ceremorphic processors address inference, training, and scientific applications in both consumer and industrial markets with unprecedented power performance differentiation.
+                      Ceremorphic is developing an advanced System-on-Chip (SoC) and system product in TSMC 5nm node for the next industrial revolution. The company has done extensive research in machine learning algorithms, multi-thread processing,
+                      quantum resistant security algorithms, reliability engineering, analog computing and low energy device architectures and has over 100 patents. Ceremorphic processors address inference, training, and scientific applications in
+                      both consumer and industrial markets with unprecedented power performance differentiation.
 
-                       <br><br>
+                      <br><br>
                       <i>To know more about Ceremorphic,<a style="color:black;" onclick="href='https://www.ceremorphic.com/'" target="_blank"><b> click here</b></a>
                       </i>
                     </p>
@@ -1360,35 +1402,34 @@ Ceremorphic is developing an advanced System-on-Chip (SoC) and system product in
     </div>
 
     <div class="footer-text">
-      Copyright line
+      Copyright &copy 2021 IITB Research Park Foundation | All rights reserved
     </div>
   </section>
 
 
 
   <script>
+    // Circular Menu
 
-  // Circular Menu
+    var items = document.querySelectorAll('.circle a');
 
-  var items = document.querySelectorAll('.circle a');
+    for (var i = 0, l = items.length; i < l; i++) {
+      items[i].style.left = (50 - 35 * Math.cos(-0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)).toFixed(4) + "%";
 
-  for (var i = 0, l = items.length; i < l; i++) {
-  items[i].style.left = (50 - 35 * Math.cos(-0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)).toFixed(4) + "%";
+      items[i].style.top = (50 + 35 * Math.sin(-0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)).toFixed(4) + "%";
+    }
 
-  items[i].style.top = (50 + 35 * Math.sin(-0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)).toFixed(4) + "%";
-  }
+    document.querySelector('.menu-button').onclick = function(e) {
+      e.preventDefault();
+      document.querySelector('.circle').classList.toggle('open');
+    }
 
-  document.querySelector('.menu-button').onclick = function(e) {
-  e.preventDefault();
-  document.querySelector('.circle').classList.toggle('open');
-  }
+    window.onload = function(e) {
+      e.preventDefault();
+      document.querySelector('.circle').classList.toggle('open');
+    }
 
-  window.onload = function(e) {
-  e.preventDefault();
-  document.querySelector('.circle').classList.toggle('open');
-  }
-
-  // Back to top
+    // Back to top
 
     $(function() {
       var text = $(".text");
