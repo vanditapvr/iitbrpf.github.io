@@ -41,10 +41,13 @@
 
   <style>
     /* Global  */
-    body {
+    body{
       background-color: #ffffed;
       font-family: 'Roboto', sans-serif;
       overflow-x: hidden;
+      margin:0;
+      padding:0;
+      box-sizing: border-box;
     }
 
     /* Header */
@@ -128,58 +131,45 @@
 
     }
 
-    #drop {
-      background-color: transparent;
-      color: whitesmoke;
-      font-size: 2rem;
-      visibility: hidden;
 
-    }
+        .sidebar-menu{
+          float:right;
+          font-size: 2.5rem;
+          margin-right: 2.5rem;
+          cursor:pointer;
+          visibility: hidden;
+        }
 
-    #drop:hover {
-      cursor: pointer;
-    }
+        .sidebar{
+          height:100%;
+          width:0;
+          position:fixed;
+          top:0;
+          right:0;
+          z-index:1;
+          background-color: whitesmoke;
+          overflow-x:hidden;
+          padding-top: 3.5rem;
+          transition: all 0.5s;
+          visibility: hidden;
+        }
 
-    #drop-down {
-      position: relative;
-      display: inline-block;
-      box-shadow: none;
-      visibility: hidden;
-    }
+        .sidebar a{
+          text-decoration: none;
+          color:maroon;
+          font-size: 1.4rem;
+          display:block;
+          padding: 1rem 0 1rem 1rem;
+        }
 
-    #dropdown-menu {
-      display: none;
-      position: absolute;
-      background-color: whitesmoke;
-      width: 14rem;
-      border-radius: 5px;
-      z-index: 1;
-      margin-left: -12rem;
-      font-size: 1.3rem;
-      text-align: center;
+        .sidebar a:hover{
+          opacity:60%;
+        }
 
-    }
-
-    #dropdown-menu a {
-      color: black;
-      padding: 0.5rem;
-      text-decoration: none;
-      display: block;
-      border-radius: 5px;
-    }
-
-
-    #dropdown-menu a:hover {
-      background-color: #ddd;
-      border-radius: 5px;
-    }
-
-    #drop-down:hover #dropdown-menu {
-      display: block;
-      border-radius: 5px;
-    }
-
-
+        .sidebar-closebtn{
+          position:absolute;
+          top:0;
+        }
 
 
     /* Tagline */
@@ -266,11 +256,11 @@
 
     @media (max-width:768px) {
 
-      #drop {
+      .sidebar-menu {
         visibility: visible;
       }
 
-      #drop-down {
+      .sidebar {
         visibility: visible;
       }
 
@@ -296,6 +286,19 @@
         height: 15rem;
       }
 
+      .change-icon-color {
+        color: transparent !important;
+        background-blend-mode: exclusion;
+        -webkit-text-stroke: transparent;
+      }
+
+      .name-color {
+        color: transparent;
+        -webkit-text-stroke: transparent;
+        text-shadow: none;
+
+      }
+
 
       .tagline-holder {
         width: 60%;
@@ -305,6 +308,7 @@
         left: 15%;
         border: none;
       }
+
 
       .tagline-text {
         color: whitesmoke;
@@ -1283,20 +1287,26 @@
 
       <div class="container display-overlay">
         <img src="WhiteTextLogo.png">
-        <div id="drop-down" style=" float: right;margin-right:10px;">
-          <div id="drop"><i class="fas fa-bars"></i></div>
-          <div id="dropdown-menu">
-            <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="team-intro.html">People</a>
-            <a href="infrastructure.html">Spaces</a>
-            <a href="clients.html">Our Clients</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="events.html">Events</a>
-            <a href="mediacoverage.html">Media Coverage</a>
-            <a href="contact.html">Contact Us</a>
-          </div>
+
+        <div span class="sidebar-menu" onclick="openSideNav()">
+          &#9776;
         </div>
+
+        <div class="sidebar" id="Sidebar">
+          <a href="javascript:void(0)" class="sidebar-closebtn" onclick="closeSideNav()">
+            &times;
+          </a>
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="team-intro.html">People</a>
+          <a href="infrastructure.html">Spaces</a>
+          <a href="clients.html">Our Clients</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="events.html">Events</a>
+          <a href="mediacoverage.html">Media Coverage</a>
+          <a href="contact.html">Contact Us</a>
+        </div>
+
 
         <!-- Tagline -->
 
@@ -1922,6 +1932,16 @@
         }
       })
     });
+
+
+
+    const openSideNav = () =>{
+      document.getElementById('Sidebar').style.width="40vh";
+    }
+
+    const closeSideNav = () =>{
+      document.getElementById('Sidebar').style.width="0vh";
+    }
 
     // Back to top
 
