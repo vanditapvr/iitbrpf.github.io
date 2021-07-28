@@ -1,6 +1,7 @@
 body {
-      font-family: 'Montserrat Semiibold 600', sans-serif;
-      font-size:1rem;
+  background-color: #ffffed;
+  font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
 
     }
 
@@ -153,10 +154,10 @@ body {
 
 @media (max-width:768px){
   .circular-menu {
-    width: 17rem;
-    height: 17rem;
+    width: 15rem;
+    height: 15rem;
     top:10rem;
-    left:45.5%;
+    left:0rem;
   }
 
   .menu-button {
@@ -165,8 +166,8 @@ body {
   }
 
   .circle {
-    width: 17rem;
-    height: 17rem;
+    width: 15rem;
+    height: 15rem;
   }
 
   .circle a {
