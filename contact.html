@@ -27,16 +27,23 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Tinos&display=swap" rel="stylesheet">
 
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Chettan+2&display=swap" rel="stylesheet">
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
   <!-- CSS Stylesheet Links -->
 
   <link href="header.css" rel="stylesheet">
+
+
   <style>
     body {
       overflow-x: hidden;
       background-color: #ffffed;
       font-family: 'Roboto', sans-serif;
+      margin:0;
+      padding:0;
+      box-sizing: border-box;
     }
 
     /* Header */
@@ -104,55 +111,46 @@
       font-size: 0.9rem;
     }
 
-    #drop {
-      background-color: transparent;
-      color: whitesmoke;
-      font-size: 2rem;
+    .sidebar-menu{
+      float:right;
+      font-size: 2.5rem;
+      cursor:pointer;
       visibility: hidden;
-      margin-top: 1.5rem;
-
+      margin:1rem 1.5rem 0 0;
     }
 
-    #drop:hover {
-      cursor: pointer;
-    }
-
-    #drop-down {
-      position: relative;
-      display: inline-block;
-      box-shadow: none;
+    .sidebar{
+      height:100%;
+      width:0;
+      position:fixed;
+      top:0;
+      right:0;
+      z-index:1;
+      background-color: #fffdd0;
+      overflow-x:hidden;
+      padding-top: 3.5rem;
+      transition: all 0.5s;
       visibility: hidden;
     }
 
-    #dropdown-menu {
-      display: none;
-      position: absolute;
-      background-color: whitesmoke;
-      width: 14rem;
-      border-radius: 5px;
-      z-index: 1;
-      margin-left: -12rem;
-      font-size: 1.3rem;
-    }
-
-    #dropdown-menu a {
-      color: black;
-      padding: 0.5rem;
+    .sidebar a{
       text-decoration: none;
-      display: block;
-      border-radius: 5px;
+      color:maroon;
+      font-size: 1.4rem;
+      display:block;
+      padding: 1rem 0 1rem 1rem;
     }
 
-
-    #dropdown-menu a:hover {
-      background-color: #ddd;
-      border-radius: 5px;
+    .sidebar a:hover{
+      opacity:60%;
     }
 
-    #drop-down:hover #dropdown-menu {
-      display: block;
-      border-radius: 5px;
+    .sidebar-closebtn{
+      position:absolute;
+      top:0;
+      font-size: 2rem !important;
     }
+
 
 
     @media (max-width:998px){
@@ -169,13 +167,22 @@
       }
 
       .header img {
-        height: 7rem;
+        height: 7.5rem;
         width: 17rem;
       }
 
       .heading {
         font-size: 2.6rem;
       }
+
+      .sidebar-menu {
+        visibility: hidden;
+      }
+
+      .sidebar {
+        visibility: hidden;
+      }
+
 
 
       /* Circular Menu */
@@ -212,15 +219,15 @@
         background: linear-gradient(95deg, rgba(36, 16, 60, 0.9981034650188201) 36%, rgba(52, 17, 95, 1) 100%);
         text-align: center;
         font-size: 10px;
-        height: 45vh;
+        height: 35vh;
         padding: 0;
         margin: 0;
         display: block;
       }
 
       .header img {
-        height: 7rem;
-        width: 17rem;
+        height: 6.5rem;
+        width: 15.5rem;
       }
 
       .heading-holder {
@@ -232,21 +239,21 @@
       .heading {
         font-size: 2rem;
         position: absolute;
-        top: 25vh;
+        top: 20vh;
         left: 35%;
       }
 
+      .sidebar-menu {
+        visibility: visible;
+      }
+
+      .sidebar {
+        visibility: visible;
+      }
+
+
 
       /* Circular Menu */
-
-
-      #drop {
-        visibility: visible;
-      }
-
-      #drop-down {
-        visibility: visible;
-      }
 
       .overlay img {
         height: 8rem;
@@ -256,6 +263,33 @@
       .circular-menu {
         visibility: hidden;
       }
+
+      .circular-menu {
+        width: 15rem;
+        height: 15rem;
+        position: absolute;
+        top: 8rem;
+        left: 1%;
+      }
+
+      .circle {
+        width: 15rem;
+        height: 15rem;
+      }
+
+      .change-icon-color {
+        color: transparent !important;
+        background-blend-mode: exclusion;
+        -webkit-text-stroke: transparent;
+      }
+
+      .name-color {
+        color: transparent;
+        -webkit-text-stroke: transparent;
+        text-shadow: none;
+
+      }
+
 
     }
 
@@ -352,17 +386,41 @@ input[type=submit]:hover {
   padding-left: 5rem;
 }
 
+@media(max-width:768px){
+  .address{
+    display:grid;
+    place-items:center;
+    padding:3%;
+    margin-top: 10%;
+    border-right: none;
+    padding-right: 1rem;
+  }
+
+  .address-text{
+    text-align:center;
+    color:#881244;
+    font-size: 1.1rem;
+  }
+
+  .g-map{
+    display:grid;
+    place-items:center;
+    margin-top: 5%;
+    padding-left: 1rem;
+  }
+
+}
+
 /* Back to top button */
 
 .back-to-top {
   position: fixed;
   bottom: 25px;
-  right: 25px;
-  left:93%;
+  left:90%;
   display: none;
-  width:5%;
   color: #881244;
   background: #ffffd4;
+  width:3rem;
 }
 
 /* Footer */
@@ -386,7 +444,7 @@ input[type=submit]:hover {
 
 .left-left img {
   height: 8rem;
-  width: 16rem;
+  width: 17rem;
 }
 
 .left-right {
@@ -442,26 +500,52 @@ input[type=submit]:hover {
   margin-top: 4rem;
   color: #cc397b;
   margin-bottom: 2rem;
+  font-family: 'Baloo Chettan 2', cursive;
 }
 
 .sicon {
   padding: 1rem;
   font-size: 1.4rem;
-  color: #ffffed;
 }
 
-@media (max-width:768px){
-   .footer-left {
-padding: 1rem;
-border-right:none;
+.fa-facebook-f{
+  color:#3b5998 !important;
 }
 
-.left-left img {
-height: 5rem;
-width: 10rem;
-}
+.fa-instagram{
+  color:#bc2a8d !important;
 }
 
+.fa-youtube{
+  color:#bb0000 !important;
+}
+
+.fa-twitter{
+  color:#00aced !important;
+}
+
+.fa-linkedin-in{
+  color:#007bb6 !important;
+}
+
+@media (max-width:998px){
+  .left-left img {
+    height: 6rem;
+    width: 13rem;
+  }
+}
+
+@media (max-width:768px) {
+  .footer-left {
+    padding: 1rem;
+    border-right: none;
+  }
+
+  .left-left img {
+    height: 6rem;
+    width: 13rem;
+  }
+}
 
    #confirm {
             display: none;
@@ -502,20 +586,25 @@ width: 10rem;
       <img src="WhiteTextLogo.png">
 
 
-          <div id="drop-down" style=" float: right;margin-right:20px;">
-            <div id="drop"><i class="fas fa-bars"></i></div>
-            <div id="dropdown-menu">
-              <a href="index.html">Home</a>
-              <a href="about.html">About Us</a>
-              <a href="team-intro.html">People</a>
-              <a href="infrastructure.html">Spaces</a>
-              <a href="clients.html">Our Clients</a>
-              <a href="gallery.html">Gallery</a>
-              <a href="events.html">Events</a>
-              <a href="mediacoverage.html">Media Coverage</a>
-              <a href="contact.html">Contact Us</a>
-            </div>
-          </div>
+      <div span class="sidebar-menu" id="side-menu" onclick="openSideNav()">
+        &#9776;
+      </div>
+
+      <div class="sidebar" id="Sidebar">
+        <a href="javascript:void(0)" class="sidebar-closebtn" id="closeSidebar" onclick="closeSideNav()">
+          &times;
+        </a>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="team-intro.html">People</a>
+        <a href="infrastructure.html">Spaces</a>
+        <a href="clients.html">Our Clients</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="events.html">Events</a>
+        <a href="mediacoverage.html">Media Coverage</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+
 
       <div class="heading-holder">
         <h1 class="heading">Contact Us!</h1>
@@ -607,6 +696,7 @@ width: 10rem;
       <div class="social-icons-contact">
         <a style="text-decoration:none;" href="https://www.facebook.com/IITBRP/" target="_blank"><i class="fab fa-facebook-f contact-social"></i></a>
         <a style="text-decoration:none;" href="https://www.instagram.com/iitbrp/" target="_blank"><i class="fab fa-instagram contact-social"></i></a>
+        <a style="text-decoration:none;" href="https://www.youtube.com/channel/UCWKc47wLUoWNWFWcwDRyMDw" target="_blank"><i class="fab fa-youtube sicon"></i></a>
         <a style="text-decoration:none;" href="https://twitter.com/IITBRP" target="_blank"><i class="fab fa-twitter contact-social"></i></a>
         <a style="text-decoration:none;" href="https://www.linkedin.com/company/iit-bombay-research-park-aspire-/" target="_blank"><i class="fab fa-linkedin-in contact-social"></i></a>
       </div>
@@ -625,45 +715,49 @@ width: 10rem;
       </div>
 
 
-<a id="back-to-top" href="#" class="btn btn-light btn-lg back-to-top" role="button"><i class="fas fa-chevron-up"></i></a>
+      <a id="back-to-top" href="#" class="btn btn-light btn-lg back-to-top" role="button"><i class="fas fa-chevron-up"></i></a>
 
-<section id="footer">
+      <section id="footer">
 
-  <div class="row">
-    <div class="col-md-6 footer-left">
-      <div class="row">
-        <div class="col-6 left-left">
-          <img src="WhiteTextLogo.png">
+        <div class="row">
+          <div class="col-md-6 footer-left">
+            <div class="row">
+              <div class="col-6 left-left">
+                <img src="WhiteTextLogo.png">
+              </div>
+              <div class="col-6 left-right">
+                <p>
+                  IITB Research Park Foundation, <br>
+                  Indian Institute of Technology Bombay, <br>
+                  Main Building, 6B, Powai,
+                  <br>Mumbai, Maharashtra 400076
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 footer-right">
+            <h6><a style="margin-right:3rem" href="about.html">About Us</a> <a style="margin-right:3rem" href="infrastructure.html"> Spaces </a> <a href="contact.html"> Contact</a></h6>
+            <p>
+              Follow us:
+            </p>
+            <div class="social-icons">
+              <a style="text-decoration:none;" href="https://www.facebook.com/IITBRP/" target="_blank"><i class="fab fa-facebook-f sicon"></i></a>
+              <a style="text-decoration:none;" href="https://www.instagram.com/iitbrp/" target="_blank"><i class="fab fa-instagram sicon"></i></a>
+              <a style="text-decoration:none;" href="https://www.youtube.com/channel/UCWKc47wLUoWNWFWcwDRyMDw" target="_blank"><i class="fab fa-youtube sicon"></i></a>
+              <a style="text-decoration:none;" href="https://twitter.com/IITBRP" target="_blank"><i class="fab fa-twitter sicon"></i></a>
+              <a style="text-decoration:none;" href="https://www.linkedin.com/company/iit-bombay-research-park-aspire-/" target="_blank"><i class="fab fa-linkedin-in sicon"></i></a>
+            </div>
+          </div>
         </div>
-        <div class="col-6 left-right">
-          <p>
-            IITB Research Park Foundation, <br>
-            Indian Institute of Technology Bombay, <br>
-            Main Building, 6B, Powai,
-            <br>Mumbai, Maharashtra 400076
-          </p>
         </div>
-      </div>
-    </div>
-    <div class="col-md-6 footer-right">
-      <h6><a style="margin-right:3rem" href="about.html">About Us</a> <a style="margin-right:3rem" href="infrastructure.html"> Spaces </a> <a href="contact.html"> Contact</a></h6>
-      <p>
-        Follow us:
-      </p>
-      <div class="social-icons">
-        <a style="text-decoration:none;" href="https://www.facebook.com/IITBRP/" target="_blank"><i class="fab fa-facebook-f sicon"></i></a>
-        <a style="text-decoration:none;" href="https://www.instagram.com/iitbrp/" target="_blank"><i class="fab fa-instagram sicon"></i></a>
-        <a style="text-decoration:none;" href="https://twitter.com/IITBRP" target="_blank"><i class="fab fa-twitter sicon"></i></a>
-        <a style="text-decoration:none;" href="https://www.linkedin.com/company/iit-bombay-research-park-aspire-/" target="_blank"><i class="fab fa-linkedin-in sicon"></i></a>
-      </div>
-    </div>
-  </div>
+        </div>
 
+        <div class="footer-text">
+          Copyright &copy 2021 IITB Research Park Foundation | All rights reserved
 
-  <div class="footer-text">
-    Copyright &copy 2021 IITB Research Park Foundation | All rights reserved
-  </div>
-</section>
+        </div>
+      </section>
+
 
 
 <script type="text/javascript">
@@ -756,6 +850,25 @@ window.onload = function(e) {
 e.preventDefault();
 document.querySelector('.circle').classList.toggle('open');
 }
+
+const openSideNav = () =>{
+  document.getElementById('Sidebar').style.width="40vh";
+}
+
+const closeSideNav = () =>{
+  document.getElementById('Sidebar').style.width="0vh";
+}
+
+
+$(document).mouseup(function (e) {
+        var container = $("Sidebar");
+        if(!container.is(e.target) &&
+        container.has(e.target).length === 0) {
+            closeSideNav();
+        }
+    });
+
+
 
 // Back to top
 

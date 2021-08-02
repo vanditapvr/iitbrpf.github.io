@@ -29,6 +29,8 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Chettan+2&display=swap" rel="stylesheet">
+
   <!-- CSS Stylesheet Links -->
 
   <link href="header.css" rel="stylesheet">
@@ -38,6 +40,7 @@
     referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 
   <style>
     /* Global  */
@@ -134,45 +137,44 @@
 
 
         .sidebar-menu{
-          float:right;
-          font-size: 2.5rem;
-          cursor:pointer;
-          visibility: hidden;
-          right:1rem;
-        }
+  float:right;
+  font-size: 2.5rem;
+  cursor:pointer;
+  visibility: hidden;
+  right:1rem;
+  }
 
-        .sidebar{
-          height:100%;
-          width:0;
-          position:fixed;
-          top:0;
-          right:0;
-          z-index:1;
-          background-color: whitesmoke;
-          overflow-x:hidden;
-          padding-top: 3.5rem;
-          transition: all 0.5s;
-          visibility: hidden;
-        }
+  .sidebar{
+  height:100%;
+  width:0;
+  position:fixed;
+  top:0;
+  right:0;
+  z-index:1;
+  background-color: #fffdd0;
+  overflow-x:hidden;
+  padding-top: 3.5rem;
+  transition: all 0.5s;
+  visibility: hidden;
+  }
 
-        .sidebar a{
-          text-decoration: none;
-          color:maroon;
-          font-size: 1.4rem;
-          display:block;
-          padding: 1rem 0 1rem 1rem;
-        }
+  .sidebar a{
+  text-decoration: none;
+  color:maroon;
+  font-size: 1.4rem;
+  display:block;
+  padding: 1rem 0 1rem 1rem;
+  }
 
-        .sidebar a:hover{
-          opacity:60%;
-        }
+  .sidebar a:hover{
+  opacity:60%;
+  }
 
-        .sidebar-closebtn{
-          position:absolute;
-          top:0;
-          font-size: 2rem !important;
-        }
-
+  .sidebar-closebtn{
+  position:absolute;
+  top:0;
+  font-size: 2rem !important;
+  }
 
     /* Tagline */
 
@@ -221,8 +223,8 @@
     @media only screen and (max-width:992px) {
 
       .overlay img {
-        height: 12rem;
-        width: 18rem;
+        height: 8rem;
+        width: 16rem;
       }
 
       .sidebar-menu {
@@ -245,6 +247,10 @@
       .circle {
         width: 22rem;
         height: 22rem;
+      }
+
+      .change-icon-color{
+        font-size: 2rem;
       }
 
 
@@ -1108,6 +1114,12 @@
 
     @media (max-width:768px) {
 
+
+      .modes-of-engagement-section {
+        margin-bottom: 2rem;
+        padding-bottom: 2rem;
+        background-color: #ffffe0;
+      }
       .modes-text {
         padding-left: 0rem;
         margin-bottom: 1rem;
@@ -1219,7 +1231,7 @@
 
     .left-left img {
       height: 8rem;
-      width: 16rem;
+      width: 17rem;
     }
 
     .left-right {
@@ -1275,6 +1287,7 @@
       margin-top: 4rem;
       color: #cc397b;
       margin-bottom: 2rem;
+      font-family: 'Baloo Chettan 2', cursive;
     }
 
     .sicon {
@@ -1302,6 +1315,13 @@
       color:#007bb6 !important;
     }
 
+    @media (max-width:998px){
+      .left-left img {
+        height: 6rem;
+        width: 13rem;
+      }
+    }
+
     @media (max-width:768px) {
       .footer-left {
         padding: 1rem;
@@ -1309,8 +1329,8 @@
       }
 
       .left-left img {
-        height: 5rem;
-        width: 10rem;
+        height: 6rem;
+        width: 13rem;
       }
     }
   </style>
