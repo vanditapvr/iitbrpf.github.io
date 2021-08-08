@@ -43,13 +43,16 @@
 
 
   <style>
+
+  html,body{
+    overflow-x: hidden;
+  }
     /* Global  */
-    body{
+    body {
       background-color: #ffffed;
       font-family: 'Roboto', sans-serif;
-      overflow-x: hidden;
-      margin:0;
-      padding:0;
+      margin: 0;
+      padding: 0;
       box-sizing: border-box;
     }
 
@@ -136,45 +139,45 @@
     }
 
 
-        .sidebar-menu{
-  float:right;
-  font-size: 2.5rem;
-  cursor:pointer;
-  visibility: hidden;
-  right:1rem;
-  }
+    .sidebar-menu {
+      float: right;
+      font-size: 2.5rem;
+      cursor: pointer;
+      visibility: hidden;
+      right: 1rem;
+    }
 
-  .sidebar{
-  height:100%;
-  width:0;
-  position:fixed;
-  top:0;
-  right:0;
-  z-index:1;
-  background-color: #fffdd0;
-  overflow-x:hidden;
-  padding-top: 3.5rem;
-  transition: all 0.5s;
-  visibility: hidden;
-  }
+    .sidebar {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      top: 0;
+      right: 0;
+      z-index: 1;
+      background-color: #fffdd0;
+      overflow-x: hidden;
+      padding-top: 3.5rem;
+      transition: all 0.5s;
+      visibility: hidden;
+    }
 
-  .sidebar a{
-  text-decoration: none;
-  color:maroon;
-  font-size: 1.4rem;
-  display:block;
-  padding: 1rem 0 1rem 1rem;
-  }
+    .sidebar a {
+      text-decoration: none;
+      color: maroon;
+      font-size: 1.4rem;
+      display: block;
+      padding: 1rem 0 1rem 1rem;
+    }
 
-  .sidebar a:hover{
-  opacity:60%;
-  }
+    .sidebar a:hover {
+      opacity: 60%;
+    }
 
-  .sidebar-closebtn{
-  position:absolute;
-  top:0;
-  font-size: 2rem !important;
-  }
+    .sidebar-closebtn {
+      position: absolute;
+      top: 0;
+      font-size: 2rem !important;
+    }
 
     /* Tagline */
 
@@ -249,7 +252,7 @@
         height: 22rem;
       }
 
-      .change-icon-color{
+      .change-icon-color {
         font-size: 2rem;
       }
 
@@ -516,7 +519,7 @@
       place-items: center;
     }
 
-    @media (max-width:1200px){
+    @media (max-width:1200px) {
       .offers-feature {
         height: 22rem;
         width: 9rem;
@@ -980,7 +983,7 @@
       font-size: 1.3rem;
     }
 
-    @media (max-width:768px){
+    @media (max-width:768px) {
 
 
       .sector {
@@ -1120,6 +1123,7 @@
         padding-bottom: 2rem;
         background-color: #ffffe0;
       }
+
       .modes-text {
         padding-left: 0rem;
         margin-bottom: 1rem;
@@ -1206,7 +1210,7 @@
       bottom: 25px;
       right: 3rem;
       display: none;
-      width:3rem;
+      width: 3rem;
       color: #881244;
       background: #ffffd4;
     }
@@ -1214,8 +1218,8 @@
     /* Footer */
 
     #footer {
-      padding: 1%;
       background-color: #24103c;
+      padding: 1%;
       padding-top: 2rem;
       font-family: 'Cormorant Garamond', serif;
     }
@@ -1296,27 +1300,27 @@
       font-size: 1.4rem;
     }
 
-    .fa-facebook-f{
-      color:#3b5998 !important;
+    .fa-facebook-f {
+      color: #3b5998 !important;
     }
 
-    .fa-instagram{
-      color:#bc2a8d !important;
+    .fa-instagram {
+      color: #bc2a8d !important;
     }
 
-    .fa-youtube{
-      color:#bb0000 !important;
+    .fa-youtube {
+      color: #bb0000 !important;
     }
 
-    .fa-twitter{
-      color:#00aced !important;
+    .fa-twitter {
+      color: #00aced !important;
     }
 
-    .fa-linkedin-in{
-      color:#007bb6 !important;
+    .fa-linkedin-in {
+      color: #007bb6 !important;
     }
 
-    @media (max-width:998px){
+    @media (max-width:998px) {
       .left-left img {
         height: 6rem;
         width: 13rem;
@@ -1523,11 +1527,11 @@
           <div class="feature-overlay">
             <div class="feature-text">
               <a href="multidisciplinary.html" target="_blank">
-              <h6>Multidisciplinary Expertise</h6>
-              <p>
-                Leverage the expertise of the highly competent faculty and the synergistic collaborative environment to evolve multi-disciplinary approaches to conduct
+                <h6>Multidisciplinary Expertise</h6>
+                <p>
+                  Leverage the expertise of the highly competent faculty and the synergistic collaborative environment to evolve multi-disciplinary approaches to conduct
                   advanced research & its translation.
-              </p>
+                </p>
               </a>
             </div>
           </div>
@@ -2006,22 +2010,22 @@
 
 
 
-    const openSideNav = () =>{
-      document.getElementById('Sidebar').style.width="40vh";
+    const openSideNav = () => {
+      document.getElementById('Sidebar').style.width = "40vh";
     }
 
-    const closeSideNav = () =>{
-      document.getElementById('Sidebar').style.width="0vh";
+    const closeSideNav = () => {
+      document.getElementById('Sidebar').style.width = "0vh";
     }
 
 
-    $(document).mouseup(function (e) {
-            var container = $("Sidebar");
-            if(!container.is(e.target) &&
-            container.has(e.target).length === 0) {
-                closeSideNav();
-            }
-        });
+    $(document).mouseup(function(e) {
+      var container = $("Sidebar");
+      if (!container.is(e.target) &&
+        container.has(e.target).length === 0) {
+        closeSideNav();
+      }
+    });
 
 
     // Back to top
