@@ -37,6 +37,9 @@
 
 
   <style>
+  html,body{
+    overflow-x: hidden;
+  }
     body {
       overflow-x: hidden;
       background-color: #ffffed;
@@ -215,81 +218,118 @@
 
     @media (max-width:768px){
 
-      .header {
-        background: linear-gradient(95deg, rgba(36, 16, 60, 0.9981034650188201) 36%, rgba(52, 17, 95, 1) 100%);
-        text-align: center;
-        font-size: 10px;
-        height: 35vh;
-        padding: 0;
-        margin: 0;
-        display: block;
-      }
 
-      .header img {
-        height: 6.5rem;
-        width: 15.5rem;
-      }
+            .header {
+              background: linear-gradient(95deg, rgba(36, 16, 60, 0.9981034650188201) 36%, rgba(52, 17, 95, 1) 100%);
+              text-align: center;
+              font-size: 10px;
+              height: 30vh;
+              padding: 0;
+              margin: 0;
+              display: block;
+            }
 
-      .heading-holder {
-        display: grid;
-        place-items: center;
-        text-align: center;
-      }
+            .header img {
+              height: 6.5rem;
+              width: 15.5rem;
+            }
 
-      .heading {
-        font-size: 2rem;
-        position: absolute;
-        top: 20vh;
-        left: 35%;
-      }
+            .heading-holder {
+              display: grid;
+              place-items: center;
+              text-align: center;
+            }
 
-      .sidebar-menu {
-        visibility: visible;
-      }
+            .heading {
+              font-size: 2rem;
+              position: absolute;
+              top: 18vh;
+              left: 30%;
+            }
 
-      .sidebar {
-        visibility: visible;
-      }
+            .sidebar-menu {
+              visibility: visible;
+            }
 
+            .sidebar {
+              visibility: visible;
+            }
+
+            .overlay img {
+              height: 8rem;
+              width: 18rem;
+            }
+
+            .circular-menu {
+              visibility: hidden;
+            }
+
+            .circular-menu {
+              width: 15rem;
+              height: 15rem;
+              position: absolute;
+              top: 8rem;
+              left: 1%;
+            }
+
+            .circle {
+              width: 15rem;
+              height: 15rem;
+            }
+
+            .change-icon-color {
+              color: transparent !important;
+              background-blend-mode: exclusion;
+              -webkit-text-stroke: transparent;
+            }
+
+            .name-color {
+              color: transparent;
+              -webkit-text-stroke: transparent;
+              text-shadow: none;
+
+            }
 
 
       /* Circular Menu */
 
-      .overlay img {
-        height: 8rem;
-        width: 18rem;
-      }
 
-      .circular-menu {
-        visibility: hidden;
-      }
+            /* Circular Menu */
 
-      .circular-menu {
-        width: 15rem;
-        height: 15rem;
-        position: absolute;
-        top: 8rem;
-        left: 1%;
-      }
+            .overlay img {
+              height: 8rem;
+              width: 18rem;
+            }
 
-      .circle {
-        width: 15rem;
-        height: 15rem;
-      }
+            .circular-menu {
+              visibility: hidden;
+            }
 
-      .change-icon-color {
-        color: transparent !important;
-        background-blend-mode: exclusion;
-        -webkit-text-stroke: transparent;
-      }
+            .circular-menu {
+              width: 15rem;
+              height: 15rem;
+              position: absolute;
+              top: 8rem;
+              left: 1%;
+            }
 
-      .name-color {
-        color: transparent;
-        -webkit-text-stroke: transparent;
-        text-shadow: none;
+            .circle {
+              width: 15rem;
+              height: 15rem;
+            }
 
-      }
+            .change-icon-color {
+              color: transparent !important;
+              background-blend-mode: exclusion;
+              -webkit-text-stroke: transparent;
+            }
 
+            .name-color {
+              color: transparent;
+              -webkit-text-stroke: transparent;
+              text-shadow: none;
+
+            }
 
     }
 
@@ -536,17 +576,27 @@ input[type=submit]:hover {
 }
 
 @media (max-width:768px) {
+  .back-to-top {
+    position: fixed;
+    bottom: 25px;
+    left:80%;
+    display: none;
+    color: #881244;
+    background: #ffffd4;
+    width:3rem;
+  }
+
+
   .footer-left {
     padding: 1rem;
     border-right: none;
   }
 
   .left-left img {
-    height: 6rem;
-    width: 13rem;
+    height: 5rem;
+    width: 11rem;
   }
 }
-
    #confirm {
             display: none;
             background-color: #F3F5F6;
@@ -585,7 +635,6 @@ input[type=submit]:hover {
     <div class="header">
       <img src="WhiteTextLogo.png">
 
-
       <div span class="sidebar-menu" id="side-menu" onclick="openSideNav()">
         &#9776;
       </div>
@@ -604,7 +653,6 @@ input[type=submit]:hover {
         <a href="mediacoverage.html">Media Coverage</a>
         <a href="contact.html">Contact Us</a>
       </div>
-
 
       <div class="heading-holder">
         <h1 class="heading">Contact Us!</h1>
@@ -757,7 +805,6 @@ input[type=submit]:hover {
 
         </div>
       </section>
-
 
 
 <script type="text/javascript">

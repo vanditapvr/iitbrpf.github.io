@@ -28,7 +28,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Tinos&display=swap" rel="stylesheet">
 
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+Chettan+2&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Chettan+2&display=swap" rel="stylesheet">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
@@ -36,121 +36,124 @@
 
   <link href="header.css" rel="stylesheet">
 
+
   <style>
-  body {
+  html,body{
     overflow-x: hidden;
-    background-color: #ffffed;
-    font-family: 'Roboto', sans-serif;
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
   }
+    body {
+      overflow-x: hidden;
+      background-color: #ffffed;
+      font-family: 'Roboto', sans-serif;
+      margin:0;
+      padding:0;
+      box-sizing: border-box;
+    }
 
-  /* Header */
+    /* Header */
 
-  .header {
-    background: linear-gradient(95deg, rgba(36, 16, 60, 0.9981034650188201) 36%, rgba(52, 17, 95, 1) 100%);
-    color: white;
-    text-align: center;
-    font-size: 10px;
-    height: 50vh;
-    padding: 0;
-    margin: 0;
-    display: grid;
-    place-items: center;
-  }
+    .header {
+      background: linear-gradient(95deg, rgba(36, 16, 60, 0.9981034650188201) 36%, rgba(52, 17, 95, 1) 100%);
+      color: white;
+      text-align: center;
+      font-size: 10px;
+      height: 50vh;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      place-items: center;
+    }
 
-  .header img {
-    height: 9rem;
-    width: 20rem;
-    left: 0rem;
-    top: 0rem;
-    position: absolute;
-  }
+    .header img {
+      height: 9rem;
+      width: 20rem;
+      left: 0rem;
+      top: 0rem;
+      position: absolute;
+    }
 
-  .heading-holder {
-    position: relative;
-    text-align: center;
-  }
+    .heading-holder {
+      position: relative;
+      text-align: center;
+    }
 
-  .heading {
-    font-size: 3rem;
-  }
-
-
-  /* Circular Menu */
-
-
-  .circular-menu {
-    width: 18rem;
-    height: 18rem;
-    position: absolute;
-    top: 0.5rem;
-    left: 75%;
-  }
-
-  .circle {
-    width: 18rem;
-    height: 18rem;
-    -webkit-transition: all 1s ease-out;
-    -moz-transition: all 1s ease-out;
-    transition: all 1s ease-out;
-  }
+    .heading {
+      font-size: 3rem;
+    }
 
 
-  .change-icon-color {
-    color: transparent !important;
-    background-blend-mode: exclusion;
-    -webkit-text-stroke: 0.04rem white;
-  }
+    /* Circular Menu */
 
-  .name-color {
-    color: white;
-    -webkit-text-stroke: 0.28px black;
-    text-shadow: none;
-    font-size: 0.9rem;
-  }
 
-  .sidebar-menu{
-    float:right;
-    font-size: 2.5rem;
-    cursor:pointer;
-    visibility: hidden;
-    margin:1rem 1.5rem 0 0;
-  }
+    .circular-menu {
+      width: 18rem;
+      height: 18rem;
+      position: absolute;
+      top: 0.5rem;
+      left: 75%;
+    }
 
-  .sidebar{
-    height:100%;
-    width:0;
-    position:fixed;
-    top:0;
-    right:0;
-    z-index:1;
-    background-color: #fffdd0;
-    overflow-x:hidden;
-    padding-top: 3.5rem;
-    transition: all 0.5s;
-    visibility: hidden;
-  }
+    .circle {
+      width: 18rem;
+      height: 18rem;
+      -webkit-transition: all 1s ease-out;
+      -moz-transition: all 1s ease-out;
+      transition: all 1s ease-out;
+    }
 
-  .sidebar a{
-    text-decoration: none;
-    color:maroon;
-    font-size: 1.4rem;
-    display:block;
-    padding: 1rem 0 1rem 1rem;
-  }
 
-  .sidebar a:hover{
-    opacity:60%;
-  }
+    .change-icon-color {
+      color: transparent !important;
+      background-blend-mode: exclusion;
+      -webkit-text-stroke: 0.04rem white;
+    }
 
-  .sidebar-closebtn{
-    position:absolute;
-    top:0;
-    font-size: 2rem !important;
-  }
+    .name-color {
+      color: white;
+      -webkit-text-stroke: 0.28px black;
+      text-shadow: none;
+      font-size: 0.9rem;
+    }
 
+    .sidebar-menu{
+      float:right;
+      font-size: 2.5rem;
+      cursor:pointer;
+      visibility: hidden;
+      margin:1rem 1.5rem 0 0;
+    }
+
+    .sidebar{
+      height:100%;
+      width:0;
+      position:fixed;
+      top:0;
+      right:0;
+      z-index:1;
+      background-color: #fffdd0;
+      overflow-x:hidden;
+      padding-top: 3.5rem;
+      transition: all 0.5s;
+      visibility: hidden;
+    }
+
+    .sidebar a{
+      text-decoration: none;
+      color:maroon;
+      font-size: 1.4rem;
+      display:block;
+      padding: 1rem 0 1rem 1rem;
+    }
+
+    .sidebar a:hover{
+      opacity:60%;
+    }
+
+    .sidebar-closebtn{
+      position:absolute;
+      top:0;
+      font-size: 2rem !important;
+    }
 
 
     @media (max-width:998px) {
@@ -219,7 +222,7 @@
         background: linear-gradient(95deg, rgba(36, 16, 60, 0.9981034650188201) 36%, rgba(52, 17, 95, 1) 100%);
         text-align: center;
         font-size: 10px;
-        height: 35vh;
+        height: 30vh;
         padding: 0;
         margin: 0;
         display: block;
@@ -239,8 +242,8 @@
       .heading {
         font-size: 2rem;
         position: absolute;
-        top: 20vh;
-        left: 35%;
+        top: 15vh;
+        left: 25%;
       }
 
       .sidebar-menu {
@@ -249,6 +252,41 @@
 
       .sidebar {
         visibility: visible;
+      }
+
+      .overlay img {
+        height: 8rem;
+        width: 18rem;
+      }
+
+      .circular-menu {
+        visibility: hidden;
+      }
+
+      .circular-menu {
+        width: 15rem;
+        height: 15rem;
+        position: absolute;
+        top: 8rem;
+        left: 1%;
+      }
+
+      .circle {
+        width: 15rem;
+        height: 15rem;
+      }
+
+      .change-icon-color {
+        color: transparent !important;
+        background-blend-mode: exclusion;
+        -webkit-text-stroke: transparent;
+      }
+
+      .name-color {
+        color: transparent;
+        -webkit-text-stroke: transparent;
+        text-shadow: none;
+
       }
 
 
@@ -410,6 +448,8 @@
       }
     }
 
+
+
     /* Back to top button */
 
     .back-to-top {
@@ -535,14 +575,25 @@
     }
 
     @media (max-width:768px) {
+      .back-to-top {
+        position: fixed;
+        bottom: 25px;
+        left:80%;
+        display: none;
+        color: #881244;
+        background: #ffffd4;
+        width:3rem;
+      }
+
+
       .footer-left {
         padding: 1rem;
         border-right: none;
       }
 
       .left-left img {
-        height: 6rem;
-        width: 13rem;
+        height: 5rem;
+        width: 11rem;
       }
     }
   </style>
@@ -577,7 +628,7 @@
     </div>
 
     <div class="heading-holder">
-      <h1 class="heading">Clients <br> & Associates</h1>
+      <h1 class="heading">Clients & Associates</h1>
     </div>
   </div>
 
@@ -618,6 +669,7 @@
     <a style="text-decoration:none" href="" class="menu-button fa fa-bars fa-2x change-icon-color"></a>
 
   </nav>
+
 
   <div class="container cards-container">
     <div class="row">
@@ -1199,7 +1251,7 @@
                     <p>
 
                       <br><br>
-                      <i>To know more about ideaForge,<a style="color:black;" onclick="href=''" target="_blank"><b> click here</b></a>
+                      <i>To know more about ideaForge,<a style="color:black;" onclick="href='https://www.ideaforge.co.in/'" target="_blank"><b> click here</b></a>
                       </i>
                     </p>
                   </div>

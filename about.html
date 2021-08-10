@@ -38,6 +38,9 @@
 
 
   <style>
+  html,body{
+    overflow-x: hidden;
+  }
     body {
       overflow-x: hidden;
       background-color: #ffffed;
@@ -207,6 +210,7 @@
       font-size: 2.5rem;
       margin-bottom: 2rem;
       color: #881244;
+      text-align: center;
     }
 
     .offers-container ul {
@@ -667,14 +671,25 @@
     }
 
     @media (max-width:768px) {
+      .back-to-top {
+        position: fixed;
+        bottom: 25px;
+        left:80%;
+        display: none;
+        color: #881244;
+        background: #ffffd4;
+        width:3rem;
+      }
+
+
       .footer-left {
         padding: 1rem;
         border-right: none;
       }
 
       .left-left img {
-        height: 6rem;
-        width: 13rem;
+        height: 5rem;
+        width: 11rem;
       }
     }
   </style>

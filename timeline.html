@@ -2,42 +2,51 @@
 <html lang="en" dir="ltr">
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Links -->
-    <!-- Bootstrap Links -->
+  <!-- Links -->
+  <!-- Bootstrap Links -->
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
 
-    <!-- Font Awesome links -->
+  <!-- Font Awesome links -->
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://kit.fontawesome.com/6c2bd266c9.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/6c2bd266c9.js" crossorigin="anonymous"></script>
 
-    <!-- Font Links -->
+  <!-- Font Links -->
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap" rel="stylesheet">
 
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Tinos&display=swap" rel="stylesheet">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Chettan+2&display=swap" rel="stylesheet">
 
-    <!-- CSS Stylesheet Links -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    <link href="header.css" rel="stylesheet">
+  <!-- CSS Stylesheet Links -->
+
+  <link href="header.css" rel="stylesheet">
+
 
   <style>
+  html,body{
+    overflow-x: hidden;
+  }
     body {
       overflow-x: hidden;
       background-color: #ffffed;
       font-family: 'Roboto', sans-serif;
+      margin:0;
+      padding:0;
+      box-sizing: border-box;
     }
 
     /* Header */
@@ -105,56 +114,45 @@
       font-size: 0.9rem;
     }
 
-    #drop {
-      background-color: transparent;
-      color: whitesmoke;
-      font-size: 2rem;
+    .sidebar-menu{
+      float:right;
+      font-size: 2.5rem;
+      cursor:pointer;
       visibility: hidden;
-      margin-top: 1.5rem;
-
+      margin:1rem 1.5rem 0 0;
     }
 
-    #drop:hover {
-      cursor: pointer;
-    }
-
-    #drop-down {
-      position: relative;
-      display: inline-block;
-      box-shadow: none;
+    .sidebar{
+      height:100%;
+      width:0;
+      position:fixed;
+      top:0;
+      right:0;
+      z-index:1;
+      background-color: #fffdd0;
+      overflow-x:hidden;
+      padding-top: 3.5rem;
+      transition: all 0.5s;
       visibility: hidden;
     }
 
-    #dropdown-menu {
-      display: none;
-      position: absolute;
-      background-color: whitesmoke;
-      width: 14rem;
-      border-radius: 5px;
-      z-index: 1;
-      margin-left: -12rem;
-      font-size: 1.3rem;
-    }
-
-    #dropdown-menu a {
-      color: black;
-      padding: 0.5rem;
+    .sidebar a{
       text-decoration: none;
-      display: block;
-      border-radius: 5px;
+      color:maroon;
+      font-size: 1.4rem;
+      display:block;
+      padding: 1rem 0 1rem 1rem;
     }
 
-
-    #dropdown-menu a:hover {
-      background-color: #ddd;
-      border-radius: 5px;
+    .sidebar a:hover{
+      opacity:60%;
     }
 
-    #drop-down:hover #dropdown-menu {
-      display: block;
-      border-radius: 5px;
+    .sidebar-closebtn{
+      position:absolute;
+      top:0;
+      font-size: 2rem !important;
     }
-
 
 
     @media (max-width:998px){
@@ -171,13 +169,22 @@
       }
 
       .header img {
-        height: 7rem;
+        height: 7.5rem;
         width: 17rem;
       }
 
       .heading {
         font-size: 2.6rem;
       }
+
+      .sidebar-menu {
+        visibility: hidden;
+      }
+
+      .sidebar {
+        visibility: hidden;
+      }
+
 
 
       /* Circular Menu */
@@ -205,7 +212,6 @@
         text-shadow: none;
         font-size: 0.87rem;
       }
-
     }
 
     @media (max-width:768px){
@@ -214,15 +220,15 @@
         background: linear-gradient(95deg, rgba(36, 16, 60, 0.9981034650188201) 36%, rgba(52, 17, 95, 1) 100%);
         text-align: center;
         font-size: 10px;
-        height: 45vh;
+        height: 30vh;
         padding: 0;
         margin: 0;
         display: block;
       }
 
       .header img {
-        height: 7rem;
-        width: 17rem;
+        height: 6.5rem;
+        width: 15.5rem;
       }
 
       .heading-holder {
@@ -234,19 +240,15 @@
       .heading {
         font-size: 2rem;
         position: absolute;
-        top: 25vh;
-        left: 35%;
+        top: 18vh;
+        left: 30%;
       }
 
-
-      /* Circular Menu */
-
-
-      #drop {
+      .sidebar-menu {
         visibility: visible;
       }
 
-      #drop-down {
+      .sidebar {
         visibility: visible;
       }
 
@@ -259,6 +261,72 @@
         visibility: hidden;
       }
 
+      .circular-menu {
+        width: 15rem;
+        height: 15rem;
+        position: absolute;
+        top: 8rem;
+        left: 1%;
+      }
+
+      .circle {
+        width: 15rem;
+        height: 15rem;
+      }
+
+      .change-icon-color {
+        color: transparent !important;
+        background-blend-mode: exclusion;
+        -webkit-text-stroke: transparent;
+      }
+
+      .name-color {
+        color: transparent;
+        -webkit-text-stroke: transparent;
+        text-shadow: none;
+
+      }
+
+
+/* Circular Menu */
+
+
+      /* Circular Menu */
+
+      .overlay img {
+        height: 8rem;
+        width: 18rem;
+      }
+
+      .circular-menu {
+        visibility: hidden;
+      }
+
+      .circular-menu {
+        width: 15rem;
+        height: 15rem;
+        position: absolute;
+        top: 8rem;
+        left: 1%;
+      }
+
+      .circle {
+        width: 15rem;
+        height: 15rem;
+      }
+
+      .change-icon-color {
+        color: transparent !important;
+        background-blend-mode: exclusion;
+        -webkit-text-stroke: transparent;
+      }
+
+      .name-color {
+        color: transparent;
+        -webkit-text-stroke: transparent;
+        text-shadow: none;
+
+      }
 
     }
 
@@ -425,16 +493,14 @@
 }
 
 /* Back to top button */
-
 .back-to-top {
   position: fixed;
   bottom: 25px;
-  right: 25px;
-  left:93%;
+  left:90%;
   display: none;
-  width:5%;
   color: #881244;
   background: #ffffd4;
+  width:3rem;
 }
 
 /* Footer */
@@ -458,7 +524,7 @@
 
 .left-left img {
   height: 8rem;
-  width: 16rem;
+  width: 17rem;
 }
 
 .left-right {
@@ -512,28 +578,65 @@
   place-items: center;
   text-align: center;
   margin-top: 4rem;
-    color: #cc397b;
+  color: #cc397b;
   margin-bottom: 2rem;
+  font-family: 'Baloo Chettan 2', cursive;
 }
 
 .sicon {
   padding: 1rem;
   font-size: 1.4rem;
-  color: #ffffed;
 }
 
-@media (max-width:768px){
-     .footer-left {
-  padding: 1rem;
-  border-right:none;
+.fa-facebook-f{
+  color:#3b5998 !important;
 }
 
-.left-left img {
-  height: 5rem;
-  width: 10rem;
-}
+.fa-instagram{
+  color:#bc2a8d !important;
 }
 
+.fa-youtube{
+  color:#bb0000 !important;
+}
+
+.fa-twitter{
+  color:#00aced !important;
+}
+
+.fa-linkedin-in{
+  color:#007bb6 !important;
+}
+
+@media (max-width:998px){
+  .left-left img {
+    height: 6rem;
+    width: 13rem;
+  }
+}
+
+@media (max-width:768px) {
+  .back-to-top {
+    position: fixed;
+    bottom: 25px;
+    left:80%;
+    display: none;
+    color: #881244;
+    background: #ffffd4;
+    width:3rem;
+  }
+
+
+  .footer-left {
+    padding: 1rem;
+    border-right: none;
+  }
+
+  .left-left img {
+    height: 5rem;
+    width: 11rem;
+  }
+}
     </style>
     <meta charset="utf-8">
     <title>IITBRPF-Timeline</title>
@@ -542,24 +645,28 @@
   <body>
 
 
-        <!-- Header -->
-        <div class="header">
-          <img src="WhiteTextLogo.png">
+    <!-- Header -->
+    <div class="header">
+      <img src="WhiteTextLogo.png">
 
-          <div id="drop-down" style=" float: right;margin-right:20px;">
-            <div id="drop"><i class="fas fa-bars"></i></div>
-            <div id="dropdown-menu">
-              <a href="index.html">Home</a>
-              <a href="about.html">About Us</a>
-              <a href="team-intro.html">People</a>
-              <a href="infrastructure.html">Spaces</a>
-              <a href="clients.html">Our Clients</a>
-              <a href="gallery.html">Gallery</a>
-              <a href="events.html">Events</a>
-              <a href="mediacoverage.html">Media Coverage</a>
-              <a href="contact.html">Contact Us</a>
-            </div>
-          </div>
+      <div span class="sidebar-menu" id="side-menu" onclick="openSideNav()">
+        &#9776;
+      </div>
+
+      <div class="sidebar" id="Sidebar">
+        <a href="javascript:void(0)" class="sidebar-closebtn" id="closeSidebar" onclick="closeSideNav()">
+          &times;
+        </a>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="team-intro.html">People</a>
+        <a href="infrastructure.html">Spaces</a>
+        <a href="clients.html">Our Clients</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="events.html">Events</a>
+        <a href="mediacoverage.html">Media Coverage</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
 
           <div class="heading-holder">
             <h1 class="heading">Journey so far...</h1>
@@ -722,6 +829,7 @@
       <div class="social-icons">
         <a style="text-decoration:none;" href="https://www.facebook.com/IITBRP/" target="_blank"><i class="fab fa-facebook-f sicon"></i></a>
         <a style="text-decoration:none;" href="https://www.instagram.com/iitbrp/" target="_blank"><i class="fab fa-instagram sicon"></i></a>
+        <a style="text-decoration:none;" href="https://www.youtube.com/channel/UCWKc47wLUoWNWFWcwDRyMDw" target="_blank"><i class="fab fa-youtube sicon"></i></a>
         <a style="text-decoration:none;" href="https://twitter.com/IITBRP" target="_blank"><i class="fab fa-twitter sicon"></i></a>
         <a style="text-decoration:none;" href="https://www.linkedin.com/company/iit-bombay-research-park-aspire-/" target="_blank"><i class="fab fa-linkedin-in sicon"></i></a>
       </div>
@@ -731,7 +839,7 @@
   </div>
 
   <div class="footer-text">
-    Copyright  2021 IITB Research Park Foundation | All rights reserved
+    Copyright &copy 2021 IITB Research Park Foundation | All rights reserved
 
   </div>
 </section>
@@ -760,6 +868,24 @@ window.onload = function(e) {
 e.preventDefault();
 document.querySelector('.circle').classList.toggle('open');
 }
+
+const openSideNav = () =>{
+  document.getElementById('Sidebar').style.width="40vh";
+}
+
+const closeSideNav = () =>{
+  document.getElementById('Sidebar').style.width="0vh";
+}
+
+
+$(document).mouseup(function (e) {
+        var container = $("Sidebar");
+        if(!container.is(e.target) &&
+        container.has(e.target).length === 0) {
+            closeSideNav();
+        }
+    });
+
 
 // Back to top
 

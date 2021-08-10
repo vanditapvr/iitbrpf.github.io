@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 <head>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Links -->
     <!-- Bootstrap Links -->
 
@@ -25,379 +25,490 @@
 
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Tinos&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tinos&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Chettan+2&display=swap" rel="stylesheet">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <!-- CSS Stylesheet Links -->
 
     <link href="header.css" rel="stylesheet">
-<style>
-  body {
-    overflow-x: hidden;
-    background-color: #ffffed;
-    font-family: 'Roboto', sans-serif;
-  }
 
-  /* Header */
 
-  .header {
-    background: linear-gradient(95deg, rgba(36, 16, 60, 0.9981034650188201) 36%, rgba(52, 17, 95, 1) 100%);
-    color: white;
-    text-align: center;
-    font-size: 10px;
-    height: 50vh;
-    padding: 0;
-    margin: 0;
-    display: grid;
-    place-items: center;
-  }
+    <style>
+    html,body{
+      overflow-x: hidden;
+    }
+      body {
+        overflow-x: hidden;
+        background-color: #ffffed;
+        font-family: 'Roboto', sans-serif;
+        margin:0;
+        padding:0;
+        box-sizing: border-box;
+      }
 
-  .header img {
-    height: 9rem;
-    width: 20rem;
-    left: 0rem;
-    top: 0rem;
-    position: absolute;
-  }
+      /* Header */
 
-  .heading-holder {
-    position: relative;
-    text-align: center;
-  }
+      .header {
+        background: linear-gradient(95deg, rgba(36, 16, 60, 0.9981034650188201) 36%, rgba(52, 17, 95, 1) 100%);
+        color: white;
+        text-align: center;
+        font-size: 10px;
+        height: 50vh;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        place-items: center;
+      }
 
-  .heading {
-    font-size: 3rem;
-  }
+      .header img {
+        height: 9rem;
+        width: 20rem;
+        left: 0rem;
+        top: 0rem;
+        position: absolute;
+      }
+
+      .heading-holder {
+        position: relative;
+        text-align: center;
+      }
+
+      .heading {
+        font-size: 3rem;
+      }
+
+
+      /* Circular Menu */
+
+
+      .circular-menu {
+        width: 18rem;
+        height: 18rem;
+        position: absolute;
+        top: 0.5rem;
+        left: 75%;
+      }
+
+      .circle {
+        width: 18rem;
+        height: 18rem;
+        -webkit-transition: all 1s ease-out;
+        -moz-transition: all 1s ease-out;
+        transition: all 1s ease-out;
+      }
+
+
+      .change-icon-color {
+        color: transparent !important;
+        background-blend-mode: exclusion;
+        -webkit-text-stroke: 0.04rem white;
+      }
+
+      .name-color {
+        color: white;
+        -webkit-text-stroke: 0.28px black;
+        text-shadow: none;
+        font-size: 0.9rem;
+      }
+
+      .sidebar-menu{
+        float:right;
+        font-size: 2.5rem;
+        cursor:pointer;
+        visibility: hidden;
+        margin:1rem 1.5rem 0 0;
+      }
+
+      .sidebar{
+        height:100%;
+        width:0;
+        position:fixed;
+        top:0;
+        right:0;
+        z-index:1;
+        background-color: #fffdd0;
+        overflow-x:hidden;
+        padding-top: 3.5rem;
+        transition: all 0.5s;
+        visibility: hidden;
+      }
+
+      .sidebar a{
+        text-decoration: none;
+        color:maroon;
+        font-size: 1.4rem;
+        display:block;
+        padding: 1rem 0 1rem 1rem;
+      }
+
+      .sidebar a:hover{
+        opacity:60%;
+      }
+
+      .sidebar-closebtn{
+        position:absolute;
+        top:0;
+        font-size: 2rem !important;
+      }
+
+
+
+    @media (max-width:998px){
+      .header {
+        background: linear-gradient(95deg, rgba(36, 16, 60, 0.9981034650188201) 36%, rgba(52, 17, 95, 1) 100%);
+        color: white;
+        text-align: center;
+        font-size: 10px;
+        height: 50vh;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        place-items: center;
+      }
+
+      .header img {
+        height: 7.5rem;
+        width: 17rem;
+      }
+
+      .heading {
+        font-size: 2.6rem;
+      }
+
+      .sidebar-menu {
+        visibility: hidden;
+      }
+
+      .sidebar {
+        visibility: hidden;
+      }
+
+
+
+      /* Circular Menu */
+
+
+      .circular-menu {
+        width: 18rem;
+        height: 18rem;
+        top: 1rem;
+        left: 68%;
+      }
+
+      .circle {
+        width: 18rem;
+        height: 18rem;
+      }
+
+      .circle a {
+        font-size: 1.5rem;
+      }
+
+      .name-color {
+        color: white;
+        -webkit-text-stroke: 0.28px black;
+        text-shadow: none;
+        font-size: 0.87rem;
+      }
+    }
+
+    @media (max-width:768px){
+      .header {
+        background: linear-gradient(95deg, rgba(36, 16, 60, 0.9981034650188201) 36%, rgba(52, 17, 95, 1) 100%);
+        text-align: center;
+        font-size: 10px;
+        height: 30vh;
+        padding: 0;
+        margin: 0;
+        display: block;
+      }
+
+      .header img {
+        height: 6.5rem;
+        width: 15.5rem;
+      }
+
+      .heading-holder {
+        display: grid;
+        place-items: center;
+        text-align: center;
+      }
+
+      .heading {
+        font-size: 2rem;
+        position: absolute;
+        top: 18vh;
+        left: 45%;
+      }
+
+      .sidebar-menu {
+        visibility: visible;
+      }
+
+      .sidebar {
+        visibility: visible;
+      }
+
+      .overlay img {
+        height: 8rem;
+        width: 18rem;
+      }
+
+      .circular-menu {
+        visibility: hidden;
+      }
+
+      .circular-menu {
+        width: 15rem;
+        height: 15rem;
+        position: absolute;
+        top: 8rem;
+        left: 1%;
+      }
+
+      .circle {
+        width: 15rem;
+        height: 15rem;
+      }
+
+      .change-icon-color {
+        color: transparent !important;
+        background-blend-mode: exclusion;
+        -webkit-text-stroke: transparent;
+      }
+
+      .name-color {
+        color: transparent;
+        -webkit-text-stroke: transparent;
+        text-shadow: none;
+
+      }
 
 
   /* Circular Menu */
 
 
-  .circular-menu {
-    width: 18rem;
-    height: 18rem;
-    position: absolute;
-    top: 0.5rem;
-    left: 75%;
-  }
+      /* Circular Menu */
 
-  .circle {
-    width: 18rem;
-    height: 18rem;
-    -webkit-transition: all 1s ease-out;
-    -moz-transition: all 1s ease-out;
-    transition: all 1s ease-out;
-  }
+      .overlay img {
+        height: 8rem;
+        width: 18rem;
+      }
 
+      .circular-menu {
+        visibility: hidden;
+      }
 
-  .change-icon-color {
-    color: transparent !important;
-    background-blend-mode: exclusion;
-    -webkit-text-stroke: 0.04rem white;
-  }
+      .circular-menu {
+        width: 15rem;
+        height: 15rem;
+        position: absolute;
+        top: 8rem;
+        left: 1%;
+      }
 
-  .name-color {
-    color: white;
-    -webkit-text-stroke: 0.28px black;
-    text-shadow: none;
-    font-size: 0.9rem;
-  }
+      .circle {
+        width: 15rem;
+        height: 15rem;
+      }
 
-  #drop {
-    background-color: transparent;
-    color: whitesmoke;
-    font-size: 2rem;
-    visibility: hidden;
-    margin-top: 1.5rem;
+      .change-icon-color {
+        color: transparent !important;
+        background-blend-mode: exclusion;
+        -webkit-text-stroke: transparent;
+      }
 
-  }
+      .name-color {
+        color: transparent;
+        -webkit-text-stroke: transparent;
+        text-shadow: none;
 
-  #drop:hover {
-    cursor: pointer;
-  }
-
-  #drop-down {
-    position: relative;
-    display: inline-block;
-    box-shadow: none;
-    visibility: hidden;
-  }
-
-  #dropdown-menu {
-    display: none;
-    position: absolute;
-    background-color: whitesmoke;
-    width: 14rem;
-    border-radius: 5px;
-    z-index: 1;
-    margin-left: -12rem;
-    font-size: 1.3rem;
-  }
-
-  #dropdown-menu a {
-    color: black;
-    padding: 0.5rem;
-    text-decoration: none;
-    display: block;
-    border-radius: 5px;
-  }
+      }
 
 
-  #dropdown-menu a:hover {
-    background-color: #ddd;
-    border-radius: 5px;
-  }
-
-  #drop-down:hover #dropdown-menu {
-    display: block;
-    border-radius: 5px;
-  }
-
-
-  @media (max-width:998px){
-    .header {
-      background: linear-gradient(95deg, rgba(36, 16, 60, 0.9981034650188201) 36%, rgba(52, 17, 95, 1) 100%);
-      color: white;
-      text-align: center;
-      font-size: 10px;
-      height: 50vh;
-      padding: 0;
-      margin: 0;
-      display: grid;
-      place-items: center;
     }
 
-    .header img {
-      height: 7rem;
-      width: 17rem;
-    }
+      .event-title{
+        text-align:center;
+        color: #881244;
+      }
 
-    .heading {
-      font-size: 2.6rem;
-    }
+      .event-description{
+        text-align: justify;
+        color: #5a3448;
+        font-size: 1.3rem;
+      }
 
+      /* Back to top button */
+      .back-to-top {
+        position: fixed;
+        bottom: 25px;
+        left:90%;
+        display: none;
+        color: #881244;
+        background: #ffffd4;
+        width:3rem;
+      }
 
-    /* Circular Menu */
+      /* Footer */
 
+      #footer {
+        padding: 1%;
+        background-color: #24103c;
+        padding-top: 2rem;
+        font-family: 'Cormorant Garamond', serif;
+      }
 
-    .circular-menu {
-      width: 18rem;
-      height: 18rem;
-      top: 1rem;
-      left: 68%;
-    }
-
-    .circle {
-      width: 18rem;
-      height: 18rem;
-    }
-
-    .circle a {
-      font-size: 1.5rem;
-    }
-
-    .name-color {
-      color: white;
-      -webkit-text-stroke: 0.28px black;
-      text-shadow: none;
-      font-size: 0.87rem;
-    }
-
-  }
-
-  @media (max-width:768px){
-    .header {
-      background: linear-gradient(95deg, rgba(36, 16, 60, 0.9981034650188201) 36%, rgba(52, 17, 95, 1) 100%);
-      text-align: center;
-      font-size: 10px;
-      height: 45vh;
-      padding: 0;
-      margin: 0;
-      display: block;
-    }
-
-    .header img {
-      height: 7rem;
-      width: 17rem;
-    }
-
-    .heading-holder {
-      display: grid;
-      place-items: center;
-      text-align: center;
-    }
-
-    .heading {
-      font-size: 2rem;
-      position: absolute;
-      top: 25vh;
-      left: 35%;
-    }
-
-
-    /* Circular Menu */
-
-
-    #drop {
-      visibility: visible;
-    }
-
-    #drop-down {
-      visibility: visible;
-    }
-
-    .overlay img {
-      height: 8rem;
-      width: 18rem;
-    }
-
-    .circular-menu {
-      visibility: hidden;
-    }
-
-
-
-
-  }
-
-    .event-title{
-      text-align:center;
-      color: #881244;
-    }
-
-    .event-description{
-      text-align: justify;
-      color: #5a3448;
-      font-size: 1.3rem;
-    }
-
-    /* Back to top button */
-
-    .back-to-top {
-      position: fixed;
-      bottom: 25px;
-      right: 25px;
-      left:93%;
-      display: none;
-      width:5%;
-      color: #881244;
-      background: #ffffd4;
-    }
-
-    /* Footer */
-
-    #footer {
-      padding: 1%;
-      background-color: #24103c;
-      padding-top: 2rem;
-      font-family: 'Cormorant Garamond', serif;
-    }
-
-    .footer-left {
-      padding: 1rem;
-      border-right: 0.1rem solid #881244;
-    }
-
-    .left-left {
-      display: grid;
-      place-items: center;
-    }
-
-    .left-left img {
-      height: 8rem;
-      width: 16rem;
-    }
-
-    .left-right {
-      display: grid;
-      place-items: center;
-      margin-top: 1rem;
-      font-size: 0.9rem;
-      font-weight: lighter;
-      padding-right: 3.5rem;
-      line-height: 1.8rem;
-      text-align: justify;
-      color: #ffffed;
-    }
-
-    .address-icon {
-      font-size: 2.6rem;
-      color: transparent;
-      -webkit-text-stroke: 0.04rem #ffffed;
-      position: absolute;
-      left: 52%;
-      top: 50%;
-    }
-
-
-    .footer-right {
-      padding: 1rem;
-      text-align: center;
-      margin-top: 3rem;
-    }
-
-    .footer-right a {
-      text-decoration: none;
-      color: #ffffed;
-      font-size: 1rem;
-    }
-
-    .footer-right p {
-      margin-top: 2rem;
-      color: #ffffed;
-      font-size: 0.85rem;
-    }
-
-    .social-icons {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .footer-text {
-      display: grid;
-      place-items: center;
-      text-align: center;
-      margin-top: 4rem;
-      color: #cc397b;
-      margin-bottom: 2rem;
-    }
-
-    .sicon {
-      padding: 1rem;
-      font-size: 1.4rem;
-      color: #ffffed;
-    }
-
-    @media (max-width:768px){
-           .footer-left {
+      .footer-left {
         padding: 1rem;
-        border-right:none;
+        border-right: 0.1rem solid #881244;
+      }
+
+      .left-left {
+        display: grid;
+        place-items: center;
       }
 
       .left-left img {
-        height: 5rem;
-        width: 10rem;
+        height: 8rem;
+        width: 17rem;
       }
+
+      .left-right {
+        display: grid;
+        place-items: center;
+        margin-top: 1rem;
+        font-size: 0.9rem;
+        font-weight: lighter;
+        padding-right: 3.5rem;
+        line-height: 1.8rem;
+        text-align: justify;
+        color: #ffffed;
+      }
+
+      .address-icon {
+        font-size: 2.6rem;
+        color: transparent;
+        -webkit-text-stroke: 0.04rem #ffffed;
+        position: absolute;
+        left: 52%;
+        top: 50%;
       }
 
 
-    </style>
-    <meta charset="utf-8">
-    <title>IITBRPF-Event</title>
-    <link rel="icon" href="OnlySymbolLogo.png" type="image">
-  </head>
-  <body>
+      .footer-right {
+        padding: 1rem;
+        text-align: center;
+        margin-top: 3rem;
+      }
 
-    <!-- Header -->
-    <div class="header">
-      <img src="WhiteTextLogo.png">
+      .footer-right a {
+        text-decoration: none;
+        color: #ffffed;
+        font-size: 1rem;
+      }
 
-      <div id="drop-down" style=" float: right;margin-right:20px;">
-        <div id="drop"><i class="fas fa-bars"></i></div>
-        <div id="dropdown-menu">
+      .footer-right p {
+        margin-top: 2rem;
+        color: #ffffed;
+        font-size: 0.85rem;
+      }
+
+      .social-icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .footer-text {
+        display: grid;
+        place-items: center;
+        text-align: center;
+        margin-top: 4rem;
+        color: #cc397b;
+        margin-bottom: 2rem;
+        font-family: 'Baloo Chettan 2', cursive;
+      }
+
+      .sicon {
+        padding: 1rem;
+        font-size: 1.4rem;
+      }
+
+      .fa-facebook-f{
+        color:#3b5998 !important;
+      }
+
+      .fa-instagram{
+        color:#bc2a8d !important;
+      }
+
+      .fa-youtube{
+        color:#bb0000 !important;
+      }
+
+      .fa-twitter{
+        color:#00aced !important;
+      }
+
+      .fa-linkedin-in{
+        color:#007bb6 !important;
+      }
+
+      @media (max-width:998px){
+        .left-left img {
+          height: 6rem;
+          width: 13rem;
+        }
+      }
+
+      @media (max-width:768px) {
+        .back-to-top {
+          position: fixed;
+          bottom: 25px;
+          left:80%;
+          display: none;
+          color: #881244;
+          background: #ffffd4;
+          width:3rem;
+        }
+
+
+        .footer-left {
+          padding: 1rem;
+          border-right: none;
+        }
+
+        .left-left img {
+          height: 5rem;
+          width: 11rem;
+        }
+      }
+
+
+      </style>
+      <meta charset="utf-8">
+      <title>IITBRPF-Event</title>
+      <link rel="icon" href="OnlySymbolLogo.png" type="image">
+    </head>
+    <body>
+
+      <!-- Header -->
+      <div class="header">
+        <img src="WhiteTextLogo.png">
+
+        <div span class="sidebar-menu" id="side-menu" onclick="openSideNav()">
+          &#9776;
+        </div>
+
+        <div class="sidebar" id="Sidebar">
+          <a href="javascript:void(0)" class="sidebar-closebtn" id="closeSidebar" onclick="closeSideNav()">
+            &times;
+          </a>
           <a href="index.html">Home</a>
           <a href="about.html">About Us</a>
           <a href="team-intro.html">People</a>
@@ -408,51 +519,49 @@
           <a href="mediacoverage.html">Media Coverage</a>
           <a href="contact.html">Contact Us</a>
         </div>
+
+        <div class="heading-holder">
+          <h1 class="heading">Event</h1>
+        </div>
       </div>
 
-      <div class="heading-holder">
-        <h1 class="heading">Event</h1>
-      </div>
-    </div>
+      <!-- Circular Menu -->
 
-    <!-- Circular Menu -->
+      <nav class="circular-menu">
 
-    <nav class="circular-menu">
+        <div class="circle">
+          <a style="text-decoration:none" href="#" class="fas fa-home change-icon-color" onclick="href='index.html'">
+            <div class="name name-color">Home</div>
+          </a>
+          <a style="text-decoration:none" href="#" class="fas fa-address-card change-icon-color" onclick="href='about.html'">
+            <div class="name name-color">About</div>
+          </a>
+          <a style="text-decoration:none" href="#" class="fas fa-user-tie change-icon-color" onclick="href='team-intro.html'">
+            <div class="name name-color">People</div>
+          </a>
+          <a style="text-decoration:none" href="#" class="fas fa-building change-icon-color" onclick="href='infrastructure.html'">
+            <div class="name name-color">Spaces</div>
+          </a>
+          <a style="text-decoration:none" href="#" class="fas fa-users change-icon-color" onclick="href='clients.html'">
+            <div class="name name-color">Clients</div>
+          </a>
+          <a style="text-decoration:none" href="#" class="fas fa-images change-icon-color" onclick="href='gallery.html'">
+            <div class="name name-color">Gallery</div>
+          </a>
+          <a style="text-decoration:none" href="#" class="fas fa-calendar-day change-icon-color" onclick="href='events.html'">
+            <div class="name name-color">Events</div>
+          </a>
+          <a style="text-decoration:none" href="#" class="fas fa-newspaper change-icon-color" onclick="href='mediacoverage.html'">
+            <div class="name name-color">Media</div>
+          </a>
+          <a style="text-decoration:none" href="#" class="fas fa-paper-plane change-icon-color" onclick="href='contact.html'">
+            <div class="name name-color">Contact</div>
+          </a>
+        </div>
 
-      <div class="circle">
-        <a style="text-decoration:none" href="#" class="fas fa-home change-icon-color" onclick="href='index.html'">
-          <div class="name name-color">Home</div>
-        </a>
-        <a style="text-decoration:none" href="#" class="fas fa-address-card change-icon-color" onclick="href='about.html'">
-          <div class="name name-color">About</div>
-        </a>
-        <a style="text-decoration:none" href="#" class="fas fa-user-tie change-icon-color" onclick="href='team-intro.html'">
-          <div class="name name-color">People</div>
-        </a>
-        <a style="text-decoration:none" href="#" class="fas fa-building change-icon-color" onclick="href='infrastructure.html'">
-          <div class="name name-color">Spaces</div>
-        </a>
-        <a style="text-decoration:none" href="#" class="fas fa-users change-icon-color" onclick="href='clients.html'">
-          <div class="name name-color">Clients</div>
-        </a>
-        <a style="text-decoration:none" href="#" class="fas fa-images change-icon-color" onclick="href='gallery.html'">
-          <div class="name name-color">Gallery</div>
-        </a>
-        <a style="text-decoration:none" href="#" class="fas fa-calendar-day change-icon-color" onclick="href='events.html'">
-          <div class="name name-color">Events</div>
-        </a>
-        <a style="text-decoration:none" href="#" class="fas fa-newspaper change-icon-color" onclick="href='mediacoverage.html'">
-          <div class="name name-color">Media</div>
-        </a>
-        <a style="text-decoration:none" href="#" class="fas fa-paper-plane change-icon-color" onclick="href='contact.html'">
-          <div class="name name-color">Contact</div>
-        </a>
-      </div>
+        <a style="text-decoration:none" href="" class="menu-button fa fa-bars fa-2x change-icon-color"></a>
 
-      <a style="text-decoration:none" href="" class="menu-button fa fa-bars fa-2x change-icon-color"></a>
-
-    </nav>
-
+      </nav>
 
     <div class="container">
 <br><br><br>
@@ -464,7 +573,7 @@
     <img class="w-100 md-4" src="Event_LogoLaunch.png"><br><br><br>
     <p class="event-description" >
 
-      <b>Applied Materials Joins IITB Research Park Foundation as Anchor Client.</b><br>
+      
               Mumbai Oct 22, 2015:- As a significant step to strengthening the partnership, IIT Bombay and Applied Materials announced that Applied will be the first anchor client of IITB’s upcoming Research Park. The IIT Bombay Research Park will enable technology-focused companies to co-locate R&D assets at IIT Bombay, and thereby benefit from close interaction with faculty and student researchers, and from seamless access to labs, equipment and services. The Applied Materials and IIT Bombay partnership started with a few sponsored projects in 2005, and in over ten years has grown to include India’s first university-based facility with 200 mm fab tools, three on-site labs focusing on Nanotechnology, Chemistry & Material Sciences and R&D on next-generation technologies, and a jointly offered Semiconductor Technology and Manufacturing Certification Program, the first of its kind in India. The 200 mm semiconductor fabrication facility is one of few university-based 200 mm fabs in the world and is currently being used by 144 research institutions across India for nanoelectronics research. The collaboration has also catalyzed the establishment of two national research centres at IIT Bombay – the Center of Excellence in Nanoelectronics (CEN) and the National Center for Photovoltaics Research & Education (NCPRE). These research centres provide world-class research facilities and skills training opportunities for India’s researchers and workforce through national programs like the INUP (Indian Nanoelectronics Users Program).
 </p>
 
@@ -490,8 +599,6 @@
             Indian Institute of Technology Bombay, <br>
             Main Building, 6B, Powai,
             <br>Mumbai, Maharashtra 400076
-
-
           </p>
         </div>
       </div>
@@ -504,6 +611,7 @@
       <div class="social-icons">
         <a style="text-decoration:none;" href="https://www.facebook.com/IITBRP/" target="_blank"><i class="fab fa-facebook-f sicon"></i></a>
         <a style="text-decoration:none;" href="https://www.instagram.com/iitbrp/" target="_blank"><i class="fab fa-instagram sicon"></i></a>
+        <a style="text-decoration:none;" href="https://www.youtube.com/channel/UCWKc47wLUoWNWFWcwDRyMDw" target="_blank"><i class="fab fa-youtube sicon"></i></a>
         <a style="text-decoration:none;" href="https://twitter.com/IITBRP" target="_blank"><i class="fab fa-twitter sicon"></i></a>
         <a style="text-decoration:none;" href="https://www.linkedin.com/company/iit-bombay-research-park-aspire-/" target="_blank"><i class="fab fa-linkedin-in sicon"></i></a>
       </div>
@@ -514,9 +622,9 @@
 
   <div class="footer-text">
     Copyright &copy 2021 IITB Research Park Foundation | All rights reserved
+
   </div>
 </section>
-
 
 
 <script>
@@ -540,6 +648,26 @@ window.onload = function(e) {
 e.preventDefault();
 document.querySelector('.circle').classList.toggle('open');
 }
+
+
+
+const openSideNav = () =>{
+  document.getElementById('Sidebar').style.width="40vh";
+}
+
+const closeSideNav = () =>{
+  document.getElementById('Sidebar').style.width="0vh";
+}
+
+
+$(document).mouseup(function (e) {
+        var container = $("Sidebar");
+        if(!container.is(e.target) &&
+        container.has(e.target).length === 0) {
+            closeSideNav();
+        }
+    });
+
 
 // Back to top
 

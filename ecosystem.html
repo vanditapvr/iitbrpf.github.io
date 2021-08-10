@@ -37,6 +37,9 @@
 
 
     <style>
+    html,body{
+      overflow-x: hidden;
+    }
       body {
         overflow-x: hidden;
         background-color: #ffffed;
@@ -210,7 +213,6 @@
           text-shadow: none;
           font-size: 0.87rem;
         }
-
       }
 
       @media (max-width:768px){
@@ -219,7 +221,7 @@
           background: linear-gradient(95deg, rgba(36, 16, 60, 0.9981034650188201) 36%, rgba(52, 17, 95, 1) 100%);
           text-align: center;
           font-size: 10px;
-          height: 35vh;
+          height: 30vh;
           padding: 0;
           margin: 0;
           display: block;
@@ -239,8 +241,8 @@
         .heading {
           font-size: 2rem;
           position: absolute;
-          top: 20vh;
-          left: 35%;
+          top: 18vh;
+          left: 30%;
         }
 
         .sidebar-menu {
@@ -251,6 +253,43 @@
           visibility: visible;
         }
 
+        .overlay img {
+          height: 8rem;
+          width: 18rem;
+        }
+
+        .circular-menu {
+          visibility: hidden;
+        }
+
+        .circular-menu {
+          width: 15rem;
+          height: 15rem;
+          position: absolute;
+          top: 8rem;
+          left: 1%;
+        }
+
+        .circle {
+          width: 15rem;
+          height: 15rem;
+        }
+
+        .change-icon-color {
+          color: transparent !important;
+          background-blend-mode: exclusion;
+          -webkit-text-stroke: transparent;
+        }
+
+        .name-color {
+          color: transparent;
+          -webkit-text-stroke: transparent;
+          text-shadow: none;
+
+        }
+
+
+  /* Circular Menu */
 
 
         /* Circular Menu */
@@ -320,7 +359,6 @@
 
 
       /* Back to top button */
-
       .back-to-top {
         position: fixed;
         bottom: 25px;
@@ -444,14 +482,25 @@
       }
 
       @media (max-width:768px) {
+        .back-to-top {
+          position: fixed;
+          bottom: 25px;
+          left:80%;
+          display: none;
+          color: #881244;
+          background: #ffffd4;
+          width:3rem;
+        }
+
+
         .footer-left {
           padding: 1rem;
           border-right: none;
         }
 
         .left-left img {
-          height: 6rem;
-          width: 13rem;
+          height: 5rem;
+          width: 11rem;
         }
       }
     </style>
@@ -464,7 +513,6 @@
     <!-- Header -->
     <div class="header">
       <img src="WhiteTextLogo.png">
-
 
       <div span class="sidebar-menu" id="side-menu" onclick="openSideNav()">
         &#9776;
@@ -531,7 +579,7 @@
     <div class="container ecosystem">
 
 
-      <h4>The Ecosystem that nurtures the industry interaction at IIT Bombay :</h4>
+      <h4>An ecosystem that nurtures industry interaction at IIT Bombay :</h4>
 
 
 
@@ -549,9 +597,9 @@
                 </ul>
               </ul>
               <ul>
-                <li>Dean R & D</li>
+                <li>Dean ACR</li>
                 <ul>
-                  <li><a href="https://www.alumni.iitb.ac.in/en/content/about-acr-office" target="_blank">Industrial Research and Consultancy Centre (IRCC) <i style="font-size:15px" class="fas fa-external-link-alt"></i></a></li>
+                  <li><a href="https://www.alumni.iitb.ac.in/en/content/about-acr-office" target="_blank">Development and Relations Foundation (DRF) <i style="font-size:15px" class="fas fa-external-link-alt"></i></a></li>
                   </ul>
                 </ul>
           </ul>
@@ -577,19 +625,7 @@
               <li><a href="http://www.ppcclt.iitb.ac.in/" target="_blank">Parimal and Pramod Chaudhari Center for Learning and Teaching (PPCCLT) <i style="font-size:15px" class="fas fa-external-link-alt"></i></a></li>
               <li><a href="http://www.tatacentre.iitb.ac.in/" target="_blank">Tata Center for Technology and Design (TCTD) <i style="font-size:15px" class="fas fa-external-link-alt"></i></a></li>
               <li><a href="https://www.iitb.ac.in/wrcb/" target="_blank">Wadhwani Research Centre for Bioengineering (WRCB) <i style="font-size:15px" class="fas fa-external-link-alt"></i></a></li>
-              <li>Student Bodies:</li>
-              <ul>
-                <li><a href="https://www.iitb.ac.in/en/activities/student-clubs">Student Clubs <i style="font-size:15px" class="fas fa-external-link-alt"></i></a></li>
-                <li><a href="https://iitbmartian.github.io/" target="_blank">IITB Mars Rover Team <i style="font-size:15px" class="fas fa-external-link-alt"></i></a></li>
-                <li><a href="http://iitbracing.org/" target="_blank">IIT Bombay Racing <i style="font-size:15px" class="fas fa-external-link-alt"></i></a></li>
-                <li><a href="https://teamshunya.com/" target="_blank">Team SHUNYA <i style="font-size:15px" class="fas fa-external-link-alt"></i></a></li>
-                <li><a href="https://www.aero.iitb.ac.in/satlab/" target="_blank">Student Satellite Program, IIT Bombay <i style="font-size:15px" class="fas fa-external-link-alt"></i></a></li>
-                <li><a href="http://www.auv-iitb.org/" target="_blank">AUV-IITB <i style="font-size:15px" class="fas fa-external-link-alt"></i></a></li>
-                <li><a href="https://hyperloopiitb.github.io/" target="_blank">Hyperloop IITB <i style="font-size:15px" class="fas fa-external-link-alt"></i></a></li>
-                <li><a href="https://rakshakiitb.org/" target="_blank">Rakshak UAV <i style="font-size:15px" class="fas fa-external-link-alt"></i></a></li>
-                <li><a href="https://umiciitb.com/" target="_blank">Unmesh Mashruwala Innovation Cell <i style="font-size:15px" class="fas fa-external-link-alt"></i></a></li>
-                <li>Exofly IITB</li>
-                </ul>
+              <li><a href="student-cells.html" target="_blank">Student Bodies <i style="font-size:15px" class="fas fa-external-link-alt"></i></a></li>
               </ul>
 
     </div>
